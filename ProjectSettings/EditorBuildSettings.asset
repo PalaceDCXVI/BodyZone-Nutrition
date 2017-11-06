@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CharacterCreation.unity
     guid: eea9e7f7e850bbe47bc287136adf1810
+  - enabled: 1
+    path: Assets/Scenes/ModuleSelect.unity
+    guid: b4226081eeefda748ab7466521ed7e3f
