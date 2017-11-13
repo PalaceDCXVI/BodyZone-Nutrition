@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PopupSpawner : MonoBehaviour {
 
@@ -10,21 +11,14 @@ public class PopupSpawner : MonoBehaviour {
 
 	public string titleText = "Title Text";
 	public string descriptionText = "Popup Description";
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	public UnityEngine.UI.Button.ButtonClickedEvent passedDelegates;
 
 	public void SpawnPopup()
 	{
 		popup = Instantiate(popupObject).GetComponent<Popup>();
 		popup.SetTitleText(titleText);
 		popup.SetDescription(descriptionText);
+
+		popup.SetAcceptFunction(passedDelegates);
 	}
 }
