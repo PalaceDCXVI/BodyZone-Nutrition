@@ -18,4 +18,13 @@ public class NutrientBucket : MonoBehaviour {
 	{
 		rectTransform.anchoredPosition = new Vector3(Input.mousePosition.x * (1.0f / transform.parent.localScale.x), rectTransform.anchoredPosition.y, 0);
 	}
+
+	void OnTriggerEnter2D(Collider2D other)	
+	{
+		if (other.gameObject.GetComponent<NutrientLife>() != null)
+		{
+			Destroy(other.gameObject);
+			//Add in score stuff here.
+		}
+	}
 }
