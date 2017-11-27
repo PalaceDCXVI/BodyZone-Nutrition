@@ -21,10 +21,12 @@ public class NutrientBucket : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)	
 	{
-		if (other.gameObject.GetComponent<NutrientLife>() != null)
+		NutrientLife lifeComponent = other.gameObject.GetComponent<NutrientLife>();
+		if (lifeComponent != null)
 		{
-			Destroy(other.gameObject);
 			//Add in score stuff here.
+			lifeComponent.AddToFoodQueue();
+			Destroy(other.gameObject);
 		}
 	}
 }

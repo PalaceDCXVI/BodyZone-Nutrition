@@ -5,6 +5,7 @@ using UnityEngine;
 public class NutrientSpawner : MonoBehaviour {
 
 	public GameObject spawnedItem;
+	public GameObject foodQueue;
 
 	public float spawnRate = 5.0f;
 	public float timer = 0.0f;

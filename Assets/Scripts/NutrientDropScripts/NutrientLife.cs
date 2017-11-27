@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class NutrientLife : MonoBehaviour {
 
+	private FoodQueue foodQueue;
+
 	public bool isGoodFood {get; private set; }
 	public Sprite[] GoodFoods;
 	public Sprite[] BadFoods;
@@ -27,12 +29,14 @@ public class NutrientLife : MonoBehaviour {
 		}
 		if (isGoodFood)
 		{
-			GetComponent<Image>().overrideSprite = GoodFoods[Random.Range(0, GoodFoods.Length)]; //int Random.Range is [inclusive, exclusive];
+			GetComponent<Image>().sprite = GoodFoods[Random.Range(0, GoodFoods.Length)]; //int Random.Range is [inclusive, exclusive];
 		}
 		else
 		{
-			GetComponent<Image>().overrideSprite = BadFoods[Random.Range(0, BadFoods.Length)];	//int Random.Range is [inclusive, exclusive];
+			GetComponent<Image>().sprite = BadFoods[Random.Range(0, BadFoods.Length)];	//int Random.Range is [inclusive, exclusive];
 		}
+
+		foodQueue = transform.parent.GetComponent<NutrientSpawner>().foodQueue.GetComponent<FoodQueue>();
 	}
 	
 	// Update is called once per frame
@@ -43,5 +47,10 @@ public class NutrientLife : MonoBehaviour {
 		{
 			Destroy(gameObject);
 		}	
+	}
+
+	public void AddToFoodQueue()
+	{
+		foodQueue.AddEatenFood(gameObject);
 	}
 }

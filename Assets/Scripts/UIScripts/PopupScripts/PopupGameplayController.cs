@@ -1,24 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PopupGameplayController : MonoBehaviour {
 
-	public MonoBehaviour[] gameplayComponents;
+	public UnityEvent unpauseEvents;
+	public UnityEvent pauseEvents;
 
 	public void StartGame()
 	{
-		foreach (MonoBehaviour item in gameplayComponents)
 		{
-			item.enabled = true;
+			unpauseEvents.Invoke(); //Unpause events?
 		}
 	}
 
 	public void PauseGame()
 	{
-		foreach (MonoBehaviour item in gameplayComponents)
 		{
-			item.enabled = false;
+			pauseEvents.Invoke(); //Pause events?
 		}
 	}
 }
