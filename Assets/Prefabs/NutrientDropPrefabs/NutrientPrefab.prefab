@@ -95,6 +95,8 @@ MonoBehaviour:
   - {fileID: 21300006, guid: a8955525075323a489229550c68846cf, type: 3}
   - {fileID: 21300014, guid: a8955525075323a489229550c68846cf, type: 3}
   lifeTime: 5
+  gravityCore: 10
+  gravityVariance: 3
 --- !u!114 &114346398496704818
 MonoBehaviour:
   m_ObjectHideFlags: 1

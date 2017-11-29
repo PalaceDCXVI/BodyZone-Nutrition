@@ -7,6 +7,8 @@ public class NutrientBucket : MonoBehaviour {
 	public bool Touch;
 	private RectTransform rectTransform;
 
+	public NutrientDropState dropState;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -26,6 +28,7 @@ public class NutrientBucket : MonoBehaviour {
 		{
 			//Add in score stuff here.
 			lifeComponent.AddToFoodQueue();
+			dropState.AddFood(lifeComponent.isGoodFood);
 			Destroy(other.gameObject);
 		}
 	}

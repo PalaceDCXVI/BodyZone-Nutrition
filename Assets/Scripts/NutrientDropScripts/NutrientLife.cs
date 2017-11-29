@@ -14,6 +14,9 @@ public class NutrientLife : MonoBehaviour {
 	public float lifeTime = 5.0f;
 	private float currentLife;
 
+	public float gravityCore = 8.0f;
+	public float gravityVariance = 1.0f;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -37,6 +40,8 @@ public class NutrientLife : MonoBehaviour {
 		}
 
 		foodQueue = transform.parent.GetComponent<NutrientSpawner>().foodQueue.GetComponent<FoodQueue>();
+
+		GetComponent<Rigidbody2D>().gravityScale = gravityCore + Random.Range(-gravityVariance, +gravityVariance);
 	}
 	
 	// Update is called once per frame

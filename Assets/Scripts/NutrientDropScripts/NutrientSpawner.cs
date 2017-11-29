@@ -8,27 +8,37 @@ public class NutrientSpawner : MonoBehaviour {
 	public GameObject foodQueue;
 
 	public float spawnRate = 5.0f;
+	public float spawnRandomness = 0.0f;
+
+	[Range(0.0f, 1.0f)]
+	public float additionalSpawnChance = 0.0f;
 	public float timer = 0.0f;
 
 	private BoxCollider2D boxCollider;
 
 	// Use this for initialization
-	void Start () 
+	void Start() 
 	{
 		boxCollider = GetComponent<BoxCollider2D>();
 
-		timer = spawnRate;	
+		timer = spawnRate + Random.Range(-spawnRandomness, +spawnRandomness);	
 	}
 	
 	// Update is called once per frame
-	void Update () 
+	void Update() 
 	{
 		timer -= Time.deltaTime;
 		if (timer < 0.0f)
 		{
 			Instantiate(spawnedItem, transform)
 				.transform.Translate(new Vector3(Random.Range(-boxCollider.bounds.extents.x, boxCollider.bounds.extents.x), Random.Range(-boxCollider.bounds.extents.y, boxCollider.bounds.extents.y), 0.0f));
-			timer = spawnRate;
+			timer = spawnRate + Random.Range(-spawnRandomness, +spawnRandomness);
+
+			if (Random.Range(0.0f, 1.0f) < additionalSpawnChance)
+			{
+				Instantiate(spawnedItem, transform)
+				.transform.Translate(new Vector3(Random.Range(-boxCollider.bounds.extents.x, boxCollider.bounds.extents.x), Random.Range(-boxCollider.bounds.extents.y, boxCollider.bounds.extents.y), 0.0f));
+			}
 		}
 	}
 
@@ -36,6 +46,5 @@ public class NutrientSpawner : MonoBehaviour {
 	{
 		Instantiate(spawnedItem, transform)
 			.transform.Translate(new Vector3(Random.Range(-boxCollider.bounds.extents.x, boxCollider.bounds.extents.x), Random.Range(-boxCollider.bounds.extents.y, boxCollider.bounds.extents.y), 0.0f));
-		
 	}
 }
