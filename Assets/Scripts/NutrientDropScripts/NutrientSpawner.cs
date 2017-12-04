@@ -14,12 +14,16 @@ public class NutrientSpawner : MonoBehaviour {
 	public float additionalSpawnChance = 0.0f;
 	public float timer = 0.0f;
 
-	private BoxCollider2D boxCollider;
+	private RectTransform rectTransform;
+
+	private RectTransform canvasRectTransform;
 
 	// Use this for initialization
 	void Start() 
 	{
-		boxCollider = GetComponent<BoxCollider2D>();
+		rectTransform = GetComponent<RectTransform>();
+		canvasRectTransform = GetComponentInParent<Canvas>().GetComponent<RectTransform>();
+		Debug.Log(canvasRectTransform.localScale.x);
 
 		timer = spawnRate + Random.Range(-spawnRandomness, +spawnRandomness);	
 	}
@@ -31,13 +35,13 @@ public class NutrientSpawner : MonoBehaviour {
 		if (timer < 0.0f)
 		{
 			Instantiate(spawnedItem, transform)
-				.transform.Translate(new Vector3(Random.Range(-boxCollider.bounds.extents.x, boxCollider.bounds.extents.x), Random.Range(-boxCollider.bounds.extents.y, boxCollider.bounds.extents.y), 0.0f));
+				.transform.Translate((new Vector2(Random.Range(-rectTransform.rect.width, rectTransform.rect.width), Random.Range(-rectTransform.rect.height, rectTransform.rect.height)) / 2.0f + rectTransform.anchoredPosition) * canvasRectTransform.localScale.x);
 			timer = spawnRate + Random.Range(-spawnRandomness, +spawnRandomness);
 
 			if (Random.Range(0.0f, 1.0f) < additionalSpawnChance)
 			{
 				Instantiate(spawnedItem, transform)
-				.transform.Translate(new Vector3(Random.Range(-boxCollider.bounds.extents.x, boxCollider.bounds.extents.x), Random.Range(-boxCollider.bounds.extents.y, boxCollider.bounds.extents.y), 0.0f));
+				.transform.Translate((new Vector2(Random.Range(-rectTransform.rect.width, rectTransform.rect.width), Random.Range(-rectTransform.rect.height, rectTransform.rect.height)) / 2.0f + rectTransform.anchoredPosition) * canvasRectTransform.localScale.x);
 			}
 		}
 	}
@@ -45,6 +49,6 @@ public class NutrientSpawner : MonoBehaviour {
 	public void SpawnObject(Vector3 position)
 	{
 		Instantiate(spawnedItem, transform)
-			.transform.Translate(new Vector3(Random.Range(-boxCollider.bounds.extents.x, boxCollider.bounds.extents.x), Random.Range(-boxCollider.bounds.extents.y, boxCollider.bounds.extents.y), 0.0f));
+			.transform.Translate((new Vector2(Random.Range(-rectTransform.rect.width, rectTransform.rect.width), Random.Range(-rectTransform.rect.height, rectTransform.rect.height)) / 2.0f + rectTransform.anchoredPosition) * canvasRectTransform.localScale.x);
 	}
 }
