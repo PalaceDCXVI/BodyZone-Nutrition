@@ -31,13 +31,16 @@ public class NutrientSpawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update() 
 	{
+
 		timer -= Time.deltaTime;
 		if (timer < 0.0f)
 		{
+			// Spawns object based on time
 			Instantiate(spawnedItem, transform)
 				.transform.Translate((new Vector2(Random.Range(-rectTransform.rect.width, rectTransform.rect.width), Random.Range(-rectTransform.rect.height, rectTransform.rect.height)) / 2.0f + rectTransform.anchoredPosition) * canvasRectTransform.localScale.x);
 			timer = spawnRate + Random.Range(-spawnRandomness, +spawnRandomness);
 
+			// Additional chance to spawn an item for variance
 			if (Random.Range(0.0f, 1.0f) < additionalSpawnChance)
 			{
 				Instantiate(spawnedItem, transform)
@@ -48,6 +51,7 @@ public class NutrientSpawner : MonoBehaviour {
 
 	public void SpawnObject(Vector3 position)
 	{
+		// Spawns the food somewhere within the nutrient spawner
 		Instantiate(spawnedItem, transform)
 			.transform.Translate((new Vector2(Random.Range(-rectTransform.rect.width, rectTransform.rect.width), Random.Range(-rectTransform.rect.height, rectTransform.rect.height)) / 2.0f + rectTransform.anchoredPosition) * canvasRectTransform.localScale.x);
 	}
