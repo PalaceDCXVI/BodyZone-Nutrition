@@ -45,7 +45,7 @@ public class NutrientBucket : MonoBehaviour {
 		else
 		{
 			// Slow Robot when there is no input, and reset rotation
-			rigidbody2D.AddForce(new Vector2 (-rigidbody2D.velocity.x * 2,0));
+			//rigidbody2D.AddForce(new Vector2 (-rigidbody2D.velocity.x * 2,0));
 			rigidbody2D.rotation = 0f;
 		}
 	}

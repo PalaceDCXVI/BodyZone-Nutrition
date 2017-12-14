@@ -10,12 +10,8 @@ public class ItemCollector : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)	
 	{
-		NutrientLife lifeComponent = other.gameObject.GetComponent<NutrientLife>();
-		if (lifeComponent != null)
+		if (other.CompareTag("LogFood") || other.CompareTag("BadFood"))
 		{
-			//Add in score stuff here.
-			lifeComponent.AddToFoodQueue();
-			dropState.AddFood(lifeComponent.isGoodFood);
 			log.CompareImage(other.GetComponent<Image>());
 			Destroy(other.gameObject);
 		}
