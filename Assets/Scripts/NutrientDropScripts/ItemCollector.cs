@@ -10,10 +10,15 @@ public class ItemCollector : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)	
 	{
-		if (other.CompareTag("LogFood") || other.CompareTag("BadFood"))
+		if (other.CompareTag("LogFood"))
 		{
 			log.CompareImage(other.GetComponent<Image>());
 			Destroy(other.gameObject);
+		}
+		else if (other.CompareTag("NotFood"))
+		{
+			log.CompareImage(other.GetComponent<Image>());
+			// TODO: Robot gets hurt or something here
 		}
 	}
 }

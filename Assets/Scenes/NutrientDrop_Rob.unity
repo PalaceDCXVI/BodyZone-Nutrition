@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -552,7 +552,42 @@ Prefab:
     - target: {fileID: 114089660362039750, guid: 3586f4220428523468dfc4b4341c1d22,
         type: 2}
       propertyPath: ItemText
-      value: Bread
+      value: Whole Wheat Bread
+      objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -3.9500008
+      objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -3.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 230
+      objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 114431651286281000, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3586f4220428523468dfc4b4341c1d22, type: 2}
@@ -655,7 +690,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 492702173}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 620.1298, z: 0}
+  m_LocalPosition: {x: 0, y: 649.15375, z: 0}
   m_LocalScale: {x: 0.66954094, y: 0.6695409, z: 0.6695409}
   m_Children: []
   m_Father: {fileID: 699203324}
@@ -993,6 +1028,41 @@ Prefab:
       propertyPath: ItemText
       value: Muffin
       objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 230
+      objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -7.7117004
+      objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -7.7117
+      objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 114431651286281000, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3586f4220428523468dfc4b4341c1d22, type: 2}
   m_IsPrefabParent: 0
@@ -1026,7 +1096,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 210990994}
   m_GameObject: {fileID: 656023925}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20, y: -526.1298, z: 0}
+  m_LocalPosition: {x: 20, y: -555.15375, z: 0}
   m_LocalScale: {x: 0.5763335, y: 0.57633376, z: 0.57633376}
   m_Children:
   - {fileID: 1241598053}
@@ -1138,8 +1208,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 699203320}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 462, y: 260, z: 0}
-  m_LocalScale: {x: 0.48136574, y: 0.48136574, z: 0.48136574}
+  m_LocalPosition: {x: 506.5, y: 316.5, z: 0}
+  m_LocalScale: {x: 0.55608875, y: 0.55608875, z: 0.55608875}
   m_Children:
   - {fileID: 1696561999}
   - {fileID: 492702174}
@@ -1521,7 +1591,42 @@ Prefab:
     - target: {fileID: 114089660362039750, guid: 3586f4220428523468dfc4b4341c1d22,
         type: 2}
       propertyPath: ItemText
-      value: WholeGrain Cereal
+      value: Whole Grain Cereal
+      objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 230
+      objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.0999794
+      objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.099978
+      objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 114431651286281000, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3586f4220428523468dfc4b4341c1d22, type: 2}
@@ -1770,8 +1875,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1145740534}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 462, y: 260, z: 0}
-  m_LocalScale: {x: 0.48136574, y: 0.48136574, z: 0.48136574}
+  m_LocalPosition: {x: 506.5, y: 316.5, z: 0}
+  m_LocalScale: {x: 0.55608875, y: 0.55608875, z: 0.55608875}
   m_Children:
   - {fileID: 1843121562}
   - {fileID: 2002725690}
@@ -2132,8 +2237,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1297709335}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 462, y: 260, z: 0}
-  m_LocalScale: {x: 0.48136574, y: 0.48136574, z: 0.48136574}
+  m_LocalPosition: {x: 506.5, y: 316.5, z: 0}
+  m_LocalScale: {x: 0.55608875, y: 0.55608875, z: 0.55608875}
   m_Children:
   - {fileID: 91723096}
   - {fileID: 1042310030}
@@ -2350,7 +2455,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 275}
+  m_Offset: {x: 0, y: 74.4}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2361,7 +2466,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 250, y: 100}
+  m_Size: {x: 200, y: 500}
   m_EdgeRadius: 0
 --- !u!1001 &1637320436
 Prefab:
@@ -2493,7 +2598,42 @@ Prefab:
     - target: {fileID: 114089660362039750, guid: 3586f4220428523468dfc4b4341c1d22,
         type: 2}
       propertyPath: ItemText
-      value: Cereal
+      value: Fruity Cereal
+      objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 230
+      objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -8.891403
+      objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -8.8914
+      objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 114431651286281000, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3586f4220428523468dfc4b4341c1d22, type: 2}
@@ -2533,7 +2673,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1696561998}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.769165, y: -262.12982, z: 0}
+  m_LocalPosition: {x: 24.174133, y: -291.15375, z: 0}
   m_LocalScale: {x: 0.41015124, y: 0.41015148, z: 0.58593065}
   m_Children:
   - {fileID: 1392052427}
@@ -2564,7 +2704,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 6bb34369062b9e34da1ca7e80efc3b45, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 75bfcd98f1379c3488cbb1d041b7948b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2799,8 +2939,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1776915431}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 462, y: 260, z: 0}
-  m_LocalScale: {x: 0.48136574, y: 0.48136574, z: 0.48136574}
+  m_LocalPosition: {x: 506.5, y: 316.5, z: 0}
+  m_LocalScale: {x: 0.55608875, y: 0.55608875, z: 0.55608875}
   m_Children:
   - {fileID: 935285859}
   m_Father: {fileID: 0}
@@ -2836,7 +2976,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1843121561}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -315.76917, y: -36.870163, z: 0}
+  m_LocalPosition: {x: -266.82587, y: -7.846237, z: 0}
   m_LocalScale: {x: 0.55636144, y: 0.55636126, z: 0.55636126}
   m_Children:
   - {fileID: 493722820}
@@ -2895,8 +3035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popupText: {fileID: 493722821}
   popupButton: {fileID: 1288998083}
-  dialogueString: Lets test what you've learned so far!\n This robot needs some natural
-    sugars, can you collect 5?
+  dialogueString: Collect the grain products\n to fill out the log!
   timeUntilClickable: 3
   killOnClickable: 0
   flipHorizontal: 0
@@ -2927,7 +3066,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2002725689}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -313.76917, y: -48.870163, z: 0}
+  m_LocalPosition: {x: -264.82587, y: -19.846237, z: 0}
   m_LocalScale: {x: 0.55832314, y: 0.55832314, z: 0.55832314}
   m_Children:
   - {fileID: 536496953}
@@ -2953,11 +3092,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropState: {fileID: 699203326}
   popupText: {fileID: 536496954}
-  GreatText: Greate Job! The robot is working flawlessly!
-  GoodText: Not bad! Though I think I hear something rattling around in that bot...
-  PoorText: That robot might need some repairing... Maybe you need some review?
-  FailedText: Oh dear... I should go help that poor robot. Remember, I said it needed
-    natural sugars.
+  EndText: Great job! Now we can learn more about these foods!
 --- !u!114 &2002725692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3254,6 +3389,41 @@ Prefab:
         type: 2}
       propertyPath: ItemText
       value: White Bread
+      objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 230
+      objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 3.2000008
+      objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 114431651286281000, guid: 3586f4220428523468dfc4b4341c1d22,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3586f4220428523468dfc4b4341c1d22, type: 2}

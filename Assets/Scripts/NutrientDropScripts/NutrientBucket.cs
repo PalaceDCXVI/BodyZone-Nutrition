@@ -31,6 +31,7 @@ public class NutrientBucket : MonoBehaviour {
       			// Move robot left and slightly tilt
 				rigidbody2D.AddForce(new Vector2(-moveSpeed, 0));
 				rigidbody2D.rotation = 20f;
+				rigidbody2D.drag = 0.0f;
 
      		}
 			// When clicking to the right of the robot
@@ -40,12 +41,13 @@ public class NutrientBucket : MonoBehaviour {
         		// Move Robot Right and slightly tilt
 				rigidbody2D.AddForce(new Vector2(moveSpeed, 0));
 				rigidbody2D.rotation = -20f;
+				rigidbody2D.drag = 0.0f;
      		}
  		}
 		else
 		{
 			// Slow Robot when there is no input, and reset rotation
-			//rigidbody2D.AddForce(new Vector2 (-rigidbody2D.velocity.x * 2,0));
+			rigidbody2D.drag = 2.0f;
 			rigidbody2D.rotation = 0f;
 		}
 	}

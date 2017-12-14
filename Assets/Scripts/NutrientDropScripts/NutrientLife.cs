@@ -10,16 +10,16 @@ public class NutrientLife : MonoBehaviour {
 	public enum FoodType
 	{
 		LogFood,
-		Neutral,
-		BadFood
+		OtherFood,
+		NotFood
 	}
 
 	[Range(0.0f, 1.0f)] public float LoggableFoodBarrier = 0.66f;
-	[Range(0.0f, 1.0f)]public float NeutralFoodBarrier = 0.33f;
+	[Range(0.0f, 1.0f)]public float OtherFoodBarrier = 0.33f;
 	public FoodType foodType {get; private set; }
 	public Sprite[] LogFoods;
-	public Sprite[] NeutralFoods;
-	public Sprite[] BadFoods;
+	public Sprite[] OtherFoods;
+	public Sprite[] NotFoods;
 
 	public float lifeTime = 5.0f;
 	private float currentLife;
@@ -39,17 +39,17 @@ public class NutrientLife : MonoBehaviour {
 			GetComponent<Image>().sprite = LogFoods[Random.Range(0, LogFoods.Length)]; //int Random.Range is [inclusive, exclusive];
 			tag = "LogFood";
 		}
-		else if (foodSelection >= NeutralFoodBarrier)
+		else if (foodSelection >= OtherFoodBarrier)
 		{
-			foodType = FoodType.Neutral;
-			GetComponent<Image>().sprite = NeutralFoods[Random.Range(0, NeutralFoods.Length)]; //int Random.Range is [inclusive, exclusive];
-			tag = "NeutralFood";
+			foodType = FoodType.OtherFood;
+			GetComponent<Image>().sprite = OtherFoods[Random.Range(0, OtherFoods.Length)]; //int Random.Range is [inclusive, exclusive];
+			tag = "OtherFood";
 		}
 		else
 		{
-			foodType = FoodType.BadFood;
-			GetComponent<Image>().sprite = BadFoods[Random.Range(0, BadFoods.Length)];	//int Random.Range is [inclusive, exclusive];
-			tag = "BadFood";
+			foodType = FoodType.NotFood;
+			GetComponent<Image>().sprite = NotFoods[Random.Range(0, NotFoods.Length)];	//int Random.Range is [inclusive, exclusive];
+			tag = "NotFood";
 		}
 
 		foodQueue = transform.parent.GetComponent<NutrientSpawner>().foodQueue.GetComponent<FoodQueue>();
