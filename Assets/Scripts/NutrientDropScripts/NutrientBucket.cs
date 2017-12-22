@@ -6,7 +6,7 @@ public class NutrientBucket : MonoBehaviour {
 
 	public bool Touch;
 	private RectTransform rectTransform;
-	private Rigidbody2D rigidbody2D;
+	private Rigidbody2D newRigidbody2D;
 
 	public float moveSpeed = 1.0f;
 
@@ -14,7 +14,7 @@ public class NutrientBucket : MonoBehaviour {
 	void Start () 
 	{
 		rectTransform = GetComponent<RectTransform>();
-		rigidbody2D = GetComponent<Rigidbody2D>();
+		newRigidbody2D = GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
@@ -29,9 +29,9 @@ public class NutrientBucket : MonoBehaviour {
      		{
 				 Debug.Log ("Clicked Left Side");
       			// Move robot left and slightly tilt
-				rigidbody2D.AddForce(new Vector2(-moveSpeed, 0));
-				rigidbody2D.rotation = 20f;
-				rigidbody2D.drag = 0.0f;
+				newRigidbody2D.AddForce(new Vector2(-moveSpeed, 0));
+				newRigidbody2D.rotation = 20f;
+				newRigidbody2D.drag = 0.0f;
 
      		}
 			// When clicking to the right of the robot
@@ -39,35 +39,35 @@ public class NutrientBucket : MonoBehaviour {
      		{
 				Debug.Log ("Clicked Right Side");
         		// Move Robot Right and slightly tilt
-				rigidbody2D.AddForce(new Vector2(moveSpeed, 0));
-				rigidbody2D.rotation = -20f;
-				rigidbody2D.drag = 0.0f;
+				newRigidbody2D.AddForce(new Vector2(moveSpeed, 0));
+				newRigidbody2D.rotation = -20f;
+				newRigidbody2D.drag = 0.0f;
      		}
  		}
 		else
 		{
 			// Slow Robot when there is no input, and reset rotation
-			rigidbody2D.drag = 2.0f;
-			rigidbody2D.rotation = 0f;
+			newRigidbody2D.drag = 2.0f;
+			newRigidbody2D.rotation = 0f;
 		}
 	}
 
 	public void StartInput()
 	{
-		if (rigidbody2D != null)
+		if (newRigidbody2D != null)
 		{
-			rigidbody2D.rotation = 0f;
-			rigidbody2D.drag = 0.0f;
+			newRigidbody2D.rotation = 0f;
+			newRigidbody2D.drag = 0.0f;
 		}
 		enabled = true;
 	}
 
 	public void StopInput()
 	{
-		if (rigidbody2D != null)
+		if (newRigidbody2D != null)
 		{
-			rigidbody2D.rotation = 0f;
-			rigidbody2D.drag = 5.0f;
+			newRigidbody2D.rotation = 0f;
+			newRigidbody2D.drag = 5.0f;
 		}
 		enabled = false;
 	}

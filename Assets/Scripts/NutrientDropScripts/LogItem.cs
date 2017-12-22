@@ -10,6 +10,8 @@ public class LogItem : MonoBehaviour {
 
 	public string ItemText;
 
+	public NutrientFactsTable.NutrientFactsData factsData;
+
 	// Use this for initialization
 	void Start () {
 		logImage = GetComponent<Image>();
@@ -20,5 +22,11 @@ public class LogItem : MonoBehaviour {
 	{
 		logImage.color = Color.white;
 		logText.text = ItemText;
+	}
+
+	//For use in the FoodDatabase scene, to pass the facts table ui prefab the data from this item.
+	public void SetNutritionFactsTable()
+	{
+		GetComponentInParent<LogDatabase>().factsTable.SetData(ref factsData);
 	}
 }
