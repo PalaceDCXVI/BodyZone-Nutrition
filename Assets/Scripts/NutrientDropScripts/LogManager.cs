@@ -30,6 +30,7 @@ public class LogManager : MonoBehaviour {
 		}
 		if (FoundItems >= logImages.Count)
 		{
+			NutrientDatabaseInterface.itemsCollected = new List<Image>(logImages);
 			dropState.EndGame();
 		}
 	}

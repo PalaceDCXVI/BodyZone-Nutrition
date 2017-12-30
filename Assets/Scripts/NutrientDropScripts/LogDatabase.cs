@@ -25,30 +25,73 @@ public class LogDatabase : MonoBehaviour
 
 	void Start()
 	{
+		//Load the xml database
 		xmlDatabase = new XmlDocument();
 		xmlDatabase.Load(Application.dataPath + "/Databases/FoodItems.xml");
 		Debug.Log("Database loaded");
 
-		//TODO: Check which objects in the file are revealed or not and set appropriately.
+		List<Image> spritesInDatabase = new List<Image>();
+		List<LogItem> foodItemsInChildren = new List<LogItem>();
+		GetComponentsInChildren<LogItem>(foodItemsInChildren);
+
+		//Get the sprites from the log items. Doing it the other way just adds most of the objects in the scene, so I'm just going to do it this way.
+		foreach (LogItem item in foodItemsInChildren)
+		{
+			spritesInDatabase.Add(item.gameObject.GetComponent<Image>());
+		}
+
+		//Go through the list and set the found items to... found.
+		XmlNode nodeInXMLDoc;
+		foreach (Image item in spritesInDatabase)
+		{
+			nodeInXMLDoc = xmlDatabase.SelectSingleNode(string.Format("descendant::FoodItem[Name='{0}']", item.name));
+			if (nodeInXMLDoc == null)
+			{
+				Debug.Log("item in database '" + item.name + "' was not found in xml document");
+				continue;
+			}
+
+			if (nodeInXMLDoc.LastChild.InnerText == "true")
+			{
+				item.color = Color.white;
+			}
+		}
+
+		UpdateElements(); //Update new elements.
 	}
 
-	void UpdateElements(Image[] ItemsCollected)
+	//Updates items in the database based on the itemsCollected variable in the NutrientDatabaseInterface.
+	void UpdateElements()
 	{
-		//Iterate through the list of sprites from the collection. For each item, go through the list of elements in the database and reveal them if not revealed.
 		List<Image> spritesInDatabase = new List<Image>();
 		GetComponentsInChildren<Image>(spritesInDatabase);
 		spritesInDatabase.RemoveAt(0);
 		
-		foreach (Image itemInCollected in ItemsCollected)
+		//Iterate through the list of sprites from the collection. For each item, go through the list of elements in the database and reveal them if not revealed.
+		foreach (Image itemInCollected in NutrientDatabaseInterface.itemsCollected)
 		{
 			foreach (Image itemInDatabase in spritesInDatabase)
 			{
 				if (itemInCollected.sprite == itemInDatabase.sprite)
 				{
 					itemInDatabase.gameObject.GetComponent<LogItem>().RevealItem();
-					//TODO: Reveal the object in the file database.
+
+					//Select the xml node that matches the name of the item in the database scene
+					//MAKE SURE THAT THE ITEMS IN THE DATABASE SCENE HAVE THE CORRECT NAME
+					XmlNode itemNode = xmlDatabase.SelectSingleNode(string.Format("descendant::FoodItem[Name='{0}']", itemInDatabase.name));
+					if (itemNode == null)
+					{
+						Debug.Log("food item '" + itemInDatabase.name + "' not found in database");
+						continue;
+					}
+					itemNode.LastChild.InnerText = "true";
 				}
 			}
 		}
+	}
+
+	void OnDestroy()
+	{
+		xmlDatabase.Save(Application.dataPath + "/Databases/FoodItems.xml");
 	}
 }

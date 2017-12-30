@@ -300,12 +300,12 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300008, guid: a8955525075323a489229550c68846cf,
+      objectReference: {fileID: 21300000, guid: 057c56304b1571944ae091135850f0ea,
         type: 3}
     - target: {fileID: 114218974576794626, guid: d5314e3a7cfe09c4e947ddd53907f6c5,
         type: 2}
       propertyPath: ItemText
-      value: White Bread
+      value: whole wheat bread
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d5314e3a7cfe09c4e947ddd53907f6c5, type: 2}
@@ -1575,7 +1575,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1322663478844500, guid: d5314e3a7cfe09c4e947ddd53907f6c5, type: 2}
       propertyPath: m_Name
-      value: DatabaseItem (2)
+      value: SugaryCereal
       objectReference: {fileID: 0}
     - target: {fileID: 114001244238483132, guid: d5314e3a7cfe09c4e947ddd53907f6c5,
         type: 2}
