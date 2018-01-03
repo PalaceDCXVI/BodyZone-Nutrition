@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NutrientFactsTable : MonoBehaviour {
 
@@ -20,10 +21,41 @@ public class NutrientFactsTable : MonoBehaviour {
 		public float Calcium;
 		public float Iron;
 	}
+
+
+	public Text CaloriesText;
+	public Text SaturatedFatsText;
+	public Text TransFatsText;
+	public Text CarbohydratesText;
+	public Text FibreText;
+	public Text SugarText;
+	public Text ProteinText;
+	public Text CholesterolText;
+	public Text SodiumText;
+	public Text PotassiumText;
+	public Text CalciumText;
+	public Text IronText;
+
+	void Start()
+	{
+		
+	}
 	
 	public void SetData(ref NutrientFactsData data)
 	{
 		//TODO: Set the various text elements based on the values provided by the item selected by the user. 
 		//Wait on an artist to create an approriate asset.
+		CaloriesText.text 		= "Calories " 		+ data.Calories;
+		SaturatedFatsText.text 	= "SaturatedFats " 	+ data.SaturatedFats;
+		TransFatsText.text 		= "TransFats " 		+ data.TransFats;
+		CarbohydratesText.text 	= "Carbohydrates " 	+ data.Carbohydrates;
+		FibreText.text 			= "Fibre " 			+ data.Fibre;
+		SugarText.text 			= "Sugar " 			+ data.Sugar;
+		ProteinText.text 		= "Protein "		+ data.Protein;
+		CholesterolText.text	= "Choleterol " 	+ data.Cholesterol;
+		SodiumText.text 		= "Sodium " 		+ data.Sodium;
+		PotassiumText.text 		= "Potassium " 		+ data.Potassium;
+		CalciumText.text 		= "Calcium " 		+ data.Calories;
+		IronText.text 			= "Iron " 			+ data.Iron;
 	}
 }
