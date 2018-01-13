@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
+//Script for a dialogue popup. Handles its creation, scale, text content and various behavioiurs.
 public class PopupDialogue : MonoBehaviour 
 {
 	public Text popupText;

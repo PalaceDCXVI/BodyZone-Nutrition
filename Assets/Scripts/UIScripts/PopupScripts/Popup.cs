@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
+//Script for general popup.
 public class Popup : MonoBehaviour {
 
 	public Text TitleText;
@@ -21,6 +22,7 @@ public class Popup : MonoBehaviour {
 		PopupDescription.text = descriptionText.Replace("\\n", "\n");
 	}
 
+	//Accepts a button clicked function for the accept button in order to add any additional functionality to any popup button's accept button.
 	public void SetAcceptFunction(UnityEngine.UI.Button.ButtonClickedEvent functionName)
 	{
 		AcceptButton.onClick = (functionName);

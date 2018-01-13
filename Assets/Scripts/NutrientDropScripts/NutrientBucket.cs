@@ -6,30 +6,69 @@ public class NutrientBucket : MonoBehaviour {
 
 	public bool Touch;
 	private RectTransform rectTransform;
+	private Rigidbody2D newRigidbody2D;
 
-	public NutrientDropState dropState;
+	public float moveSpeed = 1.0f;
 
 	// Use this for initialization
 	void Start () 
 	{
 		rectTransform = GetComponent<RectTransform>();
+		newRigidbody2D = GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		rectTransform.anchoredPosition = new Vector3(Input.mousePosition.x * (1.0f / transform.parent.localScale.x), rectTransform.anchoredPosition.y, 0);
+
+		// Robot's Movement, based on Rigid body velocity and which side of the screen is clicked
+		if (Input.GetMouseButton(0))
+ 		{
+     		// When clicking to the left of the robot
+     		if (Input.mousePosition.x < rectTransform.position.x)
+     		{
+				 Debug.Log ("Clicked Left Side");
+      			// Move robot left and slightly tilt
+				newRigidbody2D.AddForce(new Vector2(-moveSpeed, 0));
+				newRigidbody2D.rotation = 20f;
+				newRigidbody2D.drag = 0.0f;
+
+     		}
+			// When clicking to the right of the robot
+     		else if (Input.mousePosition.x > rectTransform.position.x)
+     		{
+				Debug.Log ("Clicked Right Side");
+        		// Move Robot Right and slightly tilt
+				newRigidbody2D.AddForce(new Vector2(moveSpeed, 0));
+				newRigidbody2D.rotation = -20f;
+				newRigidbody2D.drag = 0.0f;
+     		}
+ 		}
+		else
+		{
+			// Slow Robot when there is no input, and reset rotation
+			newRigidbody2D.drag = 2.0f;
+			newRigidbody2D.rotation = 0f;
+		}
 	}
 
-	void OnTriggerEnter2D(Collider2D other)	
+	public void StartInput()
 	{
-		NutrientLife lifeComponent = other.gameObject.GetComponent<NutrientLife>();
-		if (lifeComponent != null)
+		if (newRigidbody2D != null)
 		{
-			//Add in score stuff here.
-			lifeComponent.AddToFoodQueue();
-			dropState.AddFood(lifeComponent.isGoodFood);
-			Destroy(other.gameObject);
+			newRigidbody2D.rotation = 0f;
+			newRigidbody2D.drag = 0.0f;
 		}
+		enabled = true;
+	}
+
+	public void StopInput()
+	{
+		if (newRigidbody2D != null)
+		{
+			newRigidbody2D.rotation = 0f;
+			newRigidbody2D.drag = 5.0f;
+		}
+		enabled = false;
 	}
 }

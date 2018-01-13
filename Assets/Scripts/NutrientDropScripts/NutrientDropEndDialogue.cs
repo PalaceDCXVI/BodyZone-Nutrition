@@ -9,45 +9,12 @@ public class NutrientDropEndDialogue : MonoBehaviour {
 
 	public Text popupText;
 
-	public string GreatText;
-	public string GoodText;
-	public string PoorText;
-	public string FailedText;
+	public string EndText;
 
-	private int goodChoices = 0;
-
-	private int badChoices = 0;
 	// Use this for initialization
 	void Start () 
 	{
-		foreach (bool item in dropState.foodList)
-		{
-			if (item)
-			{
-				goodChoices++;
-			}
-			else
-			{
-				badChoices++;
-			}
-		}	
-
-		if (goodChoices >= dropState.endSize)
-		{
-			popupText.text = GreatText;
-		}
-		else if (goodChoices > badChoices)
-		{
-			popupText.text = GoodText;
-		}
-		else if (goodChoices <= badChoices && goodChoices != 0)
-		{
-			popupText.text = PoorText;
-		}
-		else
-		{
-			popupText.text = FailedText;
-		}
+		popupText.text = EndText;
 	}
 	
 	// Update is called once per frame

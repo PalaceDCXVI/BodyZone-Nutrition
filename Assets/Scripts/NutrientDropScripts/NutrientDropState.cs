@@ -34,4 +34,13 @@ public class NutrientDropState : MonoBehaviour {
 			endGameWrap.SetActive(true);
 		}
 	}
+
+	public void EndGame()
+	{
+			//endGame;
+			gameplayController.PauseGame();
+
+			// Create end popup.
+			endGameWrap.SetActive(true);
+	}
 }

@@ -3,13 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Handles lifetime for the nutrients, along with the type of food that it is.
 public class NutrientLife : MonoBehaviour {
 
 	private FoodQueue foodQueue;
 
-	public bool isGoodFood {get; private set; }
-	public Sprite[] GoodFoods;
-	public Sprite[] BadFoods;
+	public enum FoodType
+	{
+		LogFood,
+		OtherFood,
+		NotFood
+	}
+
+	[Range(0.0f, 1.0f)] public float LoggableFoodBarrier = 0.66f;
+	[Range(0.0f, 1.0f)]public float OtherFoodBarrier = 0.33f;
+	public FoodType foodType {get; private set; }
+	public Sprite[] LogFoods;
+	public Sprite[] OtherFoods;
+	public Sprite[] NotFoods;
 
 	public float lifeTime = 5.0f;
 	private float currentLife;
@@ -22,21 +33,24 @@ public class NutrientLife : MonoBehaviour {
 	{
 		currentLife = lifeTime;
 
-		if (Random.Range(0.0f, 1.0f) > 0.5f)
+		float foodSelection = Random.Range(0.0f, 1.0f);
+		if (foodSelection >= LoggableFoodBarrier)
 		{
-			isGoodFood = true;
+			foodType = FoodType.LogFood;
+			GetComponent<Image>().sprite = LogFoods[Random.Range(0, LogFoods.Length)]; //int Random.Range is [inclusive, exclusive];
+			tag = "LogFood";
+		}
+		else if (foodSelection >= OtherFoodBarrier)
+		{
+			foodType = FoodType.OtherFood;
+			GetComponent<Image>().sprite = OtherFoods[Random.Range(0, OtherFoods.Length)]; //int Random.Range is [inclusive, exclusive];
+			tag = "OtherFood";
 		}
 		else
 		{
-			isGoodFood = false;
-		}
-		if (isGoodFood)
-		{
-			GetComponent<Image>().sprite = GoodFoods[Random.Range(0, GoodFoods.Length)]; //int Random.Range is [inclusive, exclusive];
-		}
-		else
-		{
-			GetComponent<Image>().sprite = BadFoods[Random.Range(0, BadFoods.Length)];	//int Random.Range is [inclusive, exclusive];
+			foodType = FoodType.NotFood;
+			GetComponent<Image>().sprite = NotFoods[Random.Range(0, NotFoods.Length)];	//int Random.Range is [inclusive, exclusive];
+			tag = "NotFood";
 		}
 
 		foodQueue = transform.parent.GetComponent<NutrientSpawner>().foodQueue.GetComponent<FoodQueue>();
