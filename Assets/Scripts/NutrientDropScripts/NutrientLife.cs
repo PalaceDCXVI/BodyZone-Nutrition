@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Handles lifetime for the nutrients, along with the type of food that it is.
 public class NutrientLife : MonoBehaviour {
 
 	private FoodQueue foodQueue;

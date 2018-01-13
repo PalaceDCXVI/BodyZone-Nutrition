@@ -7,7 +7,6 @@ public class LogManager : MonoBehaviour {
 
 	public List<Image> logImages;
 
-	//TODO: Add in tracking for level end here
 	public NutrientDropState dropState;
 	public int FoundItems = 0;
 

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Collection component for the robot.
+//Handles detection and response when the robot comes into contact with a food.
 public class ItemCollector : MonoBehaviour {
 
 	public NutrientDropState dropState;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Class or storing an item's nutrient data and updating the text in the log database scene.
 public class NutrientFactsTable : MonoBehaviour {
 
 	[System.Serializable]
