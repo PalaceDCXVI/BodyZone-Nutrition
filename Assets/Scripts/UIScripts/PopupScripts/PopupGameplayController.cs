@@ -31,4 +31,9 @@ public class PopupGameplayController : MonoBehaviour {
 			pauseEvents.Invoke(); //Pause events?
 		}
 	}
+
+	public void SetTimeScale(float timeScale) //In case this is going to be used in gameplay for pausing. Note that this applies to Time.deltaTime but not Time.fixedDeltaTime.
+	{
+		Time.timeScale = timeScale;
+	}
 }

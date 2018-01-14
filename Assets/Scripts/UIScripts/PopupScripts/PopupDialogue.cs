@@ -35,7 +35,7 @@ public class PopupDialogue : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		timeUntilClickable -= Time.deltaTime;
+		timeUntilClickable -= Time.fixedDeltaTime;
 		if (timeUntilClickable <= 0.0f)
 		{
 			if (killOnClickable)
