@@ -2,6 +2,6 @@
 <FoodItems>
   <FoodItem>
     <Name>SugaryCereal</Name>
-    <HasBeenFound>false</HasBeenFound>
+    <HasBeenFound>true</HasBeenFound>
   </FoodItem>
 </FoodItems>

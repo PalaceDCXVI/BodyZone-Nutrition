@@ -28,7 +28,7 @@ public class NutrientDropState : MonoBehaviour {
 		if (foodList.Count >= endSize)
 		{
 			//endGame;
-			gameplayController.PauseGame();
+			gameplayController.EndGame();
 
 			// Create end popup.
 			endGameWrap.SetActive(true);
@@ -38,7 +38,7 @@ public class NutrientDropState : MonoBehaviour {
 	public void EndGame()
 	{
 			//endGame;
-			gameplayController.PauseGame();
+			gameplayController.EndGame();
 
 			// Create end popup.
 			endGameWrap.SetActive(true);

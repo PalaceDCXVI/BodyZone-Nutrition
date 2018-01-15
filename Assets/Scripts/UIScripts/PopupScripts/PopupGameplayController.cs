@@ -9,6 +9,8 @@ public class PopupGameplayController : MonoBehaviour {
 	public UnityEvent unpauseEvents;
 	public UnityEvent pauseEvents;
 
+	public UnityEvent endGameEvents;
+
 
 	void Start()
 	{
@@ -29,6 +31,13 @@ public class PopupGameplayController : MonoBehaviour {
 	{
 		{
 			pauseEvents.Invoke(); //Pause events?
+		}
+	}
+
+	public void EndGame()
+	{
+		{
+			endGameEvents.Invoke(); //events at the end of the game.
 		}
 	}
 

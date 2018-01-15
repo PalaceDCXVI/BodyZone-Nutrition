@@ -10,12 +10,8 @@ public class PauseMenu : MonoBehaviour {
 
 	public UnityEvent OnResumeEvents; //Events that occur when the game resumes from pause.
 
-	private int pauseCounter; //At 0, the game is running, above 0, the game is paused.
-
-	void OnEnable() //I'm not sure if this is the way I want to do this, but as it is it's not bad.
-	{
-		RequestPause();
-	}
+	[Tooltip("At 0, the game is running, above 0, the game is paused.")]
+	public int pauseCounter; //At 0, the game is running, above 0, the game is paused.
 
 	public void RequestPause()
 	{
