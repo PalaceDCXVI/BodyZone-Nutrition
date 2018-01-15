@@ -23,7 +23,7 @@ public class LogDatabase : MonoBehaviour
 
 	public NutrientFactsTable factsTable;
 
-	void Start()
+	void OnEnable()
 	{
 		//Load the xml database
 		xmlDatabase = new XmlDocument();
@@ -48,6 +48,7 @@ public class LogDatabase : MonoBehaviour
 			if (nodeInXMLDoc == null)
 			{
 				Debug.Log("item in database '" + item.name + "' was not found in xml document");
+				item.color = Color.black;
 				continue;
 			}
 
