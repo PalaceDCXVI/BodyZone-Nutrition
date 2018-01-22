@@ -9,6 +9,7 @@ public class ItemCollector : MonoBehaviour {
 
 	public NutrientDropState dropState;
 	public LogManager log;
+	public StunEffect robotStunEffect;
 
 	void OnTriggerEnter2D(Collider2D other)	
 	{
@@ -20,7 +21,9 @@ public class ItemCollector : MonoBehaviour {
 		else if (other.CompareTag("NotFood"))
 		{
 			log.CompareImage(other.GetComponent<Image>());
-			// TODO: Robot gets hurt or something here
+
+			//Apply stun effect if the food acquired is not actually a food item.
+			robotStunEffect.ApplyStun();
 		}
 	}
 }

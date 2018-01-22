@@ -9,6 +9,7 @@ public class NutrientBucket : MonoBehaviour {
 	private Rigidbody2D newRigidbody2D;
 
 	public float moveSpeed = 1.0f;
+	private float moveSpeedScale = 1.0f; public void SetMoveSpeedScale(float scale) { moveSpeedScale = scale; }
 
 	// Use this for initialization
 	void Start () 
@@ -29,7 +30,7 @@ public class NutrientBucket : MonoBehaviour {
      		{
 				 Debug.Log ("Clicked Left Side");
       			// Move robot left and slightly tilt
-				newRigidbody2D.AddForce(new Vector2(-moveSpeed, 0));
+				newRigidbody2D.AddForce(new Vector2(-moveSpeed * moveSpeedScale, 0));
 				newRigidbody2D.rotation = 20f;
 				newRigidbody2D.drag = 0.0f;
 
@@ -39,7 +40,7 @@ public class NutrientBucket : MonoBehaviour {
      		{
 				Debug.Log ("Clicked Right Side");
         		// Move Robot Right and slightly tilt
-				newRigidbody2D.AddForce(new Vector2(moveSpeed, 0));
+				newRigidbody2D.AddForce(new Vector2(moveSpeed * moveSpeedScale, 0));
 				newRigidbody2D.rotation = -20f;
 				newRigidbody2D.drag = 0.0f;
      		}
