@@ -12,8 +12,12 @@ public class LogManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		GetComponentsInChildren<Image>(logImages);
-		logImages.RemoveAt(0);
+		LogItem[] logItems = GetComponentsInChildren<LogItem>();
+
+		foreach (LogItem item in logItems)
+		{
+			logImages.Add(item.GetComponent<Image>());
+		}
 	}
 	
 	public void CompareImage(Image image)

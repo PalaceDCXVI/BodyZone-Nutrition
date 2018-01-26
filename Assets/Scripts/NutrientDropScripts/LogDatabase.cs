@@ -55,6 +55,7 @@ public class LogDatabase : MonoBehaviour
 			if (nodeInXMLDoc.LastChild.InnerText == "true")
 			{
 				item.color = Color.white;
+				item.GetComponentInChildren<Text>().text = item.GetComponent<LogItem>().ItemText;
 			}
 		}
 

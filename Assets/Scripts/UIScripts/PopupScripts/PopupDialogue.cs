@@ -51,7 +51,12 @@ public class PopupDialogue : MonoBehaviour
 	{
 		if (timeUntilClickable <= 0.0f)
 		{
-			Destroy(gameObject);
+			gameObject.SetActive(false);
 		}
+	}
+
+	public void SetText(string newText)
+	{
+		popupText.text = newText.Replace("\\n", "\n");
 	}
 }

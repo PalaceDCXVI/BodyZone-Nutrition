@@ -22,8 +22,11 @@ public class LogItem : MonoBehaviour {
 	
 	public void RevealItem()
 	{
-		logImage.color = Color.white;
-		logText.text = ItemText;
+		if (logImage != null)
+		{
+			logImage.color = Color.white;
+			logText.text = ItemText;
+		}
 	}
 
 	//For use in the FoodDatabase scene, to pass the facts table ui prefab the data from this item.

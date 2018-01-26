@@ -9,7 +9,18 @@ public class PopupGameplayController : MonoBehaviour {
 	public UnityEvent unpauseEvents;
 	public UnityEvent pauseEvents;
 
-	public UnityEvent endGameEvents;
+	private UnityEvent endGameEvents;
+
+	public UnityEvent endGameEventsStandard;
+
+	public UnityEvent endGameEventsChallenge;
+
+	public enum GameState
+	{
+		STANDARD = 0,
+		CHALLENGE = 1
+	}
+	public GameState currentGameState = GameState.STANDARD;
 
 
 	void Start()
@@ -17,6 +28,20 @@ public class PopupGameplayController : MonoBehaviour {
 		if (PauseOnStart)
 		{
 			pauseEvents.Invoke();
+		}
+
+		switch (currentGameState)
+		{
+			case GameState.STANDARD:
+			endGameEvents = endGameEventsStandard;
+			break;
+
+			case GameState.CHALLENGE:
+			endGameEvents = endGameEventsChallenge;
+			break;
+
+			default:
+			break;
 		}
 	}
 
@@ -44,5 +69,10 @@ public class PopupGameplayController : MonoBehaviour {
 	public void SetTimeScale(float timeScale) //In case this is going to be used in gameplay for pausing. Note that this applies to Time.deltaTime but not Time.fixedDeltaTime.
 	{
 		Time.timeScale = timeScale;
+	}
+
+	public void SetGameState(int newState)
+	{
+		currentGameState = (PopupGameplayController.GameState)newState;
 	}
 }
