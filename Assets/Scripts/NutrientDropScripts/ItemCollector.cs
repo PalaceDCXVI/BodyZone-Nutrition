@@ -11,19 +11,38 @@ public class ItemCollector : MonoBehaviour {
 	public LogManager log;
 	public StunEffect robotStunEffect;
 
+	public NutrientDropEndDialogue endDialogue;
+
 	void OnTriggerEnter2D(Collider2D other)	
 	{
-		if (other.CompareTag("LogFood"))
+		if (dropState.GetGameState() == PopupGameplayController.GameState.STANDARD)
 		{
-			log.CompareImage(other.GetComponent<Image>());
-			Destroy(other.gameObject);
-		}
-		else if (other.CompareTag("NotFood"))
-		{
-			log.CompareImage(other.GetComponent<Image>());
+			if (other.CompareTag("LogFood"))
+			{
+				log.CompareImage(other.GetComponent<Image>());
+				Destroy(other.gameObject);
+			}
+			else if (other.CompareTag("NotFood"))
+			{
+				log.CompareImage(other.GetComponent<Image>());
 
-			//Apply stun effect if the food acquired is not actually a food item.
-			robotStunEffect.ApplyStun();
+				//Apply stun effect if the food acquired is not actually a food item.
+				robotStunEffect.ApplyStun();
+				Destroy(other.gameObject);
+			}
+		}
+		else
+		{
+			if (other.CompareTag("LogFood"))
+			{
+				endDialogue.AddItem(true);
+				Destroy(other.gameObject);
+			}
+			else if (other.CompareTag("NotFood"))
+			{
+				endDialogue.AddItem(false);
+				Destroy(other.gameObject);
+			}			
 		}
 	}
 }

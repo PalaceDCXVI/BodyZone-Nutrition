@@ -31,7 +31,7 @@ public class LogManager : MonoBehaviour {
 				break;
 			}
 		}
-		if (FoundItems >= logImages.Count)
+		if (FoundItems >= logImages.Count && dropState.GetGameState() == PopupGameplayController.GameState.STANDARD)
 		{
 			NutrientDatabaseInterface.itemsCollected = new List<Image>(logImages);
 			dropState.EndGame();
