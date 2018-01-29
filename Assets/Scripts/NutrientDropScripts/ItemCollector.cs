@@ -11,11 +11,23 @@ public class ItemCollector : MonoBehaviour {
 	public LogManager log;
 	public StunEffect robotStunEffect;
 
-	public NutrientDropEndDialogue endDialogue;
+	public GameObject goodOutroDialogueTrigger;
+	public GameObject badOutroDialogueTrigger;
+
+	public int m_FoodCountGoal = 10;
+	public int m_goodChoices = 0;
+	public int m_challengeFoodCount = 0;
+
+
+	public void resetFoodCounters()
+	{
+		m_goodChoices = 0;
+		m_challengeFoodCount = 0;
+	}
 
 	void OnTriggerEnter2D(Collider2D other)	
 	{
-		if (dropState.GetGameState() == PopupGameplayController.GameState.STANDARD)
+		if (dropState.GetGameState() == GameplayController.GameState.STANDARD)
 		{
 			if (other.CompareTag("LogFood"))
 			{
@@ -33,15 +45,34 @@ public class ItemCollector : MonoBehaviour {
 		}
 		else
 		{
+
 			if (other.CompareTag("LogFood"))
 			{
-				endDialogue.AddItem(true);
+				m_challengeFoodCount++;
+				if(true)
+				{
+					m_goodChoices++;
+				}
+
 				Destroy(other.gameObject);
 			}
 			else if (other.CompareTag("NotFood"))
 			{
-				endDialogue.AddItem(false);
+				robotStunEffect.ApplyStun();
 				Destroy(other.gameObject);
+			}
+
+			if(m_challengeFoodCount >= m_FoodCountGoal)
+			{
+				if(m_goodChoices > 7)
+				{
+					goodOutroDialogueTrigger.GetComponent<DialogueTrigger>().TriggerDialogue();
+				}
+				else
+				{
+					badOutroDialogueTrigger.GetComponent<DialogueTrigger>().TriggerDialogue();
+				}
+				
 			}			
 		}
 	}

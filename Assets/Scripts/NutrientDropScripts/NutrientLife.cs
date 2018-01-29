@@ -15,7 +15,7 @@ public class NutrientLife : MonoBehaviour {
 		NotFood
 	}
 
-	[Range(0.0f, 1.0f)] public float LoggableFoodBarrier = 0.66f;
+	[Range(0.0f, 1.0f)] public float LoggableFoodBarrier = 0.9f;
 	[Range(0.0f, 1.0f)]public float OtherFoodBarrier = 0.33f;
 	public FoodType foodType {get; private set; }
 	public Sprite[] LogFoods;
@@ -40,12 +40,12 @@ public class NutrientLife : MonoBehaviour {
 			GetComponent<Image>().sprite = LogFoods[Random.Range(0, LogFoods.Length)]; //int Random.Range is [inclusive, exclusive];
 			tag = "LogFood";
 		}
-		else if (foodSelection >= OtherFoodBarrier)
-		{
-			foodType = FoodType.OtherFood;
-			GetComponent<Image>().sprite = OtherFoods[Random.Range(0, OtherFoods.Length)]; //int Random.Range is [inclusive, exclusive];
-			tag = "OtherFood";
-		}
+		//else if (foodSelection >= OtherFoodBarrier)
+		//{
+			//foodType = FoodType.OtherFood;
+			//GetComponent<Image>().sprite = OtherFoods[Random.Range(0, OtherFoods.Length)]; //int Random.Range is [inclusive, exclusive];
+			//tag = "OtherFood";
+		//}
 		else
 		{
 			foodType = FoodType.NotFood;

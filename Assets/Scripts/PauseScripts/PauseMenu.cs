@@ -31,4 +31,9 @@ public class PauseMenu : MonoBehaviour {
 		}
 		pauseCounter--;
 	}
+
+	public void quitGame()
+	{
+		Application.Quit();
+	}
 }

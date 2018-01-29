@@ -8,6 +8,8 @@ public class LogManager : MonoBehaviour {
 	public List<Image> logImages;
 
 	public NutrientDropState dropState;
+
+	public GameObject dialogueTrigger;
 	public int FoundItems = 0;
 
 	// Use this for initialization
@@ -31,10 +33,12 @@ public class LogManager : MonoBehaviour {
 				break;
 			}
 		}
-		if (FoundItems >= logImages.Count && dropState.GetGameState() == PopupGameplayController.GameState.STANDARD)
+		if (FoundItems >= logImages.Count && dropState.GetGameState() == GameplayController.GameState.STANDARD)
 		{
 			NutrientDatabaseInterface.itemsCollected = new List<Image>(logImages);
-			dropState.EndGame();
+			//dropState.EndGame();
+			dialogueTrigger.GetComponent<DialogueTrigger>().TriggerDialogue();
+
 		}
 	}
 }

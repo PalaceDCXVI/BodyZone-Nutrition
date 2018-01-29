@@ -5,24 +5,27 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenu.unity
     guid: 0fd7c79aad117b64781c7ca83f597c1f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/CharacterCreation.unity
     guid: eea9e7f7e850bbe47bc287136adf1810
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ModuleSelect.unity
     guid: b4226081eeefda748ab7466521ed7e3f
   - enabled: 0
     path: Assets/Scenes/NutrientDrop.unity
     guid: 953dd53a6083bfc4b9e3bc2fcc849259
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/NutrientDrop_Rob.unity
     guid: b7e7d4d0bb7b36c4a8935d1af2198c65
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FoodDatabase.unity
     guid: 19d09a60b3b720b4c9448954609ccedb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PauseMenu.unity
     guid: ed7f0ebc4824ca84ebfff7599d150a52
+  - enabled: 1
+    path: Assets/Scenes/FoodDropDemo.unity
+    guid: 27a63721f0ad157449295ceac229a392

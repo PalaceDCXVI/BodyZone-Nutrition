@@ -43,7 +43,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0.8
+  m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 8
   m_Material: {fileID: 0}
@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c8ecaf448f1bd24f9c4f2e1518b07e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoggableFoodBarrier: 0.8
+  LoggableFoodBarrier: 0.315
   OtherFoodBarrier: 0.2
   LogFoods:
   - {fileID: 21300010, guid: a8955525075323a489229550c68846cf, type: 3}
@@ -95,17 +95,14 @@ MonoBehaviour:
   - {fileID: 21300012, guid: a8955525075323a489229550c68846cf, type: 3}
   - {fileID: 21300014, guid: a8955525075323a489229550c68846cf, type: 3}
   - {fileID: 21300006, guid: a8955525075323a489229550c68846cf, type: 3}
-  OtherFoods:
-  - {fileID: 21300000, guid: a8955525075323a489229550c68846cf, type: 3}
-  - {fileID: 21300002, guid: a8955525075323a489229550c68846cf, type: 3}
-  - {fileID: 21300004, guid: a8955525075323a489229550c68846cf, type: 3}
+  OtherFoods: []
   NotFoods:
   - {fileID: 21300000, guid: ffcb055f5bb61f94495eac8db46fc36a, type: 3}
   - {fileID: 21300000, guid: 77e252d85c594a5488d06db6b8fcf6dc, type: 3}
   - {fileID: 21300000, guid: c79b4dfdf2e0c6a4d8175c136e2886a8, type: 3}
   - {fileID: 21300000, guid: cd9c2a829d6c1d04bacf6e830c9953d2, type: 3}
   - {fileID: 21300000, guid: 12c67e4b32452dc4aa62e96d4e0d720d, type: 3}
-  lifeTime: 10
+  lifeTime: 20
   gravityCore: 7.5
   gravityVariance: 3
 --- !u!114 &114346398496704818
