@@ -15,12 +15,7 @@ public class NutrientLife : MonoBehaviour {
 		NotFood
 	}
 
-	[Range(0.0f, 1.0f)] public float LoggableFoodBarrier = 0.9f;
-	[Range(0.0f, 1.0f)]public float OtherFoodBarrier = 0.33f;
 	public FoodType foodType {get; private set; }
-	public Sprite[] LogFoods;
-	public Sprite[] OtherFoods;
-	public Sprite[] NotFoods;
 
 	public float lifeTime = 5.0f;
 	private float currentLife;
@@ -32,26 +27,6 @@ public class NutrientLife : MonoBehaviour {
 	void Start ()
 	{
 		currentLife = lifeTime;
-
-		float foodSelection = Random.Range(0.0f, 1.0f);
-		if (foodSelection >= LoggableFoodBarrier)
-		{
-			foodType = FoodType.LogFood;
-			GetComponent<Image>().sprite = LogFoods[Random.Range(0, LogFoods.Length)]; //int Random.Range is [inclusive, exclusive];
-			tag = "LogFood";
-		}
-		//else if (foodSelection >= OtherFoodBarrier)
-		//{
-			//foodType = FoodType.OtherFood;
-			//GetComponent<Image>().sprite = OtherFoods[Random.Range(0, OtherFoods.Length)]; //int Random.Range is [inclusive, exclusive];
-			//tag = "OtherFood";
-		//}
-		else
-		{
-			foodType = FoodType.NotFood;
-			GetComponent<Image>().sprite = NotFoods[Random.Range(0, NotFoods.Length)];	//int Random.Range is [inclusive, exclusive];
-			tag = "NotFood";
-		}
 
 		foodQueue = transform.parent.GetComponent<NutrientSpawner>().foodQueue.GetComponent<FoodQueue>();
 
@@ -71,5 +46,30 @@ public class NutrientLife : MonoBehaviour {
 	public void AddToFoodQueue()
 	{
 		foodQueue.AddEatenFood(gameObject);
+	}
+
+	public void SetFoodType(FoodType type, Sprite selectedSprite)
+	{
+		foodType = type;
+
+		switch (foodType)
+		{
+			case FoodType.LogFood:
+			tag = "LogFood";
+			break;
+
+			case FoodType.NotFood:
+			tag = "OtherFood";
+			break;
+
+			case FoodType.OtherFood:
+			tag = "NotFood";
+			break;
+
+			default:
+			break;
+		}
+
+		GetComponent<Image>().sprite = selectedSprite; 
 	}
 }

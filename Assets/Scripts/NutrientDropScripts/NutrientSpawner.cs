@@ -12,7 +12,16 @@ public class NutrientSpawner : MonoBehaviour {
 
 	[Range(0.0f, 1.0f)]
 	public float additionalSpawnChance = 0.0f;
-	public float timer = 0.0f;
+	public float TimeUntilNextItemSpawn = 1.0f;
+	public float SpawnTimeVariance = 0.3f;
+	private float timer = 1.0f;
+
+
+	[Range(0.0f, 1.0f)] public float LoggableFoodSelectionBarrier = 0.9f;
+	[Range(0.0f, 1.0f)]public float OtherFoodSelectionBarrier = 0.33f;
+	public Sprite[] LogFoods;
+	public Sprite[] OtherFoods;
+	public Sprite[] NotFoods;
 
 	private RectTransform rectTransform;
 
@@ -36,23 +45,48 @@ public class NutrientSpawner : MonoBehaviour {
 		if (timer < 0.0f)
 		{
 			// Spawns object based on time
-			Instantiate(spawnedItem, transform)
-				.transform.Translate((new Vector2(Random.Range(-rectTransform.rect.width, rectTransform.rect.width), Random.Range(-rectTransform.rect.height, rectTransform.rect.height)) / 2.0f + rectTransform.anchoredPosition) * canvasRectTransform.localScale.x);
-			timer = spawnRate + Random.Range(-spawnRandomness, +spawnRandomness);
+			SpawnObject(transform.position);
 
 			// Additional chance to spawn an item for variance
 			if (Random.Range(0.0f, 1.0f) < additionalSpawnChance)
 			{
-				Instantiate(spawnedItem, transform)
-				.transform.Translate((new Vector2(Random.Range(-rectTransform.rect.width, rectTransform.rect.width), Random.Range(-rectTransform.rect.height, rectTransform.rect.height)) / 2.0f + rectTransform.anchoredPosition) * canvasRectTransform.localScale.x);
+				SpawnObject(transform.position);
 			}
+
+			timer = TimeUntilNextItemSpawn + Random.Range(-SpawnTimeVariance, SpawnTimeVariance);
 		}
 	}
 
 	public void SpawnObject(Vector3 position)
 	{
 		// Spawns the food somewhere within the nutrient spawner
-		Instantiate(spawnedItem, transform)
-			.transform.Translate((new Vector2(Random.Range(-rectTransform.rect.width, rectTransform.rect.width), Random.Range(-rectTransform.rect.height, rectTransform.rect.height)) / 2.0f + rectTransform.anchoredPosition) * canvasRectTransform.localScale.x);
+		GameObject newFoodItem = Instantiate(spawnedItem, transform);
+		newFoodItem.transform.Translate((new Vector2(Random.Range(-rectTransform.rect.width, rectTransform.rect.width), Random.Range(-rectTransform.rect.height, rectTransform.rect.height)) / 2.0f + rectTransform.anchoredPosition) * canvasRectTransform.localScale.x);
+		
+		float foodSelection = Random.Range(0.0f, 1.0f);
+		NutrientLife.FoodType selectedType = NutrientLife.FoodType.LogFood;
+		Sprite selectedSprite;
+
+		if (foodSelection >= LoggableFoodSelectionBarrier)
+		{
+			selectedType = NutrientLife.FoodType.LogFood;
+			selectedSprite = LogFoods[Random.Range(0, LogFoods.Length)]; //int Random.Range is [inclusive, exclusive];
+
+			newFoodItem.GetComponent<NutrientLife>().SetFoodType(selectedType, selectedSprite);
+		}
+		else if (foodSelection >= OtherFoodSelectionBarrier)
+		{
+			selectedType = NutrientLife.FoodType.NotFood;
+			selectedSprite = NotFoods[Random.Range(0, NotFoods.Length)];
+
+			newFoodItem.GetComponent<NutrientLife>().SetFoodType(selectedType, selectedSprite);
+		}
+		else
+		{
+			selectedType = NutrientLife.FoodType.OtherFood;
+			selectedSprite = OtherFoods[Random.Range(0, OtherFoods.Length)];
+
+			newFoodItem.GetComponent<NutrientLife>().SetFoodType(selectedType, selectedSprite);	
+		}
 	}
 }

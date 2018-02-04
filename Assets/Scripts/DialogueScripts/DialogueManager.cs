@@ -52,19 +52,26 @@ public class DialogueManager : MonoBehaviour {
 		
 		// Animate the sentence into the dialogue box
 		// but stop the original corountine if the player clicks continue again
+		//StopCoroutine("AnimateSentence");
 		StopAllCoroutines();
 		StartCoroutine(AnimateSentence(sentence));
 	}
 
 	IEnumerator AnimateSentence (string sentence)
 	{
-		dialogueText.text = "";
-		
-		foreach (char letter in sentence.ToCharArray())
+		dialogueText.text = sentence;
+		string tempDialogue = "";
+
+		for (int i = 0; i < sentence.Length + 1; i++) //This sets the color to black and moves a clear color flag through the text, giving the illusion of dialogue writing.
 		{
-			dialogueText.text += letter;
+			dialogueText.text = sentence;
+			dialogueText.color = Color.black;
+			tempDialogue = dialogueText.text.Insert(i, "<color=#00000000>");
+			tempDialogue += "</color>";
+			dialogueText.text = tempDialogue;			
 			yield return null;
 		}
+
 	}
 
 	void EndDialogue()
