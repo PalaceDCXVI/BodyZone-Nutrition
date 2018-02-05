@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 222920306066442874}
   - component: {fileID: 114730453842141276}
   - component: {fileID: 114089660362039750}
+  - component: {fileID: 111342444847440540}
   m_Layer: 0
   m_Name: Item
   m_TagString: Untagged
@@ -46,6 +47,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!111 &111342444847440540
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1253832098324028}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 4301769c7f3dfc4449e75b8b210d93f8, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 4301769c7f3dfc4449e75b8b210d93f8, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &114089660362039750
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -57,7 +73,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffa4a309127a9834ca0dac7049c78b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemText: White Bread
+  ItemText: Whole Wheat Bread
+  factsData:
+    Calories: 0
+    SaturatedFats: 0
+    TransFats: 0
+    Carbohydrates: 0
+    Fibre: 0
+    Sugar: 0
+    Protein: 0
+    Cholesterol: 0
+    Sodium: 0
+    Potassium: 0
+    Calcium: 0
+    Iron: 0
+  logDatabase: {fileID: 0}
 --- !u!114 &114431651286281000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -110,7 +140,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300008, guid: a8955525075323a489229550c68846cf, type: 3}
+  m_Sprite: {fileID: 21300010, guid: a8955525075323a489229550c68846cf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -137,8 +167,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1253832098324028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -225, y: 0, z: -0.50212}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.50212}
+  m_LocalScale: {x: 0.02, y: 0.017, z: 0.02594815}
   m_Children:
   - {fileID: 224893929592540004}
   m_Father: {fileID: 0}
@@ -146,7 +176,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -225, y: 0}
+  m_AnchoredPosition: {x: -1.75, y: 2.4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224893929592540004
@@ -156,7 +186,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1725969276243048}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 300, y: 0, z: 20.409977}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224828397397677750}
@@ -164,6 +194,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 300, y: 0}
-  m_SizeDelta: {x: 450, y: 120}
+  m_AnchoredPosition: {x: 150, y: -3.95}
+  m_SizeDelta: {x: 230, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}

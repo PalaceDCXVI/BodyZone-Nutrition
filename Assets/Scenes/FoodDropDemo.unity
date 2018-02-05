@@ -1797,77 +1797,6 @@ Prefab:
       propertyPath: m_Name
       value: LogItem
       objectReference: {fileID: 0}
-    - target: {fileID: 114089660362039750, guid: 3586f4220428523468dfc4b4341c1d22,
-        type: 2}
-      propertyPath: ItemText
-      value: Whole Wheat Bread
-      objectReference: {fileID: 0}
-    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
-        type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
-        type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -3.9500008
-      objectReference: {fileID: 0}
-    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: -3.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 230
-      objectReference: {fileID: 0}
-    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 114431651286281000, guid: 3586f4220428523468dfc4b4341c1d22,
-        type: 2}
-      propertyPath: m_FontData.m_FontSize
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 224828397397677750, guid: 3586f4220428523468dfc4b4341c1d22,
-        type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 224828397397677750, guid: 3586f4220428523468dfc4b4341c1d22,
-        type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.017
-      objectReference: {fileID: 0}
-    - target: {fileID: 114730453842141276, guid: 3586f4220428523468dfc4b4341c1d22,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300010, guid: a8955525075323a489229550c68846cf,
-        type: 3}
-    - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
-        type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224828397397677750, guid: 3586f4220428523468dfc4b4341c1d22,
-        type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.02594815
-      objectReference: {fileID: 0}
-    - target: {fileID: 114730453842141276, guid: 3586f4220428523468dfc4b4341c1d22,
-        type: 2}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3586f4220428523468dfc4b4341c1d22, type: 2}
   m_IsPrefabParent: 0
@@ -1997,7 +1926,8 @@ MonoBehaviour:
   spawnRate: 1.5
   spawnRandomness: 0.8
   additionalSpawnChance: 0.45
-  timer: 0
+  TimeUntilNextItemSpawn: 1
+  SpawnTimeVariance: 0.3
   LoggableFoodSelectionBarrier: 0.9
   OtherFoodSelectionBarrier: 0.33
   LogFoods:
@@ -2556,7 +2486,7 @@ Prefab:
     - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 150
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
         type: 2}
@@ -2571,7 +2501,7 @@ Prefab:
     - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -7.7117004
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
         type: 2}
@@ -3746,7 +3676,7 @@ Prefab:
     - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 150
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
         type: 2}
@@ -3761,7 +3691,7 @@ Prefab:
     - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.0999794
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
         type: 2}
@@ -6727,7 +6657,7 @@ Prefab:
     - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 150
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
         type: 2}
@@ -6742,7 +6672,7 @@ Prefab:
     - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -8.891403
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
         type: 2}
@@ -6929,7 +6859,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -8677,7 +8607,7 @@ Prefab:
     - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 150
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
         type: 2}
@@ -8692,7 +8622,7 @@ Prefab:
     - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.2000008
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224893929592540004, guid: 3586f4220428523468dfc4b4341c1d22,
         type: 2}

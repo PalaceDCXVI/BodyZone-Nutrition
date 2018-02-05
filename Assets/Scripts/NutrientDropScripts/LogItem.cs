@@ -24,8 +24,8 @@ public class LogItem : MonoBehaviour {
 	{
 		if (logImage != null)
 		{
-			logImage.color = Color.white;
 			logText.text = ItemText;
+			GetComponent<Animation>().Play();
 		}
 	}
 
