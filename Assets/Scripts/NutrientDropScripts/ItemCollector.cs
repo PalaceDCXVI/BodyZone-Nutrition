@@ -25,41 +25,65 @@ public class ItemCollector : MonoBehaviour {
 		m_challengeFoodCount = 0;
 	}
 
+	//Collect the tiems that collide with the hit box and respond to them.
+	//This includes applying effects to the robot and tallying scores.
 	void OnTriggerEnter2D(Collider2D other)	
 	{
+		NutrientLife nutrientLife = other.GetComponent<NutrientLife>();
+		if (nutrientLife == null)
+		{
+			return;
+		}
+
+		NutrientLife.FoodType collidedFoodType = other.GetComponent<NutrientLife>().foodType;
 		if (dropState.GetGameState() == GameplayController.GameState.STANDARD)
 		{
-			if (other.CompareTag("LogFood"))
+			switch (collidedFoodType)
 			{
-				log.CompareImage(other.GetComponent<Image>());
-				Destroy(other.gameObject);
-			}
-			else if (other.CompareTag("NotFood"))
-			{
-				log.CompareImage(other.GetComponent<Image>());
+				case NutrientLife.FoodType.LogFood:
+					log.CompareImage(other.GetComponent<Image>());
+					Destroy(other.gameObject);
+				break;
 
-				//Apply stun effect if the food acquired is not actually a food item.
-				robotStunEffect.ApplyStun();
-				Destroy(other.gameObject);
+				case NutrientLife.FoodType.NotFood:
+					log.CompareImage(other.GetComponent<Image>());
+
+					//Apply stun effect if the food acquired is not actually a food item.
+					robotStunEffect.ApplyStun();
+					Destroy(other.gameObject);
+				break;
+
+				case NutrientLife.FoodType.OtherFood:
+				break;
+
+				default:
+				break;
 			}
 		}
 		else
 		{
-
-			if (other.CompareTag("LogFood"))
+			switch (collidedFoodType)
 			{
-				m_challengeFoodCount++;
-				if(true)
-				{
-					m_goodChoices++;
-				}
+				case NutrientLife.FoodType.LogFood:
+					m_challengeFoodCount++;
+					if(true)
+					{
+						m_goodChoices++;
+					}
 
-				Destroy(other.gameObject);
-			}
-			else if (other.CompareTag("NotFood"))
-			{
-				robotStunEffect.ApplyStun();
-				Destroy(other.gameObject);
+					Destroy(other.gameObject);
+				break;
+
+				case NutrientLife.FoodType.NotFood:
+					robotStunEffect.ApplyStun();
+					Destroy(other.gameObject);
+				break;
+
+				case NutrientLife.FoodType.OtherFood:
+				break;
+
+				default:
+				break;				
 			}
 
 			if(m_challengeFoodCount >= m_FoodCountGoal)

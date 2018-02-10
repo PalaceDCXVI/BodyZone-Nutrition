@@ -25,7 +25,11 @@ public class LogItem : MonoBehaviour {
 		if (logImage != null)
 		{
 			logText.text = ItemText;
-			GetComponent<Animation>().Play();
+			Animation animation = GetComponent<Animation>();
+			if (animation != null)
+			{
+				GetComponent<Animation>().Play();
+			}
 		}
 	}
 

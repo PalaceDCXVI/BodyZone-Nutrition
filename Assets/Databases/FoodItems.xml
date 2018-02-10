@@ -1,6 +1,22 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <FoodItems>
   <FoodItem>
+    <Name>WholeWheatBread</Name>
+    <HasBeenFound>true</HasBeenFound>
+  </FoodItem>
+  <FoodItem>
+    <Name>WhiteBread</Name>
+    <HasBeenFound>true</HasBeenFound>
+  </FoodItem>
+  <FoodItem>
+    <Name>Muffin</Name>
+    <HasBeenFound>true</HasBeenFound>
+  </FoodItem>
+  <FoodItem>
+    <Name>WholeGrainCereal</Name>
+    <HasBeenFound>true</HasBeenFound>
+  </FoodItem>
+  <FoodItem>
     <Name>SugaryCereal</Name>
     <HasBeenFound>true</HasBeenFound>
   </FoodItem>

@@ -15,7 +15,7 @@ public class NutrientLife : MonoBehaviour {
 		NotFood
 	}
 
-	public FoodType foodType {get; private set; }
+	public FoodType foodType;
 
 	public float lifeTime = 5.0f;
 	private float currentLife;
