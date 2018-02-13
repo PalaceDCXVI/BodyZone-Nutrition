@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Xml;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 
 public class LogDatabase : MonoBehaviour 

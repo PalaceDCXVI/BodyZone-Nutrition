@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class LogManager : MonoBehaviour {
 
@@ -10,6 +11,7 @@ public class LogManager : MonoBehaviour {
 	public NutrientDropState dropState;
 
 	public GameObject dialogueTrigger;
+
 	public int FoundItems = 0;
 
 	// Use this for initialization

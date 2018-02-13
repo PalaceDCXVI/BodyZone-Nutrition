@@ -1393,6 +1393,8 @@ MonoBehaviour:
   additionalSpawnChance: 0.45
   TimeUntilNextItemSpawn: 1
   SpawnTimeVariance: 0.3
+  WantedFoodTimer: 7
+  wantedFood: {fileID: 698557673}
   LoggableFoodSelectionBarrier: 0.9
   OtherFoodSelectionBarrier: 0.33
   LogFoods:
@@ -1920,6 +1922,90 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &698557671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 698557672}
+  - component: {fileID: 698557675}
+  - component: {fileID: 698557674}
+  - component: {fileID: 698557673}
+  m_Layer: 0
+  m_Name: WantedFood
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &698557672
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 698557671}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1696561999}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 150, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &698557673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 698557671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc74249da2705145b197e8380037c47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nutrientSpawner: {fileID: 492702175}
+  givenGoodFoods: []
+  currentWantedFood: {fileID: 0}
+  currentWantedFoodIndex: 0
+--- !u!114 &698557674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 698557671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &698557675
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 698557671}
 --- !u!1 &699203320
 GameObject:
   m_ObjectHideFlags: 0
@@ -3462,6 +3548,7 @@ MonoBehaviour:
   m_FoodCountGoal: 10
   m_goodChoices: 0
   m_challengeFoodCount: 0
+  wantedFood: {fileID: 698557673}
 --- !u!222 &1392052429
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3999,6 +4086,7 @@ RectTransform:
   m_LocalScale: {x: 0.41015124, y: 0.41015148, z: 0.58593065}
   m_Children:
   - {fileID: 1392052427}
+  - {fileID: 698557672}
   m_Father: {fileID: 699203324}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4972,6 +5060,11 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114183161071354534, guid: 0e48ed5e6ff4b554bab43d348e220bd8,
+        type: 2}
+      propertyPath: OnFoodRevealedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 224193593865896802, guid: 0e48ed5e6ff4b554bab43d348e220bd8,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -5213,6 +5306,31 @@ Prefab:
     - target: {fileID: 114440281304451992, guid: 0e48ed5e6ff4b554bab43d348e220bd8,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114183161071354534, guid: 0e48ed5e6ff4b554bab43d348e220bd8,
+        type: 2}
+      propertyPath: OnFoodRevealedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114183161071354534, guid: 0e48ed5e6ff4b554bab43d348e220bd8,
+        type: 2}
+      propertyPath: OnFoodRevealedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114183161071354534, guid: 0e48ed5e6ff4b554bab43d348e220bd8,
+        type: 2}
+      propertyPath: OnFoodRevealedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 698557673}
+    - target: {fileID: 114183161071354534, guid: 0e48ed5e6ff4b554bab43d348e220bd8,
+        type: 2}
+      propertyPath: OnFoodRevealedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextFood
+      objectReference: {fileID: 0}
+    - target: {fileID: 114183161071354534, guid: 0e48ed5e6ff4b554bab43d348e220bd8,
+        type: 2}
+      propertyPath: OnFoodRevealedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -7,6 +7,8 @@ public class NutrientSpawner : MonoBehaviour {
 	public GameObject spawnedItem;
 	public GameObject foodQueue;
 
+
+	[Tooltip("Average time between the spawn of each new item")]
 	public float spawnRate = 5.0f;
 	public float spawnRandomness = 0.0f;
 
@@ -15,6 +17,12 @@ public class NutrientSpawner : MonoBehaviour {
 	public float TimeUntilNextItemSpawn = 1.0f;
 	public float SpawnTimeVariance = 0.3f;
 	private float timer = 1.0f;
+
+	[Tooltip("Time until the currently wanted food will spawn;")]
+	[Range(2.0f, 10.0f)]
+	public float WantedFoodTimer = 0.0f;
+	private float currentWantedFoodTimer = 0.0f;
+	public WantedFood wantedFood;
 
 
 	[Range(0.0f, 1.0f)] public float LoggableFoodSelectionBarrier = 0.9f;
@@ -28,20 +36,21 @@ public class NutrientSpawner : MonoBehaviour {
 	private RectTransform canvasRectTransform;
 
 	// Use this for initialization
-	void Start() 
+	void Start()
 	{
 		rectTransform = GetComponent<RectTransform>();
 		canvasRectTransform = GetComponentInParent<Canvas>().GetComponent<RectTransform>();
-		Debug.Log(canvasRectTransform.localScale.x);
 
-		timer = spawnRate + Random.Range(-spawnRandomness, +spawnRandomness);	
+		timer = spawnRate + Random.Range(-spawnRandomness, +spawnRandomness);
+		currentWantedFoodTimer = WantedFoodTimer;
 	}
 	
 	// Update is called once per frame
-	void Update() 
+	void Update()
 	{
 
 		timer -= Time.deltaTime;
+		currentWantedFoodTimer -= Time.deltaTime;
 		if (timer < 0.0f)
 		{
 			// Spawns object based on time
@@ -54,6 +63,13 @@ public class NutrientSpawner : MonoBehaviour {
 			}
 
 			timer = TimeUntilNextItemSpawn + Random.Range(-SpawnTimeVariance, SpawnTimeVariance);
+		}
+
+		if (currentWantedFoodTimer < 0.0f)
+		{
+			SpawnWantedObject();
+			timer = TimeUntilNextItemSpawn + Random.Range(-SpawnTimeVariance, SpawnTimeVariance);
+			currentWantedFoodTimer = WantedFoodTimer;
 		}
 	}
 
@@ -86,7 +102,19 @@ public class NutrientSpawner : MonoBehaviour {
 			selectedType = NutrientLife.FoodType.OtherFood;
 			selectedSprite = OtherFoods[Random.Range(0, OtherFoods.Length)];
 
-			newFoodItem.GetComponent<NutrientLife>().SetFoodType(selectedType, selectedSprite);	
+			newFoodItem.GetComponent<NutrientLife>().SetFoodType(selectedType, selectedSprite);
 		}
+
+		if (selectedSprite == wantedFood.currentWantedFood.sprite)
+		{
+			currentWantedFoodTimer = WantedFoodTimer;
+		}
+	}
+
+	void SpawnWantedObject()
+	{
+		GameObject newFoodItem = Instantiate(spawnedItem, transform);
+		newFoodItem.transform.Translate((new Vector2(Random.Range(-rectTransform.rect.width, rectTransform.rect.width), Random.Range(-rectTransform.rect.height, rectTransform.rect.height)) / 2.0f + rectTransform.anchoredPosition) * canvasRectTransform.localScale.x);
+		newFoodItem.GetComponent<NutrientLife>().SetFoodType(NutrientLife.FoodType.LogFood, wantedFood.currentWantedFood.sprite);
 	}
 }

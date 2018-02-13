@@ -18,6 +18,8 @@ public class ItemCollector : MonoBehaviour {
 	public int m_goodChoices = 0;
 	public int m_challengeFoodCount = 0;
 
+	public WantedFood wantedFood;
+
 
 	public void resetFoodCounters()
 	{
@@ -35,14 +37,23 @@ public class ItemCollector : MonoBehaviour {
 			return;
 		}
 
+		Image otherImage = other.GetComponent<Image>();
+		if (otherImage == null)
+		{
+			return;
+		}
+
 		NutrientLife.FoodType collidedFoodType = other.GetComponent<NutrientLife>().foodType;
 		if (dropState.GetGameState() == GameplayController.GameState.STANDARD)
 		{
 			switch (collidedFoodType)
 			{
 				case NutrientLife.FoodType.LogFood:
-					log.CompareImage(other.GetComponent<Image>());
-					Destroy(other.gameObject);
+					if (otherImage.sprite == wantedFood.currentWantedFood.sprite)
+					{
+						log.CompareImage(other.GetComponent<Image>());
+						Destroy(other.gameObject);
+					}
 				break;
 
 				case NutrientLife.FoodType.NotFood:
