@@ -6,8 +6,6 @@ using UnityEngine.UI;
 //Handles lifetime for the nutrients, along with the type of food that it is.
 public class NutrientLife : MonoBehaviour {
 
-	private FoodQueue foodQueue;
-
 	public enum FoodType
 	{
 		LogFood,
@@ -28,8 +26,6 @@ public class NutrientLife : MonoBehaviour {
 	{
 		currentLife = lifeTime;
 
-		foodQueue = transform.parent.GetComponent<NutrientSpawner>().foodQueue.GetComponent<FoodQueue>();
-
 		GetComponent<Rigidbody2D>().gravityScale = gravityCore + Random.Range(-gravityVariance, +gravityVariance);
 	}
 	
@@ -41,11 +37,6 @@ public class NutrientLife : MonoBehaviour {
 		{
 			Destroy(gameObject);
 		}	
-	}
-
-	public void AddToFoodQueue()
-	{
-		foodQueue.AddEatenFood(gameObject);
 	}
 
 	public void SetFoodType(FoodType type, Sprite selectedSprite)

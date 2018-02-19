@@ -8,22 +8,12 @@ using UnityEngine.UI;
 public class ItemCollector : MonoBehaviour {
 
 	public NutrientDropState dropState;
-	public LogManager log;
+
+	public WantedFood wantedFood;
 	public StunEffect robotStunEffect;
 
 	public GameObject goodOutroDialogueTrigger;
 	public GameObject badOutroDialogueTrigger;
-
-	public int m_FoodCountGoal = 10;
-	public int m_goodChoices = 0;
-	public int m_challengeFoodCount = 0;
-
-
-	public void resetFoodCounters()
-	{
-		m_goodChoices = 0;
-		m_challengeFoodCount = 0;
-	}
 
 	//Collect the tiems that collide with the hit box and respond to them.
 	//This includes applying effects to the robot and tallying scores.
@@ -35,69 +25,40 @@ public class ItemCollector : MonoBehaviour {
 			return;
 		}
 
-		NutrientLife.FoodType collidedFoodType = other.GetComponent<NutrientLife>().foodType;
-		if (dropState.GetGameState() == GameplayController.GameState.STANDARD)
+		Image otherImage = other.GetComponent<Image>();
+		if (otherImage == null)
 		{
-			switch (collidedFoodType)
-			{
-				case NutrientLife.FoodType.LogFood:
-					log.CompareImage(other.GetComponent<Image>());
-					Destroy(other.gameObject);
-				break;
-
-				case NutrientLife.FoodType.NotFood:
-					log.CompareImage(other.GetComponent<Image>());
-
-					//Apply stun effect if the food acquired is not actually a food item.
-					robotStunEffect.ApplyStun();
-					Destroy(other.gameObject);
-				break;
-
-				case NutrientLife.FoodType.OtherFood:
-				break;
-
-				default:
-				break;
-			}
+			return;
 		}
-		else
+
+		NutrientLife.FoodType collidedFoodType = other.GetComponent<NutrientLife>().foodType;
+		switch (collidedFoodType)
 		{
-			switch (collidedFoodType)
-			{
-				case NutrientLife.FoodType.LogFood:
-					m_challengeFoodCount++;
-					if(true)
-					{
-						m_goodChoices++;
-					}
+			case NutrientLife.FoodType.LogFood:
 
-					Destroy(other.gameObject);
-				break;
-
-				case NutrientLife.FoodType.NotFood:
-					robotStunEffect.ApplyStun();
-					Destroy(other.gameObject);
-				break;
-
-				case NutrientLife.FoodType.OtherFood:
-				break;
-
-				default:
-				break;				
-			}
-
-			if(m_challengeFoodCount >= m_FoodCountGoal)
-			{
-				if(m_goodChoices > 7)
+				if (otherImage.sprite == wantedFood.currentWantedFood.sprite)
 				{
-					goodOutroDialogueTrigger.GetComponent<DialogueTrigger>().TriggerDialogue();
+					//Set the wanted food as the next food.
+					wantedFood.NextFood();
+					
+					//Destoy collided object.
+					//Should be moved to trigger an animation where the robot 'eats' the food.
+					Destroy(other.gameObject);
 				}
-				else
-				{
-					badOutroDialogueTrigger.GetComponent<DialogueTrigger>().TriggerDialogue();
-				}
-				
-			}			
+			break;
+
+			case NutrientLife.FoodType.NotFood:
+			//Apply stun effect if the food acquired is not actually a food item.
+				robotStunEffect.ApplyStun();
+
+				Destroy(other.gameObject);
+			break;
+
+			case NutrientLife.FoodType.OtherFood:
+			break;
+
+			default:
+			break;
 		}
 	}
 }

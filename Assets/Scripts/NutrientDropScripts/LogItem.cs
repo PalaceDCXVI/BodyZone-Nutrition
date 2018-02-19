@@ -9,6 +9,7 @@ public class LogItem : MonoBehaviour {
 	Text logText;
 
 	public string ItemText;
+	public string ItemDescription;
 
 	public NutrientFactsTable.NutrientFactsData factsData;
 
@@ -22,6 +23,7 @@ public class LogItem : MonoBehaviour {
 	
 	public void RevealItem()
 	{
+		//Reveal item in the log.
 		if (logImage != null)
 		{
 			logText.text = ItemText;
@@ -30,6 +32,10 @@ public class LogItem : MonoBehaviour {
 			{
 				GetComponent<Animation>().Play();
 			}
+			
+			//Find game object for the wanted food and tell it to go to the next item.
+			//TODO: for the love of god find a better way to do this.
+			((WantedFood)GameObject.FindObjectOfType(typeof(WantedFood))).NextFood();
 		}
 	}
 
@@ -39,6 +45,8 @@ public class LogItem : MonoBehaviour {
 		if (logImage.color != Color.black)
 		{
 			logDatabase.factsTable.SetData(ref factsData);
+			logDatabase.FoodNameText.text = ItemText;
+			logDatabase.FoodDescriptionText.text = ItemDescription;
 		}
 	}
 }
