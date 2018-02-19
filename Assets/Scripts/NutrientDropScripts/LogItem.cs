@@ -9,6 +9,7 @@ public class LogItem : MonoBehaviour {
 	Text logText;
 
 	public string ItemText;
+	public string ItemDescription;
 
 	public NutrientFactsTable.NutrientFactsData factsData;
 
@@ -44,6 +45,8 @@ public class LogItem : MonoBehaviour {
 		if (logImage.color != Color.black)
 		{
 			logDatabase.factsTable.SetData(ref factsData);
+			logDatabase.FoodNameText.text = ItemText;
+			logDatabase.FoodDescriptionText.text = ItemDescription;
 		}
 	}
 }

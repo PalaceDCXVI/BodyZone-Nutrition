@@ -32,13 +32,14 @@ public class WantedFood : MonoBehaviour {
 
 	public void NextFood()
 	{
-		Debug.Log("Now what");
 		currentWantedFoodIndex += 1;
 		if (currentWantedFoodIndex >= givenGoodFoods.Count)
 		{
-			currentWantedFoodIndex--;
-			//End level;
+			//End level
 		}
-		currentWantedFood.sprite = givenGoodFoods[currentWantedFoodIndex];
+		else
+		{
+			currentWantedFood.sprite = givenGoodFoods[currentWantedFoodIndex];
+		}
 	}
 }

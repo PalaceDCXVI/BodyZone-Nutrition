@@ -23,6 +23,8 @@ public class LogDatabase : MonoBehaviour
 	XmlDocument xmlDatabase;
 
 	public NutrientFactsTable factsTable;
+	public Text FoodNameText;
+	public Text FoodDescriptionText;
 
 	void OnEnable()
 	{
@@ -56,7 +58,6 @@ public class LogDatabase : MonoBehaviour
 			if (nodeInXMLDoc.LastChild.InnerText == "true")
 			{
 				item.color = Color.white;
-				item.GetComponentInChildren<Text>().text = item.GetComponent<LogItem>().ItemText;
 			}
 		}
 
