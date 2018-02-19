@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour {
-
+	public static DialogueManager inst;
 	
 	public Text nameText;
 	public Text dialogueText;
@@ -12,22 +12,31 @@ public class DialogueManager : MonoBehaviour {
 	private Queue<string> sentences;
 
 	private GameObject currentTrigger;
-	
-	
-	
-	// Use this for initialization
+
+
+
+	private void Awake() {
+		if(inst==null) inst=this;
+		else {
+			Debug.Log("DialogueManager destroyed on '"+gameObject.name+"'. Are there duplicates in the scene?");
+			DestroyImmediate(this);
+		}
+	}
 	void Start () {
 		sentences = new Queue<string>();		
 	}
 
+	public void StartDialogue(Dialogue _dialogue) {
+		StartDialogue(_dialogue, null);
+	}
 	public void StartDialogue (Dialogue dialogue, GameObject trigger)
 	{		
-		gameCanvas.GetComponent<GameplayController>().StartDialogue();
-		currentTrigger = trigger;
+		GameplayController.inst.StartDialogue();
+		if(trigger!=null) currentTrigger = trigger;
 
 		animator.SetBool("IsOpen", true);
 		
-		nameText.text = dialogue.name;
+		nameText.text = dialogue.m_speaker;
 		
 		sentences.Clear();
 		
@@ -75,8 +84,8 @@ public class DialogueManager : MonoBehaviour {
 	}
 
 	void EndDialogue()
-	{	
-		currentTrigger.GetComponent<DialogueTrigger>().EndDialogue();
+	{
+		if(currentTrigger!=null) currentTrigger.GetComponent<DialogueTrigger>().EndDialogue();
 		
 		Debug.Log("End of convertstion.");
 		animator.SetBool("IsOpen", false);

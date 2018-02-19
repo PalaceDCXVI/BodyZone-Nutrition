@@ -17,10 +17,7 @@ public class DialogueTrigger : MonoBehaviour {
 	
 	public void TriggerDialogue()
 	{
-		// Better way would being using a singleton but this is faster for the demo
-		
-		
-		FindObjectOfType<DialogueManager>().StartDialogue(dialogue, trigger);
+		DialogueManager.inst.StartDialogue(dialogue, trigger);
 	}
 
 	public void EndDialogue()

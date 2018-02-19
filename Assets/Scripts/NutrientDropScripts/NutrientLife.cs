@@ -21,7 +21,6 @@ public class NutrientLife : MonoBehaviour {
 	public float gravityCore = 8.0f;
 	public float gravityVariance = 1.0f;
 
-	// Use this for initialization
 	void Start ()
 	{
 		currentLife = lifeTime;
@@ -29,13 +28,12 @@ public class NutrientLife : MonoBehaviour {
 		GetComponent<Rigidbody2D>().gravityScale = gravityCore + Random.Range(-gravityVariance, +gravityVariance);
 	}
 	
-	// Update is called once per frame
 	void Update () 
 	{
 		currentLife -= Time.deltaTime;
 		if (currentLife <= 0.0f)
 		{
-			Destroy(gameObject);
+			DestroyImmediate(gameObject);
 		}	
 	}
 

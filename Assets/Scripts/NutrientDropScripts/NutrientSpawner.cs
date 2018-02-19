@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class NutrientSpawner : MonoBehaviour {
+	public	GameObject	m_spawnZone;        //Zone where food spawns.
+
+	private RectTransform	mp_SZ_rectTransform;
+	private RectTransform	mp_canvasRectTransform;
+
 
 	public GameObject spawnedItem;
 	public GameObject foodQueue;
@@ -31,21 +36,17 @@ public class NutrientSpawner : MonoBehaviour {
 	public Sprite[] OtherFoods;
 	public Sprite[] NotFoods;
 
-	private RectTransform rectTransform;
+	
 
-	private RectTransform canvasRectTransform;
-
-	// Use this for initialization
 	void Start()
 	{
-		rectTransform = GetComponent<RectTransform>();
-		canvasRectTransform = GetComponentInParent<Canvas>().GetComponent<RectTransform>();
+		mp_SZ_rectTransform = m_spawnZone.GetComponent<RectTransform>();
+		mp_canvasRectTransform = m_spawnZone.GetComponentInParent<Canvas>().GetComponent<RectTransform>();
 
 		timer = spawnRate + Random.Range(-spawnRandomness, +spawnRandomness);
 		currentWantedFoodTimer = WantedFoodTimer;
 	}
 	
-	// Update is called once per frame
 	void Update()
 	{
 
@@ -54,12 +55,12 @@ public class NutrientSpawner : MonoBehaviour {
 		if (timer < 0.0f)
 		{
 			// Spawns object based on time
-			SpawnObject(transform.position);
+			SpawnObject(mp_SZ_rectTransform.position);
 
 			// Additional chance to spawn an item for variance
 			if (Random.Range(0.0f, 1.0f) < additionalSpawnChance)
 			{
-				SpawnObject(transform.position);
+				SpawnObject(mp_SZ_rectTransform.position);
 			}
 
 			timer = TimeUntilNextItemSpawn + Random.Range(-SpawnTimeVariance, SpawnTimeVariance);
@@ -76,8 +77,8 @@ public class NutrientSpawner : MonoBehaviour {
 	public void SpawnObject(Vector3 position)
 	{
 		// Spawns the food somewhere within the nutrient spawner
-		GameObject newFoodItem = Instantiate(spawnedItem, transform);
-		newFoodItem.transform.Translate((new Vector2(Random.Range(-rectTransform.rect.width, rectTransform.rect.width), Random.Range(-rectTransform.rect.height, rectTransform.rect.height)) / 2.0f + rectTransform.anchoredPosition) * canvasRectTransform.localScale.x);
+		GameObject newFoodItem = Instantiate(spawnedItem, mp_SZ_rectTransform);
+		newFoodItem.transform.Translate((new Vector2(Random.Range(-mp_SZ_rectTransform.rect.width, mp_SZ_rectTransform.rect.width), Random.Range(-mp_SZ_rectTransform.rect.height, mp_SZ_rectTransform.rect.height)) / 2.0f + mp_SZ_rectTransform.anchoredPosition) * mp_canvasRectTransform.localScale.x);
 		
 		float foodSelection = Random.Range(0.0f, 1.0f);
 		NutrientLife.FoodType selectedType = NutrientLife.FoodType.LogFood;
@@ -113,8 +114,8 @@ public class NutrientSpawner : MonoBehaviour {
 
 	void SpawnWantedObject()
 	{
-		GameObject newFoodItem = Instantiate(spawnedItem, transform);
-		newFoodItem.transform.Translate((new Vector2(Random.Range(-rectTransform.rect.width, rectTransform.rect.width), Random.Range(-rectTransform.rect.height, rectTransform.rect.height)) / 2.0f + rectTransform.anchoredPosition) * canvasRectTransform.localScale.x);
+		GameObject newFoodItem = Instantiate(spawnedItem, mp_SZ_rectTransform);
+		newFoodItem.transform.Translate((new Vector2(Random.Range(-mp_SZ_rectTransform.rect.width, mp_SZ_rectTransform.rect.width), Random.Range(-mp_SZ_rectTransform.rect.height, mp_SZ_rectTransform.rect.height)) / 2.0f + mp_SZ_rectTransform.anchoredPosition) * mp_canvasRectTransform.localScale.x);
 		newFoodItem.GetComponent<NutrientLife>().SetFoodType(NutrientLife.FoodType.LogFood, wantedFood.currentWantedFood.sprite);
 	}
 }

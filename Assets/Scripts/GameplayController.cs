@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class GameplayController : MonoBehaviour {
+	public static GameplayController inst;
 
 	public bool PauseOnStart = false;
 	public UnityEvent unpauseEvents;
@@ -18,6 +19,13 @@ public class GameplayController : MonoBehaviour {
 	public GameState currentGameState = GameState.STANDARD;
 
 
+	private void Awake() {
+		if(inst==null) inst=this;
+		else {
+			Debug.Log("GameplayController destroyed on '"+gameObject.name+"'. Are there duplicates in the scene?");
+			DestroyImmediate(this);
+		}
+	}
 	void Start()
 	{
 		if (PauseOnStart)
