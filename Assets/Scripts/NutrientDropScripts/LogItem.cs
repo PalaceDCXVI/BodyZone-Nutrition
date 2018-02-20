@@ -35,7 +35,7 @@ public class LogItem : MonoBehaviour {
 			
 			//Find game object for the wanted food and tell it to go to the next item.
 			//TODO: for the love of god find a better way to do this.
-			((WantedFood)GameObject.FindObjectOfType(typeof(WantedFood))).NextFood();
+			((ND_RobotHandler)GameObject.FindObjectOfType(typeof(ND_RobotHandler))).NextFood();
 		}
 	}
 

@@ -28,7 +28,7 @@ public class NutrientBucket : MonoBehaviour {
      		// When clicking to the left of the robot
      		if (Input.mousePosition.x < rectTransform.position.x)
      		{
-				 Debug.Log ("Clicked Left Side");
+				//Debug.Log ("Clicked Left Side");
       			// Move robot left and slightly tilt
 				newRigidbody2D.AddForce(new Vector2(-moveSpeed * moveSpeedScale, 0));
 				newRigidbody2D.rotation = 20f;
@@ -38,7 +38,7 @@ public class NutrientBucket : MonoBehaviour {
 			// When clicking to the right of the robot
      		else if (Input.mousePosition.x > rectTransform.position.x)
      		{
-				Debug.Log ("Clicked Right Side");
+				//Debug.Log ("Clicked Right Side");
         		// Move Robot Right and slightly tilt
 				newRigidbody2D.AddForce(new Vector2(moveSpeed * moveSpeedScale, 0));
 				newRigidbody2D.rotation = -20f;

@@ -89,6 +89,9 @@ public class DialogueManager : MonoBehaviour {
 		
 		Debug.Log("End of convertstion.");
 		animator.SetBool("IsOpen", false);
+
+		//Start the nutrient drop game.
+		NutrientSpawner.inst.StartGame();
 	}
 	
 }

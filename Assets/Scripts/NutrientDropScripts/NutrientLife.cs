@@ -3,62 +3,44 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//Handles lifetime for the nutrients, along with the type of food that it is.
-public class NutrientLife : MonoBehaviour {
+/// <summary>
+/// Handles setting the food's image and keeping track of what type it is.
+/// </summary>
 
-	public enum FoodType
-	{
-		LogFood,
-		OtherFood,
-		NotFood
-	}
-
-	public FoodType foodType;
-
-	public float lifeTime = 5.0f;
-	private float currentLife;
-
+public class NutrientLife:MonoBehaviour{
+	public FOODTYPE m_foodType;			//Which type of food this is.	
+	public int		m_foodTypeIndex;	//Index into NutrientSpawner.mp_spawnerInfo lists of foods of exactly which food item this is.
+	
 	public float gravityCore = 8.0f;
 	public float gravityVariance = 1.0f;
 
-	void Start ()
-	{
-		currentLife = lifeTime;
-
+	void Start(){
 		GetComponent<Rigidbody2D>().gravityScale = gravityCore + Random.Range(-gravityVariance, +gravityVariance);
 	}
 	
-	void Update () 
-	{
-		currentLife -= Time.deltaTime;
-		if (currentLife <= 0.0f)
-		{
-			DestroyImmediate(gameObject);
-		}	
-	}
+	void Update(){}
 
-	public void SetFoodType(FoodType type, Sprite selectedSprite)
-	{
-		foodType = type;
+	public void SetFoodType(FOODTYPE _type, int _typeIndex, Sprite _selectedSprite){
+		m_foodType=_type;
+		m_foodTypeIndex=_typeIndex;
 
-		switch (foodType)
-		{
-			case FoodType.LogFood:
-			tag = "LogFood";
-			break;
+		switch(m_foodType){
+			case FOODTYPE.LOGFOOD:
+				tag="LogFood";
+				break;
 
-			case FoodType.NotFood:
-			tag = "OtherFood";
-			break;
+			case FOODTYPE.OTHERFOOD:
+				tag="OtherFood";
+				break;
 
-			case FoodType.OtherFood:
-			tag = "NotFood";
-			break;
+			case FOODTYPE.NOTFOOD:
+				tag="NotFood";
+				break;
 
 			default:
-			break;
+				break;
 		}
 
-		GetComponent<Image>().sprite = selectedSprite; 
+		GetComponent<Image>().sprite=_selectedSprite; 
 	}
 }

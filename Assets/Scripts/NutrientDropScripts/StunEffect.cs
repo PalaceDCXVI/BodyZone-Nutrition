@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class StunEffect : MonoBehaviour {
-
+public class StunEffect:MonoBehaviour{
 	public UnityEvent StunEffects;
 	public UnityEvent UnStunEffects;
 

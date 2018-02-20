@@ -3,62 +3,51 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//Collection component for the robot.
-//Handles detection and response when the robot comes into contact with a food.
-public class ItemCollector : MonoBehaviour {
+/// <summary>
+/// Collection component of the robot.
+/// Handles detection and response when the robot comes into contact with food.
+/// </summary>
 
-	public NutrientDropState dropState;
-
-	public WantedFood wantedFood;
+public class ItemCollector:MonoBehaviour {
 	public StunEffect robotStunEffect;
+	
+	void OnTriggerEnter2D(Collider2D other){
+		if(!NutrientSpawner.inst.m_active) return;
 
-	public GameObject goodOutroDialogueTrigger;
-	public GameObject badOutroDialogueTrigger;
-
-	//Collect the tiems that collide with the hit box and respond to them.
-	//This includes applying effects to the robot and tallying scores.
-	void OnTriggerEnter2D(Collider2D other)	
-	{
-		NutrientLife nutrientLife = other.GetComponent<NutrientLife>();
-		if (nutrientLife == null)
-		{
+		NutrientLife _nutrientLife=other.GetComponent<NutrientLife>();
+		if(_nutrientLife==null){
 			return;
 		}
 
-		Image otherImage = other.GetComponent<Image>();
-		if (otherImage == null)
-		{
-			return;
-		}
+		FOODTYPE _foodType=other.GetComponent<NutrientLife>().m_foodType;
+		int _foodIndex=other.GetComponent<NutrientLife>().m_foodTypeIndex;
 
-		NutrientLife.FoodType collidedFoodType = other.GetComponent<NutrientLife>().foodType;
-		switch (collidedFoodType)
-		{
-			case NutrientLife.FoodType.LogFood:
+		switch(_foodType){
+			case FOODTYPE.LOGFOOD:
+				if(_foodIndex==ND_RobotHandler.inst.m_wantedFoods[ND_RobotHandler.inst.m_wantedFoodIndex]) {
+					//The wanted food was eaten.
+					ND_RobotHandler.inst.NextFood();
 
-				if (otherImage.sprite == wantedFood.currentWantedFood.sprite)
-				{
-					//Set the wanted food as the next food.
-					wantedFood.NextFood();
-					
-					//Destoy collided object.
-					//Should be moved to trigger an animation where the robot 'eats' the food.
+					//Apply a robot eating animation.
+
+					//Destroy incoming food.
 					Destroy(other.gameObject);
 				}
-			break;
+				break;
 
-			case NutrientLife.FoodType.NotFood:
-			//Apply stun effect if the food acquired is not actually a food item.
+			case FOODTYPE.NOTFOOD:
+				//Apply stun effect if the food acquired is not actually a food item.
 				robotStunEffect.ApplyStun();
+				ND_RobotHandler.inst.EatBadFood();
 
 				Destroy(other.gameObject);
-			break;
+				break;
 
-			case NutrientLife.FoodType.OtherFood:
-			break;
+			case FOODTYPE.OTHERFOOD:
+				break;
 
 			default:
-			break;
+				break;
 		}
 	}
 }

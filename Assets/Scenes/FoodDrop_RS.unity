@@ -138,7 +138,7 @@ Prefab:
     - target: {fileID: 224226124687495088, guid: c3d87a666fff54444ac99f520582ec71,
         type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 224226124687495088, guid: c3d87a666fff54444ac99f520582ec71,
         type: 2}
@@ -178,7 +178,7 @@ Prefab:
     - target: {fileID: 224226124687495088, guid: c3d87a666fff54444ac99f520582ec71,
         type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 224226124687495088, guid: c3d87a666fff54444ac99f520582ec71,
         type: 2}
@@ -1428,7 +1428,7 @@ RectTransform:
   - {fileID: 1152348171}
   - {fileID: 412380465}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1445,7 +1445,6 @@ GameObject:
   - component: {fileID: 698557672}
   - component: {fileID: 698557675}
   - component: {fileID: 698557674}
-  - component: {fileID: 698557673}
   m_Layer: 0
   m_Name: WantedFood
   m_TagString: Untagged
@@ -1471,21 +1470,6 @@ RectTransform:
   m_AnchoredPosition: {x: 16, y: -7}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &698557673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 698557671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fc74249da2705145b197e8380037c47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nutrientSpawner: {fileID: 1311920963}
-  givenGoodFoods: []
-  currentWantedFood: {fileID: 0}
-  currentWantedFoodIndex: 0
 --- !u!114 &698557674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1610,7 +1594,7 @@ RectTransform:
   - {fileID: 775219774}
   - {fileID: 757297033}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1642,7 +1626,7 @@ RectTransform:
   m_GameObject: {fileID: 757297032}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.288617, y: 0.66953385, z: 0.66953385}
+  m_LocalScale: {x: 5.1422358, y: 0.66953385, z: 0.66953385}
   m_Children: []
   m_Father: {fileID: 699203324}
   m_RootOrder: 4
@@ -1711,7 +1695,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 775219773}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 580, y: -221, z: -8.727276}
+  m_LocalPosition: {x: 700, y: -221, z: -8.727276}
   m_LocalScale: {x: 14.437949, y: 443.1239, z: 1.5177871}
   m_Children: []
   m_Father: {fileID: 699203324}
@@ -1740,7 +1724,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 17, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &803532352
 GameObject:
@@ -1833,7 +1817,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 860959214}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -580, y: -227, z: -8.727276}
+  m_LocalPosition: {x: -700, y: -227, z: -8.727276}
   m_LocalScale: {x: 14.437949, y: 443.12387, z: 1.5177871}
   m_Children: []
   m_Father: {fileID: 699203324}
@@ -1862,7 +1846,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 17, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &935285858
 GameObject:
@@ -2241,7 +2225,7 @@ RectTransform:
   - {fileID: 118379323}
   - {fileID: 1697850711}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2600,7 +2584,7 @@ RectTransform:
   m_Children:
   - {fileID: 91723096}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2619,6 +2603,7 @@ GameObject:
   - component: {fileID: 1311920963}
   - component: {fileID: 1311920965}
   - component: {fileID: 1311920964}
+  - component: {fileID: 1311920966}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -2666,32 +2651,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_spawnZone: {fileID: 492702173}
-  spawnedItem: {fileID: 1923310784056918, guid: 56e7aafe83d9af74ab400dcc32384d8d,
+  m_pre_SpawnItem: {fileID: 1923310784056918, guid: 56e7aafe83d9af74ab400dcc32384d8d,
     type: 2}
-  foodQueue: {fileID: 0}
-  spawnRate: 1.5
-  spawnRandomness: 0.8
-  additionalSpawnChance: 0.45
-  TimeUntilNextItemSpawn: 1
-  SpawnTimeVariance: 0.3
-  WantedFoodTimer: 7
-  wantedFood: {fileID: 698557673}
-  LoggableFoodSelectionBarrier: 0.9
-  OtherFoodSelectionBarrier: 0.33
-  LogFoods:
-  - {fileID: 21300008, guid: a8955525075323a489229550c68846cf, type: 3}
-  - {fileID: 21300010, guid: a8955525075323a489229550c68846cf, type: 3}
-  - {fileID: 21300012, guid: a8955525075323a489229550c68846cf, type: 3}
-  - {fileID: 21300006, guid: a8955525075323a489229550c68846cf, type: 3}
-  - {fileID: 21300014, guid: a8955525075323a489229550c68846cf, type: 3}
-  OtherFoods:
-  - {fileID: 21300000, guid: a8955525075323a489229550c68846cf, type: 3}
-  - {fileID: 21300002, guid: a8955525075323a489229550c68846cf, type: 3}
-  - {fileID: 21300004, guid: a8955525075323a489229550c68846cf, type: 3}
-  NotFoods:
-  - {fileID: 21300000, guid: 77e252d85c594a5488d06db6b8fcf6dc, type: 3}
-  - {fileID: 21300000, guid: 12c67e4b32452dc4aa62e96d4e0d720d, type: 3}
-  - {fileID: 21300000, guid: c79b4dfdf2e0c6a4d8175c136e2886a8, type: 3}
+  m_active: 0
 --- !u!114 &1311920964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2886,6 +2848,21 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   currentGameState: 0
+--- !u!114 &1311920966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1311920960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc74249da2705145b197e8380037c47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_wantedFoods: 
+  m_wantedFoodIndex: 0
+  m_robotWantedFoodImage: {fileID: 698557674}
+  m_progressBarFill: {fileID: 803532354}
 --- !u!1 &1387818580
 GameObject:
   m_ObjectHideFlags: 0
@@ -3013,11 +2990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861f6753601a7ac4ea340a606207db23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropState: {fileID: 0}
-  wantedFood: {fileID: 698557673}
   robotStunEffect: {fileID: 1696562006}
-  goodOutroDialogueTrigger: {fileID: 1152348170}
-  badOutroDialogueTrigger: {fileID: 412380463}
 --- !u!222 &1392052429
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3262,7 +3235,7 @@ Prefab:
     - target: {fileID: 224137475508206000, guid: 6ce7c812f8c3de94380830f87a12e727,
         type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 224137475508206000, guid: 6ce7c812f8c3de94380830f87a12e727,
         type: 2}
@@ -3774,6 +3747,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1697850711}
+  - component: {fileID: 1697850712}
   m_Layer: 5
   m_Name: ProgressBar
   m_TagString: Untagged
@@ -3801,6 +3775,21 @@ RectTransform:
   m_AnchoredPosition: {x: -855, y: -42}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1697850712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1697850710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebc21d289822c08499185b991650ea88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_fill: {fileID: 803532354}
+  m_waveHeight: 0.02
+  m_waveSpeed: 3.25
+  m_transitionTime: 1
 --- !u!1 &1807067081
 GameObject:
   m_ObjectHideFlags: 0
@@ -4239,20 +4228,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e10665e29daa6a46a5b98d6a1ce964b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_logFoods:
-  - {fileID: 21300008, guid: a8955525075323a489229550c68846cf, type: 3}
-  - {fileID: 21300010, guid: a8955525075323a489229550c68846cf, type: 3}
-  - {fileID: 21300012, guid: a8955525075323a489229550c68846cf, type: 3}
-  - {fileID: 21300006, guid: a8955525075323a489229550c68846cf, type: 3}
-  - {fileID: 21300014, guid: a8955525075323a489229550c68846cf, type: 3}
-  m_otherFoods:
-  - {fileID: 21300000, guid: a8955525075323a489229550c68846cf, type: 3}
-  - {fileID: 21300002, guid: a8955525075323a489229550c68846cf, type: 3}
-  - {fileID: 21300004, guid: a8955525075323a489229550c68846cf, type: 3}
-  m_notFoods:
-  - {fileID: 21300000, guid: 77e252d85c594a5488d06db6b8fcf6dc, type: 3}
-  - {fileID: 21300000, guid: 12c67e4b32452dc4aa62e96d4e0d720d, type: 3}
-  - {fileID: 21300000, guid: c79b4dfdf2e0c6a4d8175c136e2886a8, type: 3}
   m_dialogues:
   - m_dialogueID: Intro
     m_speaker: Assistant
@@ -4311,6 +4286,33 @@ MonoBehaviour:
     - Looks like we caught too many foods with refined grains.
     - Let's try again!
     - Remember to pick foods that are made with whole grains.
+  m_spawnerInfo:
+    m_spawnGroupSize: 10
+    m_spawnRate: 1
+    m_spawnRandomness: 0.1
+    m_additionalSpawnChance: 0.2
+    m_logFoodPercent: 0.3
+    m_neededFoodChance: 0.7
+    m_notFoodPercent: 0.4
+    m_timeLimit: 0
+    m_neededItems: 5
+    m_needAllLogFoods: 1
+    m_logFoods:
+    - {fileID: 21300008, guid: a8955525075323a489229550c68846cf, type: 3}
+    - {fileID: 21300010, guid: a8955525075323a489229550c68846cf, type: 3}
+    - {fileID: 21300012, guid: a8955525075323a489229550c68846cf, type: 3}
+    - {fileID: 21300006, guid: a8955525075323a489229550c68846cf, type: 3}
+    - {fileID: 21300014, guid: a8955525075323a489229550c68846cf, type: 3}
+    m_otherFoods:
+    - {fileID: 21300000, guid: a8955525075323a489229550c68846cf, type: 3}
+    - {fileID: 21300002, guid: a8955525075323a489229550c68846cf, type: 3}
+    - {fileID: 21300004, guid: a8955525075323a489229550c68846cf, type: 3}
+    m_notFoods:
+    - {fileID: 21300000, guid: 77e252d85c594a5488d06db6b8fcf6dc, type: 3}
+    - {fileID: 21300000, guid: 12c67e4b32452dc4aa62e96d4e0d720d, type: 3}
+    - {fileID: 21300000, guid: c79b4dfdf2e0c6a4d8175c136e2886a8, type: 3}
+  m_robotInfo:
+    m_robotHealth: 0
 --- !u!4 &1958455837
 Transform:
   m_ObjectHideFlags: 0
@@ -4322,7 +4324,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2018698461
 GameObject:
