@@ -31,9 +31,7 @@ public class GameplayController : MonoBehaviour {
 		if (PauseOnStart)
 		{
 			pauseEvents.Invoke();
-		}
-
-		
+		}		
 	}
 
 	public void StartGame()

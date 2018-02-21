@@ -8,6 +8,7 @@ TagManager:
   - OtherFood
   - NotFood
   - LevelInfo
+  - SceneInfo
   layers:
   - Default
   - TransparentFX

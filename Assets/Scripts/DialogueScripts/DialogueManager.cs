@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class DialogueManager : MonoBehaviour {
 	public static DialogueManager inst;
+	public DIALOGUETYPE		m_dlgType;		//The type of dialogue currently being played.
 	
 	public Text nameText;
 	public Text dialogueText;
@@ -31,7 +33,9 @@ public class DialogueManager : MonoBehaviour {
 	}
 	public void StartDialogue (Dialogue dialogue, GameObject trigger)
 	{		
-		GameplayController.inst.StartDialogue();
+		//Debug.Log("DialogueManager.StartDialogue: "+dialogue.m_dialogueType.ToString());
+
+		m_dlgType=dialogue.m_dialogueType;
 		if(trigger!=null) currentTrigger = trigger;
 
 		animator.SetBool("IsOpen", true);
@@ -87,11 +91,20 @@ public class DialogueManager : MonoBehaviour {
 	{
 		if(currentTrigger!=null) currentTrigger.GetComponent<DialogueTrigger>().EndDialogue();
 		
-		Debug.Log("End of convertstion.");
+		//Debug.Log("End of conversation: "+m_dlgType.ToString());
 		animator.SetBool("IsOpen", false);
 
-		//Start the nutrient drop game.
-		NutrientSpawner.inst.StartGame();
+		//End of intro. Start the nutrient drop game.
+		if(m_dlgType==DIALOGUETYPE.LEVELINTRO) ND_GameController.inst.StartDropGame();
+
+		//Level success.
+		if(m_dlgType==DIALOGUETYPE.LEVELWIN) ND_GameController.inst.ReturnLevelSelect();
+
+		//Robot dead. Reload level.
+		if(m_dlgType==DIALOGUETYPE.LEVELFAILROBOTDEATH) ND_GameController.inst.ReloadScene(true);
+
+		//Time ran out. Reload level.
+		if(m_dlgType==DIALOGUETYPE.LEVELFIALTIMELIMIT) ND_GameController.inst.ReloadScene(true);
 	}
 	
 }

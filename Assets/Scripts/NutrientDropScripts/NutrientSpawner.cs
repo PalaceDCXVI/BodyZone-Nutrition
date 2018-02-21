@@ -70,7 +70,7 @@ public class NutrientSpawner:MonoBehaviour {
 			//Check if the time limit for the level has passed.
 			mp_levelTimer+=Time.deltaTime;
 			if((mp_spawnerInfo.m_timeLimit!=0)&&(mp_levelTimer>=mp_spawnerInfo.m_timeLimit)){
-				EndGameTimeOver();
+				ND_GameController.inst.EndLevelTimeLimit();
 			}
 
 			//Check if the robot has died from eating too many non-foods.
@@ -170,18 +170,6 @@ public class NutrientSpawner:MonoBehaviour {
 		//Reset the spawnTimer.
 		mp_spawnTimer=mp_spawnerInfo.m_spawnRate+Random.Range(-mp_spawnerInfo.m_spawnRandomness, +mp_spawnerInfo.m_spawnRandomness);
 	}
-	public void EndGameTimeOver(){
-		//End the spawner.
-		m_active=false;
-	}
-	public void EndGameSuccess() {
-		//Finished eating all wanted foods.
-		m_active=false;
-	}
-	public void EndGameRobotDead() {
-		//Robot died eating too many non-foods.
-		m_active=false;
-	}
 
 	public void SpawnFood(FOODTYPE _type){
 		//Spawn a food item.
@@ -266,5 +254,13 @@ public class NutrientSpawner:MonoBehaviour {
 			mp_spawnGroup.Add(_fillList[_selection]);
 			_fillList.RemoveAt(_selection);
 		}
+	}
+
+	public void Pause(bool _pause=true) {
+		m_active=!_pause;
+	}
+	public float GetLevelTimer() {
+		//Returns the time left in the game.
+		return mp_levelTimer;
 	}
 }
