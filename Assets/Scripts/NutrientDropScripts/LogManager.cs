@@ -6,20 +6,23 @@ using UnityEngine.Events;
 
 public class LogManager : MonoBehaviour {
 
-	private List<Image> logImages = new List<Image>();
-
-	public NutrientDropState dropState;
-
-	public GameObject dialogueTrigger;
-
+	public GameObject currentlyActiveTab = null;
 
 	// Use this for initialization
-	void Start () {
-		LogItem[] logItems = GetComponentsInChildren<LogItem>();
+	void Start () 
+	{
+	}
 
-		foreach (LogItem item in logItems)
+	public void SetActiveTab(GameObject selectedTab)
+	{
+		//Close current tab
+		if (currentlyActiveTab != null)
 		{
-			logImages.Add(item.GetComponent<Image>());
+			currentlyActiveTab.SetActive(false);
 		}
+
+		//Open selected tab
+		selectedTab.SetActive(true);
+		currentlyActiveTab = selectedTab;
 	}
 }

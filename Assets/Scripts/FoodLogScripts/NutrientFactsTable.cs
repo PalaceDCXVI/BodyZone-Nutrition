@@ -10,6 +10,7 @@ public class NutrientFactsTable : MonoBehaviour {
 	public struct NutrientFactsData
 	{
 		public int Calories;
+		public float fats;
 		public float SaturatedFats;
 		public float TransFats;
 		public float Carbohydrates;
