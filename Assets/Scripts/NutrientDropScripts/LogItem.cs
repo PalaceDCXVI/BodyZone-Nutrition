@@ -5,8 +5,12 @@ using UnityEngine.UI;
 
 public class LogItem : MonoBehaviour {
 
-	Image logImage;
-	Text logText;
+	public Image logImage;
+	public Image GlowOverlay;
+
+	bool hasBeenFound = false;
+	bool hasBeenClicked = false;
+	bool isClicked = false;
 
 	public string ItemText;
 	public string ItemDescription;
@@ -16,27 +20,52 @@ public class LogItem : MonoBehaviour {
 	public LogDatabase logDatabase;
 
 	// Use this for initialization
-	void Start () {
-		logImage = GetComponent<Image>();
-		logText = GetComponentInChildren<Text>();
+	void Start () 
+	{
 	}
 	
+	public void SetBeenClicked(bool clicked)
+	{
+		hasBeenClicked = clicked;
+
+		if (hasBeenClicked)
+		{
+			GlowOverlay.gameObject.SetActive(false);
+			logDatabase.SetItemClickedInDatabase(this);
+		}
+		else
+		{
+			GlowOverlay.gameObject.SetActive(true);
+		}
+	}
+
+	public void SetIsCurrentlyClicked(bool isCurrentlyClicked)
+	{
+		isClicked = isCurrentlyClicked;
+
+		if (isClicked)
+		{
+			//Dim the image.
+		}
+		else
+		{
+			//Set it to normal.
+		}
+	}
+
 	public void RevealItem()
 	{
-		//Reveal item in the log.
-		if (logImage != null)
-		{
-			logText.text = ItemText;
-			Animation animation = GetComponent<Animation>();
-			if (animation != null)
-			{
-				GetComponent<Animation>().Play();
-			}
-			
-			//Find game object for the wanted food and tell it to go to the next item.
-			//TODO: for the love of god find a better way to do this.
-			((WantedFood)GameObject.FindObjectOfType(typeof(WantedFood))).NextFood();
-		}
+		hasBeenFound = true;
+		logImage.color = Color.white;
+		GetComponent<Button>().interactable = true;
+	}
+
+	public void HideItem()
+	{
+		hasBeenFound = false;
+		logImage.color = Color.black;
+		GetComponent<Button>().interactable = false;
+		GlowOverlay.gameObject.SetActive(false);
 	}
 
 	//For use in the FoodDatabase scene, to pass the facts table ui prefab the data from this item.
@@ -46,7 +75,7 @@ public class LogItem : MonoBehaviour {
 		{
 			logDatabase.factsTable.SetData(ref factsData);
 			logDatabase.FoodNameText.text = ItemText;
-			logDatabase.FoodDescriptionText.text = ItemDescription;
+			logDatabase.FoodDescriptionText.text = ItemDescription.Replace(". ", ".\n").Replace("! ", "!\n");
 		}
 	}
 }
