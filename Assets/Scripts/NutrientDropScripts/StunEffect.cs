@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class StunEffect:MonoBehaviour{
+	public Color		m_stunColor;
 	public UnityEvent StunEffects;
 	public UnityEvent UnStunEffects;
 
@@ -23,10 +25,12 @@ public class StunEffect:MonoBehaviour{
 	{
 		StunEffects.Invoke();
 		isStunned = true;
+		GetComponent<Image>().color=m_stunColor;
 
 		yield return new WaitForSecondsRealtime(stunLength);
 
 		UnStunEffects.Invoke();
 		isStunned = false;
+		GetComponent<Image>().color=Color.white;
 	}
 }

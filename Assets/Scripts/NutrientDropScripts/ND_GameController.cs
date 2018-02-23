@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 
 public class ND_GameController:MonoBehaviour {
 	public static ND_GameController inst;
-	public ND_LevelInput			m_levelInput;		//Variables needed for the level. What types of food spawn, what dialogue is spoken, etc.
+	public LevelInput				m_levelInput;		//Variables needed for the level. What types of food spawn, what dialogue is spoken, etc.
 	public GameObject				m_pre_SceneInfo;	//Prefab for scene info.
 
 	public Animator					m_animDialogue;		//Animator for dialogue canvas.
@@ -46,7 +46,7 @@ public class ND_GameController:MonoBehaviour {
 			for(int i=0; i<_levelInfos.Length; i++) {
 				if(_levelInfos[i].name=="PassedLevelInfo") {
 					//Debug.Log("ND_GameController.FIndLevelInfo has found PassedLevelInfo.");
-					StartLevel(_levelInfos[i].GetComponent<ND_LevelInput>());
+					StartLevel(_levelInfos[i].GetComponent<LevelInput>());
 					_passedInfo=true;
 				}
 			}
@@ -54,7 +54,7 @@ public class ND_GameController:MonoBehaviour {
 				for(int i=0; i<_levelInfos.Length; i++) {
 					if(_levelInfos[i].name=="TestLevelInfo") {
 						//Debug.Log("ND_GameController.FIndLevelInfo has found TestLevelInfo.");
-						StartLevel(_levelInfos[i].GetComponent<ND_LevelInput>());
+						StartLevel(_levelInfos[i].GetComponent<LevelInput>());
 					}
 				}
 			}
@@ -76,19 +76,19 @@ public class ND_GameController:MonoBehaviour {
 			return _sceneInfos;
 		}
 	}
-	public void StartLevel(ND_LevelInput _levelInput){
+	public void StartLevel(LevelInput _levelInput){
 		//Call this immediately after loading the scene. Pass the LevelInput, and the level will start with those values.
 		m_levelInput=_levelInput;
 		NutrientBucket.inst.Pause();
 		NutrientSpawner.inst.Pause();
-		NutrientSpawner.inst.SetSpawnerInfo(m_levelInput.m_spawnerInfo);
+		NutrientSpawner.inst.SetSpawnerInfo(m_levelInput.m_foodDropLevelInput.m_spawnerInfo);
 		ND_RobotHandler.inst.SetWantedFoods();
 		ND_LevelTimer.inst.SetupTimer();
 
 		//Start the intro dialogue if it exists and isn't set to be skipped, else start the drop game.
 		if((FindSceneInfo()==null)||(!FindSceneInfo()[0].GetComponent<SceneInfo>().m_skipIntro)) {
 			if(FindDialogue(DIALOGUETYPE.FD_INTRO, false)!=null) {
-				DialogueManager.inst.StartConversation(FindDialogue(DIALOGUETYPE.FD_INTRO));
+				DialogueManager.inst.StartConversation(FindDialogue(DIALOGUETYPE.FD_INTRO), SpeechBubble.SPEECHBUBBLETYPE.ASSISTANT);
 				m_animDialogue.SetTrigger("Go_BottomIn");
 			}
 			else StartDropGame();
@@ -111,7 +111,7 @@ public class ND_GameController:MonoBehaviour {
 
 		//Start the success dialogue, else return to level select.
 		if(FindDialogue(DIALOGUETYPE.FD_WIN, false)!=null) {
-			DialogueManager.inst.StartConversation(FindDialogue(DIALOGUETYPE.FD_WIN));
+			DialogueManager.inst.StartConversation(FindDialogue(DIALOGUETYPE.FD_WIN), SpeechBubble.SPEECHBUBBLETYPE.ASSISTANT);
 			m_animDialogue.SetTrigger("Go_BottomIn");
 		}
 		else ReturnLevelSelect();
@@ -125,7 +125,7 @@ public class ND_GameController:MonoBehaviour {
 
 		//Start the dead robot dialogue, else reload the level.
 		if(FindDialogue(DIALOGUETYPE.FD_FAILROBOTDEATH, false)!=null) {
-			DialogueManager.inst.StartConversation(FindDialogue(DIALOGUETYPE.FD_FAILROBOTDEATH));
+			DialogueManager.inst.StartConversation(FindDialogue(DIALOGUETYPE.FD_FAILROBOTDEATH), SpeechBubble.SPEECHBUBBLETYPE.ASSISTANT);
 			m_animDialogue.SetTrigger("Go_BottomIn");
 		}
 		else ReloadScene(true);
@@ -139,7 +139,7 @@ public class ND_GameController:MonoBehaviour {
 
 		//Start the time out dialogue, else reload the level.
 		if(FindDialogue(DIALOGUETYPE.FD_FAILTIMELIMIT, false)!=null) {
-			DialogueManager.inst.StartConversation(FindDialogue(DIALOGUETYPE.FD_FAILTIMELIMIT));
+			DialogueManager.inst.StartConversation(FindDialogue(DIALOGUETYPE.FD_FAILTIMELIMIT), SpeechBubble.SPEECHBUBBLETYPE.ASSISTANT);
 			m_animDialogue.SetTrigger("Go_BottomIn");
 		}
 		else ReloadScene(true);
@@ -191,8 +191,8 @@ public class ND_GameController:MonoBehaviour {
 
 	public Conversation FindDialogue(DIALOGUETYPE _type, bool _logError=true) {
 		//Finds a loaded dialogue to use by type.
-		for(int i=0; i<m_levelInput.m_dialogues.Count; i++) {
-			if(m_levelInput.m_dialogues[i].m_dialogueType==_type) return m_levelInput.m_dialogues[i];
+		for(int i=0; i<m_levelInput.m_foodDropLevelInput.m_dialogues.Count; i++) {
+			if(m_levelInput.m_foodDropLevelInput.m_dialogues[i].m_dialogueType==_type) return m_levelInput.m_foodDropLevelInput.m_dialogues[i];
 		}
 
 		if(_logError) Debug.Log("ERROR: ND_GameController.FindDialogue can't find dialogue of type \""+_type.ToString()+"\"");

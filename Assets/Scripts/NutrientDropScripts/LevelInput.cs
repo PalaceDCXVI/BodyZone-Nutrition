@@ -20,6 +20,13 @@ public enum LEVELRATING {
 	STAR3
 }
 
+public enum LEVELTYPE {
+	NONE,
+	FOODDROP,
+	FOODQUIZ,
+	BOTH
+}
+
 [System.Serializable]
 public class ND_RobotInfo {
 	//Gameplay information related to the robot.
@@ -64,29 +71,52 @@ public class ND_SpawnerInfo{
 	public List<Sprite>		m_notFoods;
 }
 
-public class ND_LevelInput:MonoBehaviour{
+[System.Serializable]
+public class FoodDrop_LevelInput {
+	//Information for a Food Drop level.
 	[Tooltip("The different dialogues needed by the level.")]
 	public List<Conversation>	m_dialogues;
 	[Tooltip("Gameplay information used by the spawner to set how difficult the level is.")]
 	public ND_SpawnerInfo	m_spawnerInfo;
 	[Tooltip("Gameplay information related to the robot.")]
 	public ND_RobotInfo		m_robotInfo;
+}
+
+[System.Serializable]
+public class FoodQuiz_LevelInput {
+	//Information for a Food Quiz level.
+	[Tooltip("Whether to use the Food Drop Level Input's LogFoods as the Foods.")]
+	public bool				m_useFoodDropLogFoods=true;
+	[Tooltip("The different foods to choose from.")]
+	public List<Sprite>		m_foods;
+	[Tooltip("Indices into Foods of which foods the robot wants. In order.")]
+	public List<int>		m_foodOrder;
+	[Tooltip("The different dialogues needed by the level.")]
+	public List<Conversation>	m_dialogues;
+}
+
+public class LevelInput:MonoBehaviour{
+	[Tooltip("What type of level this is.")]
+	public LEVELTYPE			m_levelType;
+	[Tooltip("Information for a Food Drop level.")]
+	public FoodDrop_LevelInput	m_foodDropLevelInput;
+	[Tooltip("Information for a Food Quiz level.")]
+	public FoodQuiz_LevelInput	m_foodQuizLevelInput;
 	[Tooltip("Whether the level is (un)available/completed.")]
-	public LEVELSTATUS		m_levelStatus=LEVELSTATUS.UNAVAILABLE;
+	public LEVELSTATUS			m_levelStatus=LEVELSTATUS.UNAVAILABLE;
 	[Tooltip("What performance rating a completed level has.")]
-	public LEVELRATING		m_levelRating;
+	public LEVELRATING			m_levelRating;
 	[Tooltip("The name of the level.")]
-	public string			m_levelName="";
+	public string				m_levelName="";
 
 	void Start(){}
 	
 	void Update(){}
 
-	public void Copy(ND_LevelInput _base) {
+	public void Copy(LevelInput _base) {
 		//Copy over level input settings.
-		if(_base.m_dialogues!=null) m_dialogues=_base.m_dialogues;
-		m_spawnerInfo=_base.m_spawnerInfo;
-		m_robotInfo=_base.m_robotInfo;
+		m_foodDropLevelInput=_base.m_foodDropLevelInput;
+		m_foodQuizLevelInput=_base.m_foodQuizLevelInput;
 		m_levelStatus=_base.m_levelStatus;
 		m_levelRating=_base.m_levelRating;
 		m_levelName=_base.m_levelName;

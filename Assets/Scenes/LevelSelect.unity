@@ -2478,15 +2478,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7efdc1ed1ddf3e843943a25fa543903b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_dlgType: 0
-  m_convo:
-    m_dialogueType: 0
-    m_speaker: 
-    m_dialogue: []
-  m_T_name: {fileID: 78515974}
-  m_T_dialogue: {fileID: 1430261151}
-  m_speechBubble: {fileID: 455116218}
-  animator: {fileID: 1807067085}
+  m_speechBubbles:
+  - m_type: 1
+    m_T_name: {fileID: 78515974}
+    m_T_dialogue: {fileID: 1430261151}
+    m_speechBubble: {fileID: 455116218}
 --- !u!4 &1311920962
 Transform:
   m_ObjectHideFlags: 0
@@ -2542,14 +2538,20 @@ MonoBehaviour:
   m_animAssistant: {fileID: 1807067085}
   m_animWhiteboard: {fileID: 306849847}
   m_introConversation:
+    m_name: 
     m_dialogueType: 1
+    m_dialogueValue: -1
     m_speaker: Assistant
     m_dialogue:
     - m_inFlag: 0
+      m_inFlagValue: -1
       m_outFlag: 1
+      m_outFlagValue: -1
       m_sentence: Welcome back to the lab, Doc! Ready to start your research today?
     - m_inFlag: 0
+      m_inFlagValue: -1
       m_outFlag: 0
+      m_outFlagValue: -1
       m_sentence: Click on one of the levels to get started!
 --- !u!1 &1387818580
 GameObject:
@@ -3280,97 +3282,154 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e10665e29daa6a46a5b98d6a1ce964b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_dialogues:
-  - m_dialogueType: 2
-    m_speaker: Assistant
-    m_dialogue:
-    - m_inFlag: 0
-      m_outFlag: 0
-      m_sentence: Welcome back, Doc!
-    - m_inFlag: 0
-      m_outFlag: 0
-      m_sentence: Are you ready to research more foods?
-    - m_inFlag: 0
-      m_outFlag: 0
-      m_sentence: Today, I have some grain products set up for you.
-    - m_inFlag: 0
-      m_outFlag: 0
-      m_sentence: Unfortunately, I forgot to record which ones I added to the food
-        dropper...
-    - m_inFlag: 0
-      m_outFlag: 0
-      m_sentence: So, if you wouldn't mind collecting some food for me, I'll take
-        notes about each one!
-    - m_inFlag: 0
-      m_outFlag: 0
-      m_sentence: Touch to the left or right to move the robot.
-    - m_inFlag: 0
-      m_outFlag: 0
-      m_sentence: Oh, by the way...
-    - m_inFlag: 0
-      m_outFlag: 0
-      m_sentence: Our food dropper is still malfunctioning, so try to avoid any junk
-        that falls!
-    - m_inFlag: 0
-      m_outFlag: 0
-      m_sentence: Good luck!
-  - m_dialogueType: 3
-    m_speaker: Assistant
-    m_dialogue:
-    - m_inFlag: 0
-      m_outFlag: 0
-      m_sentence: Wow, I'm sure glad I have you, Doc!
-    - m_inFlag: 0
-      m_outFlag: 0
-      m_sentence: That would have taken me at least twice as long...
-    - m_inFlag: 0
-      m_outFlag: 0
-      m_sentence: Let's take a look at the notes I made about each food!
-  - m_dialogueType: 4
-    m_speaker: Assistant
-    m_dialogue:
-    - m_inFlag: 0
-      m_outFlag: 0
-      m_sentence: Oh no, the robot ate too much junk!
-    - m_inFlag: 0
-      m_outFlag: 0
-      m_sentence: Let's try that again.
-  - m_dialogueType: 5
-    m_speaker: Assistant
-    m_dialogue:
-    - m_inFlag: 0
-      m_outFlag: 0
-      m_sentence: Oh no, we ran out of time!
-    - m_inFlag: 0
-      m_outFlag: 0
-      m_sentence: Let's try that again.
-  m_spawnerInfo:
-    m_spawnGroupSize: 10
-    m_spawnRate: 1
-    m_spawnRandomness: 0.1
-    m_additionalSpawnChance: 0.2
-    m_logFoodPercent: 0.3
-    m_neededFoodChance: 0.5
-    m_notFoodPercent: 0.4
-    m_timeLimit: 0
-    m_neededItems: 5
-    m_needAllLogFoods: 1
-    m_logFoods:
-    - {fileID: 21300006, guid: a8955525075323a489229550c68846cf, type: 3}
-    - {fileID: 21300008, guid: a8955525075323a489229550c68846cf, type: 3}
-    - {fileID: 21300010, guid: a8955525075323a489229550c68846cf, type: 3}
-    - {fileID: 21300012, guid: a8955525075323a489229550c68846cf, type: 3}
-    - {fileID: 21300014, guid: a8955525075323a489229550c68846cf, type: 3}
-    m_otherFoods:
-    - {fileID: 21300000, guid: a8955525075323a489229550c68846cf, type: 3}
-    - {fileID: 21300002, guid: a8955525075323a489229550c68846cf, type: 3}
-    - {fileID: 21300004, guid: a8955525075323a489229550c68846cf, type: 3}
-    m_notFoods:
-    - {fileID: 21300000, guid: 77e252d85c594a5488d06db6b8fcf6dc, type: 3}
-    - {fileID: 21300000, guid: c79b4dfdf2e0c6a4d8175c136e2886a8, type: 3}
-    - {fileID: 21300000, guid: 12c67e4b32452dc4aa62e96d4e0d720d, type: 3}
-  m_robotInfo:
-    m_robotHealth: 0
+  m_levelType: 1
+  m_foodDropLevelInput:
+    m_dialogues:
+    - m_name: Intro
+      m_dialogueType: 2
+      m_dialogueValue: 0
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Welcome back, Doc!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Are you ready to research more foods?
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Today, I have some grain products set up for you.
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Unfortunately, I forgot to record which ones I added to the food
+          dropper...
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: So, if you wouldn't mind collecting some food for me, I'll take
+          notes about each one!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Touch to the left or right to move the robot.
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Oh, by the way...
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Our food dropper is still malfunctioning, so try to avoid any
+          junk that falls!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Good luck!
+    - m_name: Win
+      m_dialogueType: 3
+      m_dialogueValue: 0
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Wow, I'm sure glad I have you, Doc!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: That would have taken me at least twice as long...
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Let's take a look at the notes I made about each food!
+    - m_name: Fail Robot Death
+      m_dialogueType: 4
+      m_dialogueValue: 0
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Hmm... something's not right...
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Looks like we caught too many foods with refined grains.
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Let's try again!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Remember to pick food that are made with whole grains.
+    - m_name: Fail Time Limit
+      m_dialogueType: 5
+      m_dialogueValue: 0
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Oh no, we ran out of time!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Let's try again.
+    m_spawnerInfo:
+      m_spawnGroupSize: 10
+      m_spawnRate: 1
+      m_spawnRandomness: 0.1
+      m_additionalSpawnChance: 0.2
+      m_logFoodPercent: 0.3
+      m_neededFoodChance: 0.5
+      m_notFoodPercent: 0.4
+      m_timeLimit: 0
+      m_neededItems: 5
+      m_needAllLogFoods: 1
+      m_logFoods:
+      - {fileID: 21300006, guid: a8955525075323a489229550c68846cf, type: 3}
+      - {fileID: 21300008, guid: a8955525075323a489229550c68846cf, type: 3}
+      - {fileID: 21300010, guid: a8955525075323a489229550c68846cf, type: 3}
+      - {fileID: 21300012, guid: a8955525075323a489229550c68846cf, type: 3}
+      - {fileID: 21300014, guid: a8955525075323a489229550c68846cf, type: 3}
+      m_otherFoods:
+      - {fileID: 21300000, guid: a8955525075323a489229550c68846cf, type: 3}
+      - {fileID: 21300002, guid: a8955525075323a489229550c68846cf, type: 3}
+      - {fileID: 21300004, guid: a8955525075323a489229550c68846cf, type: 3}
+      m_notFoods:
+      - {fileID: 21300000, guid: 77e252d85c594a5488d06db6b8fcf6dc, type: 3}
+      - {fileID: 21300000, guid: 12c67e4b32452dc4aa62e96d4e0d720d, type: 3}
+      - {fileID: 21300000, guid: c79b4dfdf2e0c6a4d8175c136e2886a8, type: 3}
+    m_robotInfo:
+      m_robotHealth: 0
+  m_foodQuizLevelInput:
+    m_useFoodDropLogFoods: 1
+    m_foods: []
+    m_foodOrder: 
+    m_dialogues: []
   m_levelStatus: 2
   m_levelRating: 0
   m_levelName: Grains 1

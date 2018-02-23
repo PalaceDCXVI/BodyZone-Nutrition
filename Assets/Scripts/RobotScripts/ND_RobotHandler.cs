@@ -67,7 +67,6 @@ public class ND_RobotHandler:MonoBehaviour{
 	}
 
 	public void Update(){
-		Debug.Log(NutrientBucket.inst.GetMoveSpeed());
 		m_animRobot.SetFloat("MoveSpeed", NutrientBucket.inst.GetMoveSpeed());
 	}
 
@@ -108,7 +107,7 @@ public class ND_RobotHandler:MonoBehaviour{
 		//A non-food was eaten.
 		m_badFoodsEaten++;
 
-		if((ND_GameController.inst.m_levelInput.m_robotInfo.m_robotHealth>0)&&(m_badFoodsEaten>=ND_GameController.inst.m_levelInput.m_robotInfo.m_robotHealth)){
+		if((ND_GameController.inst.m_levelInput.m_foodDropLevelInput.m_robotInfo.m_robotHealth>0)&&(m_badFoodsEaten>=ND_GameController.inst.m_levelInput.m_foodDropLevelInput.m_robotInfo.m_robotHealth)){
 			//Robot has eaten too much trash. Game over.
 			ND_GameController.inst.EndLevelRobotDead();
 		}

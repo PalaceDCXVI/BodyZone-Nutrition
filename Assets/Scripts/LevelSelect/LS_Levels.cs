@@ -10,7 +10,7 @@ public class LS_Levels:MonoBehaviour{
 	public static LS_Levels inst;
 	[Tooltip("Automatically fill the level list based on the children objects. Child order determines level order.")]
 	public bool					m_autoPopulate;
-	public List<ND_LevelInput>	m_levels;   //All the levels of the game.
+	public List<LevelInput>	m_levels;   //All the levels of the game.
 	
 	private void Awake() {
 		if(inst==null) inst=this;
@@ -21,12 +21,12 @@ public class LS_Levels:MonoBehaviour{
 
 		//Auto populate the level list if needed.
 		if(m_autoPopulate) {
-			if(m_levels==null) m_levels=new List<ND_LevelInput>();
+			if(m_levels==null) m_levels=new List<LevelInput>();
 			m_levels.Clear();
 
 			for(int i=0; i<transform.childCount; i++) {
-				if(transform.GetChild(i).GetComponent<ND_LevelInput>()!=null) {
-					m_levels.Add(transform.GetChild(i).GetComponent<ND_LevelInput>());
+				if(transform.GetChild(i).GetComponent<LevelInput>()!=null) {
+					m_levels.Add(transform.GetChild(i).GetComponent<LevelInput>());
 				}
 			}
 		}

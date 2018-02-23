@@ -15,7 +15,7 @@ public class NutrientLife:MonoBehaviour{
 	public float gravityVariance = 1.0f;
 
 	void Start(){
-		GetComponent<Rigidbody2D>().gravityScale = gravityCore + Random.Range(-gravityVariance, +gravityVariance);
+		if(GetComponent<Rigidbody>()) GetComponent<Rigidbody2D>().gravityScale = gravityCore + Random.Range(-gravityVariance, +gravityVariance);
 	}
 	
 	void Update(){}

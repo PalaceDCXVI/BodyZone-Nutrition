@@ -75,7 +75,7 @@ public class LS_LevelButtonHandler:MonoBehaviour{
 		if(mp_levelIndex+6<LS_Levels.inst.m_levels.Count) m_moveButtons[1].SetActive(true);
 		else m_moveButtons[1].SetActive(false);
 	}
-	public void SetButton(GameObject _button, ND_LevelInput _info) {
+	public void SetButton(GameObject _button, LevelInput _info) {
 		//Set a button's name, image, and star rating.
 		
 		//Button's name.

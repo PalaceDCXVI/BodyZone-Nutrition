@@ -30,7 +30,7 @@ public class ND_LevelTimer:MonoBehaviour {
 
 	public void SetupTimer() {
 		//Shows the timer and activates the updating.
-		m_timeLimit=ND_GameController.inst.m_levelInput.m_spawnerInfo.m_timeLimit;
+		m_timeLimit=ND_GameController.inst.m_levelInput.m_foodDropLevelInput.m_spawnerInfo.m_timeLimit;
 
 		if(m_timeLimit<=0) {
 			m_timer.SetActive(false);

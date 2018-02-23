@@ -30,12 +30,12 @@ public class LS_LevelSelectHandler:MonoBehaviour{
 	private void SetupLevelSelect() {
 		//Populates the list of level buttons.
 		LS_LevelButtonHandler.inst.PopulateButtonList();
-		DialogueManager.inst.StartConversation(m_introConversation);
+		DialogueManager.inst.StartConversation(m_introConversation, SpeechBubble.SPEECHBUBBLETYPE.ASSISTANT);
 	}
-	public void StartFoodDrop(ND_LevelInput _levelInput) {
+	public void StartFoodDrop(LevelInput _levelInput) {
 		//Move on to the Food Drop game with the _levelInput.
-		m_levelInputObject.AddComponent<ND_LevelInput>();
-		m_levelInputObject.GetComponent<ND_LevelInput>().Copy(_levelInput);
+		m_levelInputObject.AddComponent<LevelInput>();
+		m_levelInputObject.GetComponent<LevelInput>().Copy(_levelInput);
 
 		SceneManager.LoadScene("FoodDrop_RS");
 	}
