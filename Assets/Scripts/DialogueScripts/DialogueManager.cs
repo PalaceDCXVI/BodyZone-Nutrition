@@ -3,94 +3,94 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DialogueManager : MonoBehaviour {
+/// <summary>
+/// Handles playing a Conversation.
+/// </summary>
+
+public class DialogueManager:MonoBehaviour{
 	public static DialogueManager inst;
 	public DIALOGUETYPE		m_dlgType;		//The type of dialogue currently being played.
-	
-	public Text nameText;
-	public Text dialogueText;
+	public Conversation		m_convo;        //Local copy of the conversation currently being played.
+	private int				mp_dlgIndex;		//Index into the list of DialogueLines of which one is currently shown.
+
+	//Shown information.
+	public Text				m_T_name;		//Text of the speaker name.
+	public Text				m_T_dialogue;   //Text of the spoken sentence.
+
 	public Animator animator;
-	public GameObject gameCanvas;
-	private Queue<string> sentences;
-
-	private GameObject currentTrigger;
-
-
-
-	private void Awake() {
+	
+	private void Awake(){
 		if(inst==null) inst=this;
 		else {
 			Debug.Log("DialogueManager destroyed on '"+gameObject.name+"'. Are there duplicates in the scene?");
 			DestroyImmediate(this);
 		}
 	}
-	void Start () {
-		sentences = new Queue<string>();		
+	void Start(){
+		mp_dlgIndex=0;	
 	}
 
-	public void StartDialogue(Dialogue _dialogue) {
-		StartDialogue(_dialogue, null);
+	public void Update() {
+		if(Input.GetKeyDown(KeyCode.Alpha3)) animator.SetTrigger("Go_HideRight");
+		if(Input.GetKeyDown(KeyCode.Alpha4)) animator.SetTrigger("Go_PullWhiteboard");
 	}
-	public void StartDialogue (Dialogue dialogue, GameObject trigger)
-	{		
-		//Debug.Log("DialogueManager.StartDialogue: "+dialogue.m_dialogueType.ToString());
 
-		m_dlgType=dialogue.m_dialogueType;
-		if(trigger!=null) currentTrigger = trigger;
+	public void StartConversation(Conversation _convo){
+		//Debug.Log("DialogueManager.StartConversation("+_convo.m_dialogueType.ToString()+").");
+		m_convo=_convo;
+		m_dlgType=m_convo.m_dialogueType;
+		m_T_name.text=_convo.m_speaker;
+		mp_dlgIndex=-1;
 
 		animator.SetBool("IsOpen", true);
-		
-		nameText.text = dialogue.m_speaker;
-		
-		sentences.Clear();
-		
-		foreach (string sentence in dialogue.sentences)
-		{
-			sentences.Enqueue(sentence);			
-		}
 
 		DisplayNextSentence();
 	}
+	public void DisplayNextSentence(){
+		//Check if any out flags need to be done.
+		if((mp_dlgIndex>=0)&&(m_convo.m_dialogue[mp_dlgIndex].m_outFlag!=LINEFLAG.NONE)){
 
-	public void DisplayNextSentence ()
-	{
-		if (sentences.Count == 0)
-		{
-			EndDialogue();
+		}
+
+		//Increment index and play sentence.
+		if(mp_dlgIndex+1<m_convo.m_dialogue.Count) {
+			mp_dlgIndex++;
+
+			m_T_dialogue.text=m_convo.m_dialogue[mp_dlgIndex].m_sentence;
+
+			//Take care of any in flags.
+			if(m_convo.m_dialogue[mp_dlgIndex].m_inFlag!=LINEFLAG.NONE){
+
+			}
+		}
+		else {
+			EndConversation();
 			return;
 		}
-
-		string sentence = sentences.Dequeue();
-		dialogueText.text = sentence;
-		
+				
 		// Animate the sentence into the dialogue box
 		// but stop the original corountine if the player clicks continue again
-		//StopCoroutine("AnimateSentence");
 		StopAllCoroutines();
-		StartCoroutine(AnimateSentence(sentence));
+		StartCoroutine(AnimateSentence(m_T_dialogue.text));
 	}
 
-	IEnumerator AnimateSentence (string sentence)
-	{
-		dialogueText.text = sentence;
-		string tempDialogue = "";
+	private IEnumerator AnimateSentence(string _sentence){
+		//Type out each letter of the sentence over time.
+		m_T_dialogue.text=_sentence;
+		string tempDialogue="";
 
-		for (int i = 0; i < sentence.Length + 1; i++) //This sets the color to black and moves a clear color flag through the text, giving the illusion of dialogue writing.
-		{
-			dialogueText.text = sentence;
-			dialogueText.color = Color.black;
-			tempDialogue = dialogueText.text.Insert(i, "<color=#00000000>");
+		//This sets the color to black and moves a clear color flag through the text, giving the illusion of dialogue writing.
+		for (int i=0; i<_sentence.Length+1; i++){
+			m_T_dialogue.text = _sentence;
+			m_T_dialogue.color = Color.black;
+			tempDialogue = m_T_dialogue.text.Insert(i, "<color=#00000000>");
 			tempDialogue += "</color>";
-			dialogueText.text = tempDialogue;			
+			m_T_dialogue.text = tempDialogue;			
 			yield return null;
 		}
-
 	}
 
-	void EndDialogue()
-	{
-		if(currentTrigger!=null) currentTrigger.GetComponent<DialogueTrigger>().EndDialogue();
-		
+	public void EndConversation(){		
 		//Debug.Log("End of conversation: "+m_dlgType.ToString());
 		animator.SetBool("IsOpen", false);
 
@@ -106,5 +106,6 @@ public class DialogueManager : MonoBehaviour {
 		//Time ran out. Reload level.
 		if(m_dlgType==DIALOGUETYPE.LEVELFIALTIMELIMIT) ND_GameController.inst.ReloadScene(true);
 	}
+
 	
 }

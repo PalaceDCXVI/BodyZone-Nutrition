@@ -86,7 +86,7 @@ public class ND_GameController:MonoBehaviour {
 		//Start the intro dialogue if it exists and isn't set to be skipped, else start the drop game.
 		if((FindSceneInfo()==null)||(!FindSceneInfo()[0].GetComponent<SceneInfo>().m_skipIntro)) {
 			if(FindDialogue(DIALOGUETYPE.LEVELINTRO, false)!=null) {
-				DialogueManager.inst.StartDialogue(FindDialogue(DIALOGUETYPE.LEVELINTRO));
+				DialogueManager.inst.StartConversation(FindDialogue(DIALOGUETYPE.LEVELINTRO));
 			}
 			else StartDropGame();
 		}			
@@ -108,7 +108,7 @@ public class ND_GameController:MonoBehaviour {
 
 		//Start the success dialogue, else return to level select.
 		if(FindDialogue(DIALOGUETYPE.LEVELWIN, false)!=null)
-			DialogueManager.inst.StartDialogue(FindDialogue(DIALOGUETYPE.LEVELWIN));
+			DialogueManager.inst.StartConversation(FindDialogue(DIALOGUETYPE.LEVELWIN));
 		else ReturnLevelSelect();
 	}
 	public void EndLevelRobotDead(){
@@ -120,7 +120,7 @@ public class ND_GameController:MonoBehaviour {
 
 		//Start the dead robot dialogue, else reload the level.
 		if(FindDialogue(DIALOGUETYPE.LEVELFAILROBOTDEATH, false)!=null)
-			DialogueManager.inst.StartDialogue(FindDialogue(DIALOGUETYPE.LEVELFAILROBOTDEATH));
+			DialogueManager.inst.StartConversation(FindDialogue(DIALOGUETYPE.LEVELFAILROBOTDEATH));
 		else ReloadScene(true);
 	}
 	public void EndLevelTimeLimit() {
@@ -132,7 +132,7 @@ public class ND_GameController:MonoBehaviour {
 
 		//Start the time out dialogue, else reload the level.
 		if(FindDialogue(DIALOGUETYPE.LEVELFIALTIMELIMIT, false)!=null)
-			DialogueManager.inst.StartDialogue(FindDialogue(DIALOGUETYPE.LEVELFIALTIMELIMIT));
+			DialogueManager.inst.StartConversation(FindDialogue(DIALOGUETYPE.LEVELFIALTIMELIMIT));
 		else ReloadScene(true);
 	}
 	public void ReturnLevelSelect() {
@@ -180,7 +180,7 @@ public class ND_GameController:MonoBehaviour {
 		}
 	}
 
-	public Dialogue FindDialogue(DIALOGUETYPE _type, bool _logError=true) {
+	public Conversation FindDialogue(DIALOGUETYPE _type, bool _logError=true) {
 		//Finds a loaded dialogue to use by type.
 		for(int i=0; i<m_levelInput.m_dialogues.Count; i++) {
 			if(m_levelInput.m_dialogues[i].m_dialogueType==_type) return m_levelInput.m_dialogues[i];

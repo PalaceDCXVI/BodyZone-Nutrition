@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 78515975}
   - component: {fileID: 78515974}
   m_Layer: 0
-  m_Name: Name
+  m_Name: T_Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -440,17 +440,17 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 78515972}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1807067082}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 250, y: -29}
-  m_SizeDelta: {x: 460, y: 30}
+  m_AnchoredPosition: {x: 1086.3528, y: -330.00537}
+  m_SizeDelta: {x: 468.18, y: 56.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &78515974
 MonoBehaviour:
@@ -465,20 +465,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 22
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: c40792f2e481e3d458e46da1bee1c946, type: 3}
+    m_FontSize: 70
+    m_FontStyle: 2
     m_BestFit: 0
-    m_MinSize: 9
-    m_MaxSize: 53
-    m_Alignment: 0
+    m_MinSize: 7
+    m_MaxSize: 70
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -797,72 +797,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1d7ad75325c38d243851f3702116c906, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &355990451
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 355990452}
-  - component: {fileID: 355990453}
-  m_Layer: 0
-  m_Name: LogScreenDialogue
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &355990452
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 355990451}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 97, y: 28, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 690481989}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &355990453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 355990451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 611a881787fb2b14caa9e821917cc008, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    m_dialogueType: 0
-    m_speaker: 
-    sentences:
-    - Here is where you'll find the information about all the food you collect.
-    - Tap of any of the foods for more information!
-    - When you're ready to continue your research hit the continue button.
-    - One more thing...
-    - What do ghosts put on bagels?
-    - SCREAM CHEESE
-  dialogueEnd:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &395507932
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,114 +964,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!1 &412380463
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 412380465}
-  - component: {fileID: 412380464}
-  m_Layer: 0
-  m_Name: BadOutroDialogue
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &412380464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 412380463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 611a881787fb2b14caa9e821917cc008, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    m_dialogueType: 0
-    m_speaker: 
-    sentences:
-    - Hmm... something's not right...
-    - Looks like we caught too many foods with refined grains.
-    - Let's try again!
-    - Remember to pick food that are made with whole grains.
-  dialogueEnd:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: StartInput
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1866700632}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!4 &412380465
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 412380463}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 97, y: 28, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 690481989}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &443813876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1423,7 +1249,7 @@ GameObject:
   - component: {fileID: 682639859}
   - component: {fileID: 682639861}
   m_Layer: 0
-  m_Name: Character
+  m_Name: I_Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1435,16 +1261,16 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 682639857}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 2.3976412, y: 2.3976426, z: 2.3976426}
   m_Children: []
   m_Father: {fileID: 1807067082}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -407, y: -32.720245}
+  m_AnchoredPosition: {x: -326.54724, y: -180.20534}
   m_SizeDelta: {x: 119, y: 248}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &682639859
@@ -1460,7 +1286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1503,13 +1329,14 @@ GameObject:
   - component: {fileID: 690481988}
   - component: {fileID: 690481987}
   - component: {fileID: 690481986}
+  - component: {fileID: 690481990}
   m_Layer: 0
-  m_Name: DialogueCanvas
+  m_Name: CG_Dialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &690481986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1578,12 +1405,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1807067082}
-  - {fileID: 1585413032}
-  - {fileID: 1904130938}
-  - {fileID: 355990452}
-  - {fileID: 1831126133}
-  - {fileID: 1152348171}
-  - {fileID: 412380465}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1592,6 +1413,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!225 &690481990
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 690481985}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &803532352
 GameObject:
   m_ObjectHideFlags: 0
@@ -1688,63 +1520,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_dialogues:
-  - m_dialogueType: 1
-    m_speaker: Assistant
-    sentences:
-    - Welcome back Doc!
-    - Are you ready to research more foods?
-    - Today, I have some grain products set up for you.
-    - Unfortunately, I forgot to record which ones I added to the food dropper...
-    - So, if you wouldn't mind collecting some food for me, I'll take notes about
-      each one!
-    - Touch to the left or right to move the robot.
-    - Oh, by the way...
-    - Our food dropper is still malfunctioning, so try to avoid any junk that falls!
-    - Good luck!
-  - m_dialogueType: 2
-    m_speaker: Assistant
-    sentences:
-    - Wow, I'm sure glad I have you Doc!
-    - That would have taken me at least twice as long...
-    - Let's take a look at the notes I made about each food!
   - m_dialogueType: 0
-    m_speaker: Assistant
-    sentences:
-    - Here is where you'll find the information about all the food you collect.
-    - Tap on any of the foods for more information!
-    - When you're ready to continue your rresearch, hit the continue button.
-    - One more thing...
-    - What do ghosts put on bagels?
-    - SCREAM CHEESE
+    m_speaker: 
+    m_dialogue: []
   - m_dialogueType: 0
-    m_speaker: Assistant
-    sentences:
-    - According to my data, foods with whole grains are better for you than food made
-      with refined grains.
-    - Let's test out this theory! Collect 10 foods, and try to choose foods made with
-      whole grains.
-    - 'These foods include: whole wheat bread, whole grain cereal, and whole grain
-      muffins!'
+    m_speaker: 
+    m_dialogue: []
   - m_dialogueType: 0
-    m_speaker: Assistant
-    sentences:
-    - Wow Doc! You made some great choices.
-    - My readings are telling me that these so called "whole grain foods" contain
-      much more fiber!
-    - Fiber helps you stay feeling full longer and gives you longer lasting energy!
-    - '*whispers* it also helps you poop'
-    - Anywayyyy...
-    - Thanks for coming in today Doc! I think we made a lot of progress...
-    - '!!!!!!!!!'
-    - Look at the time! I've got a birdwatching lesson in 15 minutes!
-    - Seeya later Doc!
+    m_speaker: 
+    m_dialogue: []
   - m_dialogueType: 0
-    m_speaker: Assistant
-    sentences:
-    - Hmm... something's not right...
-    - Looks like we caught too many foods with refined grains.
-    - Let's try again!
-    - Remember to pick foods that are made with whole grains.
+    m_speaker: 
+    m_dialogue: []
+  - m_dialogueType: 0
+    m_speaker: 
+    m_dialogue: []
+  - m_dialogueType: 0
+    m_speaker: 
+    m_dialogue: []
   m_spawnerInfo:
     m_spawnGroupSize: 10
     m_spawnRate: 1
@@ -1788,6 +1581,74 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &896524518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 896524519}
+  - component: {fileID: 896524521}
+  - component: {fileID: 896524520}
+  m_Layer: 0
+  m_Name: I_TalkBubble
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &896524519
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 896524518}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0004725, y: 1.0004725, z: 1.0004725}
+  m_Children: []
+  m_Father: {fileID: 1807067082}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 141.45273, y: 91.79466}
+  m_SizeDelta: {x: 631, y: 348}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &896524520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 896524518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 90485daee0d08784ba1cf42fc238e616, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &896524521
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 896524518}
 --- !u!1 &935285858
 GameObject:
   m_ObjectHideFlags: 0
@@ -1908,7 +1769,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 355990453}
+      - m_Target: {fileID: 0}
         m_MethodName: TriggerDialogue
         m_Mode: 1
         m_Arguments:
@@ -2056,8 +1917,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_FontSize: 23
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -2172,87 +2033,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1152348170
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1152348171}
-  - component: {fileID: 1152348172}
-  m_Layer: 0
-  m_Name: GoodOutroDialogue
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1152348171
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1152348170}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 97, y: 28, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 690481989}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1152348172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1152348170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 611a881787fb2b14caa9e821917cc008, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    m_dialogueType: 0
-    m_speaker: 
-    sentences:
-    - Wow Doc! You made some great choices.
-    - My readings are telling me that these so called "whole grain foods" contain
-      much more fiber!
-    - Fiber helps you stay feeling full longer and gives you longer lasting energy!
-    - '*whipsers* it also helps you poop'
-    - Anywayyyy...
-    - Thanks for coming in today Doc! I think we made a lot of progress...
-    - '!!!!!!!!!!'
-    - Look at the time! I've got a birdwatching lesson in 15 minutes!
-    - Seeya later Doc!
-  dialogueEnd:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 118379318}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1866700632}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1179865068
 GameObject:
   m_ObjectHideFlags: 0
@@ -2345,11 +2125,11 @@ RectTransform:
   m_Children:
   - {fileID: 1111040432}
   m_Father: {fileID: 1807067082}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 164.5, y: -80.5}
+  m_AnchoredPosition: {x: 323.45273, y: -17.205336}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1224939416
@@ -2677,16 +2457,19 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1311920960}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7efdc1ed1ddf3e843943a25fa543903b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_dlgType: 0
-  nameText: {fileID: 78515974}
-  dialogueText: {fileID: 1430261151}
+  m_convo:
+    m_dialogueType: 0
+    m_speaker: 
+    m_dialogue: []
+  m_T_name: {fileID: 78515974}
+  m_T_dialogue: {fileID: 1430261151}
   animator: {fileID: 1807067085}
-  gameCanvas: {fileID: 0}
 --- !u!4 &1311920962
 Transform:
   m_ObjectHideFlags: 0
@@ -2715,14 +2498,14 @@ MonoBehaviour:
   m_pre_B_Level: {fileID: 1962130968126930, guid: 1d7ad75325c38d243851f3702116c906,
     type: 2}
   m_levelStars:
-  - {fileID: 21300006, guid: 823e43ecec78dbe4a97853de5c7dc261, type: 3}
-  - {fileID: 21300004, guid: 823e43ecec78dbe4a97853de5c7dc261, type: 3}
-  - {fileID: 21300002, guid: 823e43ecec78dbe4a97853de5c7dc261, type: 3}
-  - {fileID: 21300000, guid: 823e43ecec78dbe4a97853de5c7dc261, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   m_levelBoxes:
-  - {fileID: 21300000, guid: 3c5c50b8b1b33604aa08852f766a71da, type: 3}
-  - {fileID: 21300002, guid: 3c5c50b8b1b33604aa08852f766a71da, type: 3}
-  - {fileID: 21300004, guid: 3c5c50b8b1b33604aa08852f766a71da, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   m_moveButtons:
   - {fileID: 1235407308}
   - {fileID: 494657807}
@@ -2827,7 +2610,7 @@ GameObject:
   - component: {fileID: 1430261152}
   - component: {fileID: 1430261151}
   m_Layer: 0
-  m_Name: Dialogue
+  m_Name: T_Dialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2839,17 +2622,17 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1430261149}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1807067082}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 250, y: -121.8}
-  m_SizeDelta: {x: 460, y: 122}
+  m_AnchoredPosition: {x: 1116.8429, y: -461.46167}
+  m_SizeDelta: {x: 529.14, y: 190.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1430261151
 MonoBehaviour:
@@ -2864,26 +2647,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_Font: {fileID: 12800000, guid: c40792f2e481e3d458e46da1bee1c946, type: 3}
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
-    m_MaxSize: 40
+    m_MaxSize: 60
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'This is just test dialogue. This will be replaced. '
+  m_Text: This is just test dialogue. This will be replaced. Testing what happens
+    when this is really long on the screen.
 --- !u!222 &1430261152
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3022,99 +2806,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1513666061}
---- !u!1 &1585413028
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1585413032}
-  - component: {fileID: 1585413030}
-  - component: {fileID: 1585413031}
-  m_Layer: 0
-  m_Name: IntroDialogue
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1585413030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1585413028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 611a881787fb2b14caa9e821917cc008, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    m_dialogueType: 0
-    m_speaker: 
-    sentences:
-    - Welcome back Doc!
-    - Are you ready to research more foods?
-    - Today, I have some grain products set up for you.
-    - Unfortunately, I forgot to record which ones I added to the food dropper...
-    - So, if you wouldn't mind collecting some food for me, I'll take notes about
-      each one!
-    - Touch to the left or right to move the robot.
-    - Oh, by the way...
-    - Our food dropper is still malfunctioning, so try to avoid any junk that falls!
-    - Good luck!
-  dialogueEnd:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: StartInput
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 34438630}
-        m_MethodName: RequestResume
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &1585413031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1585413028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a397fa4f1328e654a9b1329f42aa3ca0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1585413032
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1585413028}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 690481989}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1599824066
 GameObject:
   m_ObjectHideFlags: 0
@@ -3485,10 +3176,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1807067082}
   - component: {fileID: 1807067084}
-  - component: {fileID: 1807067083}
   - component: {fileID: 1807067085}
   m_Layer: 0
-  m_Name: DialogueBox
+  m_Name: Animator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3502,47 +3192,21 @@ RectTransform:
   m_GameObject: {fileID: 1807067081}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 682639858}
+  - {fileID: 896524519}
   - {fileID: 78515973}
   - {fileID: 1430261150}
   - {fileID: 1224939415}
   m_Father: {fileID: 690481989}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 179, y: 230}
-  m_SizeDelta: {x: 500, y: 200}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1807067083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1807067081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.6764706, g: 0.6764706, b: 0.6764706, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
 --- !u!222 &1807067084
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3596,33 +3260,67 @@ MonoBehaviour:
   m_dialogues:
   - m_dialogueType: 1
     m_speaker: Assistant
-    sentences:
-    - Welcome back Doc!
-    - Are you ready to research more foods?
-    - Today, I have some grain products set up for you.
-    - Unfortunately, I forgot to record which ones I added to the food dropper...
-    - So, if you wouldn't mind collecting some food for me, I'll take notes about
-      each one!
-    - Touch to the left or right to move the robot.
-    - Oh, by the way...
-    - Our food dropper is still malfunctioning, so try to avoid any junk that falls!
-    - Good luck!
+    m_dialogue:
+    - m_inFlag: 0
+      m_outFlag: 0
+      m_sentence: Welcome back, Doc!
+    - m_inFlag: 0
+      m_outFlag: 0
+      m_sentence: Are you ready to research more foods?
+    - m_inFlag: 0
+      m_outFlag: 0
+      m_sentence: Today, I have some grain products set up for you.
+    - m_inFlag: 0
+      m_outFlag: 0
+      m_sentence: Unfortunately, I forgot to record which ones I added to the food
+        dropper...
+    - m_inFlag: 0
+      m_outFlag: 0
+      m_sentence: So, if you wouldn't mind collecting some food for me, I'll take
+        notes about each one!
+    - m_inFlag: 0
+      m_outFlag: 0
+      m_sentence: Touch to the left or right to move the robot.
+    - m_inFlag: 0
+      m_outFlag: 0
+      m_sentence: Oh, by the way...
+    - m_inFlag: 0
+      m_outFlag: 0
+      m_sentence: Our food dropper is still malfunctioning, so try to avoid any junk
+        that falls!
+    - m_inFlag: 0
+      m_outFlag: 0
+      m_sentence: Good luck!
   - m_dialogueType: 2
     m_speaker: Assistant
-    sentences:
-    - Wow, I'm sure glad I have you, Doc!
-    - That would have taken me at least twice as long...
-    - Let's take a look at the notes I made about each food!
+    m_dialogue:
+    - m_inFlag: 0
+      m_outFlag: 0
+      m_sentence: Wow, I'm sure glad I have you, Doc!
+    - m_inFlag: 0
+      m_outFlag: 0
+      m_sentence: That would have taken me at least twice as long...
+    - m_inFlag: 0
+      m_outFlag: 0
+      m_sentence: Let's take a look at the notes I made about each food!
   - m_dialogueType: 3
     m_speaker: Assistant
-    sentences:
-    - Oh no! The robot ate too much junk!
-    - Let's try that again.
+    m_dialogue:
+    - m_inFlag: 0
+      m_outFlag: 0
+      m_sentence: Oh no, the robot ate too much junk!
+    - m_inFlag: 0
+      m_outFlag: 0
+      m_sentence: Let's try that again.
   - m_dialogueType: 4
     m_speaker: Assistant
-    sentences:
-    - Oh no, we ran out of time!
-    - Let's try that again.
+    m_dialogue:
+    - m_inFlag: 0
+      m_outFlag: 0
+      m_sentence: Oh no, we ran out of time!
+    - m_inFlag: 0
+      m_outFlag: 0
+      m_sentence: Let's try that again.
   m_spawnerInfo:
     m_spawnGroupSize: 10
     m_spawnRate: 1
@@ -3666,138 +3364,6 @@ Transform:
   m_Father: {fileID: 1831391179}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1831126132
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1831126133}
-  - component: {fileID: 1831126134}
-  m_Layer: 0
-  m_Name: ChallengeIntroDialogue
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1831126133
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1831126132}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 97, y: 28, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 690481989}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1831126134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1831126132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 611a881787fb2b14caa9e821917cc008, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    m_dialogueType: 0
-    m_speaker: 
-    sentences:
-    - According to my data, foods with whole grains are better for you than food made
-      with refined grains.
-    - Let's test out this theory! Collect 10 foods, and try to choose foods made with
-      whole grains.
-    - These foods include, whole wheat bread, whole grain cereal, and whole grain
-      muffins!
-  dialogueEnd:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: StartInput
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: SetGameState
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1866700632}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: SetGameState
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1831391177
 GameObject:
   m_ObjectHideFlags: 0
@@ -3967,69 +3533,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1866700632}
---- !u!1 &1904130937
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1904130938}
-  - component: {fileID: 1904130939}
-  m_Layer: 0
-  m_Name: AfterCollectionDialogue
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1904130938
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1904130937}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 97, y: 28, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 690481989}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1904130939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1904130937}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 611a881787fb2b14caa9e821917cc008, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    m_dialogueType: 0
-    m_speaker: 
-    sentences:
-    - Wow, I'm sure glad I have you doc!
-    - That would have taken me at least twice as long...
-    - Let's take a look at the notes I made about each food!
-  dialogueEnd:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1958455835
 GameObject:
   m_ObjectHideFlags: 0

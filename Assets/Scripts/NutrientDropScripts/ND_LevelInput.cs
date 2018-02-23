@@ -66,7 +66,7 @@ public class ND_SpawnerInfo{
 
 public class ND_LevelInput:MonoBehaviour{
 	[Tooltip("The different dialogues needed by the level.")]
-	public List<Dialogue>	m_dialogues;
+	public List<Conversation>	m_dialogues;
 	[Tooltip("Gameplay information used by the spawner to set how difficult the level is.")]
 	public ND_SpawnerInfo	m_spawnerInfo;
 	[Tooltip("Gameplay information related to the robot.")]

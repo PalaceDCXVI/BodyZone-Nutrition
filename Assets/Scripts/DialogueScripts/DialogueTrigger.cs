@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class DialogueTrigger : MonoBehaviour {
 
-	public Dialogue dialogue;
+	public Conversation dialogue;
 	public UnityEvent dialogueEnd;
 	
 	private GameObject trigger;
@@ -17,7 +17,7 @@ public class DialogueTrigger : MonoBehaviour {
 	
 	public void TriggerDialogue()
 	{
-		DialogueManager.inst.StartDialogue(dialogue, trigger);
+		//DialogueManager.inst.StartDialogue(dialogue, trigger);
 	}
 
 	public void EndDialogue()

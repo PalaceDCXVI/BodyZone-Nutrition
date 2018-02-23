@@ -693,16 +693,64 @@ RectTransform:
   m_AnchoredPosition: {x: -0.000030517578, y: -0.000030517578}
   m_SizeDelta: {x: 765.1, y: 481.5}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &227795170 stripped
+--- !u!1 &227795170
 GameObject:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 1279798415251106, guid: 6ce7c812f8c3de94380830f87a12e727,
     type: 2}
   m_PrefabInternal: {fileID: 1597872258}
---- !u!1 &328546234 stripped
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 227795171}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &227795171
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1597872258}
+  m_GameObject: {fileID: 227795170}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1543068035}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &328546234
 GameObject:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 1296352318957934, guid: 6ce7c812f8c3de94380830f87a12e727,
     type: 2}
   m_PrefabInternal: {fileID: 1597872258}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 328546235}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &328546235
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1597872258}
+  m_GameObject: {fileID: 328546234}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1543068035}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &355990451
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,13 +794,7 @@ MonoBehaviour:
   dialogue:
     m_dialogueType: 0
     m_speaker: 
-    sentences:
-    - Here is where you'll find the information about all the food you collect.
-    - Tap of any of the foods for more information!
-    - When you're ready to continue your research hit the continue button.
-    - One more thing...
-    - What do ghosts put on bagels?
-    - SCREAM CHEESE
+    m_dialogue: []
   dialogueEnd:
     m_PersistentCalls:
       m_Calls:
@@ -849,7 +891,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -966,11 +1008,7 @@ MonoBehaviour:
   dialogue:
     m_dialogueType: 0
     m_speaker: 
-    sentences:
-    - Hmm... something's not right...
-    - Looks like we caught too many foods with refined grains.
-    - Let's try again!
-    - Remember to pick food that are made with whole grains.
+    m_dialogue: []
   dialogueEnd:
     m_PersistentCalls:
       m_Calls:
@@ -1428,7 +1466,7 @@ RectTransform:
   - {fileID: 1152348171}
   - {fileID: 412380465}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1594,7 +1632,7 @@ RectTransform:
   - {fileID: 775219774}
   - {fileID: 757297033}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2225,7 +2263,7 @@ RectTransform:
   - {fileID: 118379323}
   - {fileID: 1697850711}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2275,17 +2313,7 @@ MonoBehaviour:
   dialogue:
     m_dialogueType: 0
     m_speaker: 
-    sentences:
-    - Wow Doc! You made some great choices.
-    - My readings are telling me that these so called "whole grain foods" contain
-      much more fiber!
-    - Fiber helps you stay feeling full longer and gives you longer lasting energy!
-    - '*whipsers* it also helps you poop'
-    - Anywayyyy...
-    - Thanks for coming in today Doc! I think we made a lot of progress...
-    - '!!!!!!!!!!'
-    - Look at the time! I've got a birdwatching lesson in 15 minutes!
-    - Seeya later Doc!
+    m_dialogue: []
   dialogueEnd:
     m_PersistentCalls:
       m_Calls:
@@ -2373,7 +2401,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1224939414
 GameObject:
@@ -2584,7 +2612,7 @@ RectTransform:
   m_Children:
   - {fileID: 91723096}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2623,10 +2651,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_dlgType: 0
-  nameText: {fileID: 78515974}
-  dialogueText: {fileID: 1430261151}
+  m_convo:
+    m_dialogueType: 0
+    m_speaker: 
+    m_dialogue: []
+  m_T_name: {fileID: 78515974}
+  m_T_dialogue: {fileID: 1430261151}
   animator: {fileID: 1807067085}
-  gameCanvas: {fileID: 699203320}
 --- !u!4 &1311920962
 Transform:
   m_ObjectHideFlags: 0
@@ -2638,7 +2669,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1311920963
 MonoBehaviour:
@@ -2932,6 +2963,36 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1430261149}
+--- !u!1 &1543068034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1597872258}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1543068035}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1543068035
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1597872258}
+  m_GameObject: {fileID: 1543068034}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 227795171}
+  - {fileID: 328546235}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1585413028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2963,17 +3024,7 @@ MonoBehaviour:
   dialogue:
     m_dialogueType: 0
     m_speaker: 
-    sentences:
-    - Welcome back Doc!
-    - Are you ready to research more foods?
-    - Today, I have some grain products set up for you.
-    - Unfortunately, I forgot to record which ones I added to the food dropper...
-    - So, if you wouldn't mind collecting some food for me, I'll take notes about
-      each one!
-    - Touch to the left or right to move the robot.
-    - Oh, by the way...
-    - Our food dropper is still malfunctioning, so try to avoid any junk that falls!
-    - Good luck!
+    m_dialogue: []
   dialogueEnd:
     m_PersistentCalls:
       m_Calls:
@@ -3759,13 +3810,7 @@ MonoBehaviour:
   dialogue:
     m_dialogueType: 0
     m_speaker: 
-    sentences:
-    - According to my data, foods with whole grains are better for you than food made
-      with refined grains.
-    - Let's test out this theory! Collect 10 foods, and try to choose foods made with
-      whole grains.
-    - These foods include, whole wheat bread, whole grain cereal, and whole grain
-      muffins!
+    m_dialogue: []
   dialogueEnd:
     m_PersistentCalls:
       m_Calls:
@@ -3965,10 +4010,7 @@ MonoBehaviour:
   dialogue:
     m_dialogueType: 0
     m_speaker: 
-    sentences:
-    - Wow, I'm sure glad I have you doc!
-    - That would have taken me at least twice as long...
-    - Let's take a look at the notes I made about each food!
+    m_dialogue: []
   dialogueEnd:
     m_PersistentCalls:
       m_Calls:
@@ -4015,31 +4057,28 @@ MonoBehaviour:
   m_dialogues:
   - m_dialogueType: 1
     m_speaker: Assistant
-    sentences:
-    - Welcome back Doc!
-    - Are you ready to research more foods?
-    - Today, I have some grain products set up for you.
-    - Unfortunately, I forgot to record which ones I added to the food dropper...
-    - So, if you wouldn't mind collecting some food for me, I'll take notes about
-      each one!
-    - Touch to the left or right to move the robot.
-    - Oh, by the way...
-    - Our food dropper is still malfunctioning, so try to avoid any junk that falls!
-    - Good luck!
+    m_dialogue:
+    - m_inFlag: 0
+      m_outFlag: 0
+      m_sentence: Test the level intro dialogue!
   - m_dialogueType: 2
     m_speaker: Assistant
-    sentences:
-    - Wow, I'm sure glad I have you Doc!
-    - That would have taken me at least twice as long...
-    - Let's take a look at the notes I made about each food!
+    m_dialogue:
+    - m_inFlag: 0
+      m_outFlag: 0
+      m_sentence: Test the level win dialogue!
   - m_dialogueType: 3
     m_speaker: Assistant
-    sentences:
-    - Looks like the robot ate too much junk. Let's try again.
+    m_dialogue:
+    - m_inFlag: 0
+      m_outFlag: 0
+      m_sentence: Test the robot death dialogue!
   - m_dialogueType: 4
     m_speaker: Assistant
-    sentences:
-    - You ran out of time! Let's try again.
+    m_dialogue:
+    - m_inFlag: 0
+      m_outFlag: 0
+      m_sentence: Test the time limit fail dialogue!
   m_spawnerInfo:
     m_spawnGroupSize: 10
     m_spawnRate: 1
@@ -4081,7 +4120,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2018698461
 GameObject:
