@@ -259,7 +259,7 @@ Prefab:
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Calories
-      value: 0
+      value: 147
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -274,7 +274,7 @@ Prefab:
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Carbohydrates
-      value: 0
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -284,7 +284,7 @@ Prefab:
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Sugar
-      value: 0
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -294,17 +294,17 @@ Prefab:
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Sodium
-      value: 0
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Potassium
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Calcium
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -315,6 +315,12 @@ Prefab:
         type: 2}
       propertyPath: ItemText
       value: Soda
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: ItemIngredients
+      value: water, high fructose corn syrup, citric acid, natural flavors, sodium
+        citrate, sodium benzoate.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
@@ -1523,22 +1529,22 @@ Prefab:
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Calories
-      value: 0
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.SaturatedFats
-      value: 0
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.TransFats
-      value: 0
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Carbohydrates
-      value: 0
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -1548,37 +1554,37 @@ Prefab:
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Sugar
-      value: 0
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Protein
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.fats
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Cholesterol
-      value: 0
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Sodium
-      value: 0
+      value: 121
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Potassium
-      value: 0
+      value: 361
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Calcium
-      value: 0
+      value: 309
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -1610,6 +1616,11 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 556353045}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: ItemIngredients
+      value: Milk
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
   m_IsPrefabParent: 0
@@ -2172,6 +2183,11 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 2000870011}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: ItemIngredients
+      value: Water
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
   m_IsPrefabParent: 0
@@ -3264,7 +3280,7 @@ Prefab:
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Calories
-      value: 0
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -3279,7 +3295,7 @@ Prefab:
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Carbohydrates
-      value: 0
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -3289,12 +3305,12 @@ Prefab:
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Sugar
-      value: 0
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Protein
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -3304,12 +3320,12 @@ Prefab:
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Potassium
-      value: 0
+      value: 470
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Calcium
-      value: 0
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -3320,6 +3336,11 @@ Prefab:
         type: 2}
       propertyPath: ItemText
       value: Orange Juice
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: ItemIngredients
+      value: 100% pure orange juice
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
@@ -3617,7 +3638,7 @@ Prefab:
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Calories
-      value: 0
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -3632,7 +3653,7 @@ Prefab:
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Carbohydrates
-      value: 0
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -3642,7 +3663,7 @@ Prefab:
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Sugar
-      value: 0
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -3652,12 +3673,12 @@ Prefab:
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Sodium
-      value: 0
+      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Potassium
-      value: 0
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -3694,6 +3715,12 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 210411544}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: ItemIngredients
+      value: Water, Sugar, Dextrose, Citric Acid, Salt, Sodium Citrate, Monopotassium
+        Phosphate, Gum Arabic, Glycerol Ester Of Rosin, Natural flavour, Yellow 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
   m_IsPrefabParent: 0
