@@ -7,6 +7,7 @@ public class LogItem : MonoBehaviour {
 
 	public Image logImage;
 	public Image GlowOverlay;
+	public Image ShadowOverlay;
 
 	bool hasBeenFound = false;
 	bool hasBeenClicked = false;
@@ -45,11 +46,11 @@ public class LogItem : MonoBehaviour {
 
 		if (isClicked)
 		{
-			//Dim the image.
+			ShadowOverlay.gameObject.SetActive(true);//Dim the image.
 		}
 		else
 		{
-			//Set it to normal.
+			ShadowOverlay.gameObject.SetActive(false);//Set it to normal.
 		}
 	}
 

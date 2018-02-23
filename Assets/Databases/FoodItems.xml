@@ -8,17 +8,17 @@
   <FoodItem>
     <Name>WhiteBread</Name>
     <HasBeenFound>true</HasBeenFound>
-    <HasBeenClicked>false</HasBeenClicked>
+    <HasBeenClicked>true</HasBeenClicked>
   </FoodItem>
   <FoodItem>
     <Name>Muffin</Name>
     <HasBeenFound>true</HasBeenFound>
-    <HasBeenClicked>false</HasBeenClicked>
+    <HasBeenClicked>true</HasBeenClicked>
   </FoodItem>
   <FoodItem>
     <Name>WholeGrainCereal</Name>
     <HasBeenFound>true</HasBeenFound>
-    <HasBeenClicked>false</HasBeenClicked>
+    <HasBeenClicked>true</HasBeenClicked>
   </FoodItem>
   <FoodItem>
     <Name>SugaryCereal</Name>
