@@ -25,6 +25,7 @@ public class LogDatabase : MonoBehaviour
 	public NutrientFactsTable factsTable;
 	public Text FoodNameText;
 	public Text FoodDescriptionText;
+	public Text FoodIngredientsText;
 
 	List<LogItem> foodItemsInChildren = new List<LogItem>();
 
@@ -38,7 +39,7 @@ public class LogDatabase : MonoBehaviour
 		xmlDatabase.Load(Application.dataPath + "/Databases/FoodItems.xml");
 		Debug.Log("Database loaded");
 
-		GetComponentsInChildren<LogItem>(foodItemsInChildren);
+		GetComponentsInChildren<LogItem>(true, foodItemsInChildren);
 
 		//Go through the list and set the found items to... found.
 		XmlNode nodeInXMLDoc;

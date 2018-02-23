@@ -1835,6 +1835,17 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 443316452}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: ItemIngredients
+      value: 'Wheat (Whole Grain Wheat, Bran), Corn Bran, Corn Starch, Calcium Carbonate,
+        Guar Gum, Color Added, Cellulose Gum, Salt, Baking Soda, Corn Oil, Aspartame
+        (Phenylketonurics: Contains Phenylalanine), Zinc and Iron (Mineral Nutrients),
+        Vitamin C (Sodium Ascorbate), a B Vitamin (Niacinamide), Vitamin B6 (Pyridoxine
+        Hydrochloride), Vitamin B2 (Riboflavin), Vitamin B1 (Thiamin Mononitrate),
+        a B Vitamin (Folic Acid), Vitamin B12, Vitamin E (Mixed Tocopherols) Added
+        to Preserve Freshness.'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
   m_IsPrefabParent: 0
@@ -3452,6 +3463,7 @@ RectTransform:
   - {fileID: 1791569455}
   - {fileID: 92151163}
   - {fileID: 1575806390}
+  - {fileID: 1367227950}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3685,6 +3697,84 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1367227949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1932880120489372, guid: 6ce7c812f8c3de94380830f87a12e727,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1367227950}
+  - component: {fileID: 1367227952}
+  - component: {fileID: 1367227951}
+  m_Layer: 5
+  m_Name: FoodIngredients
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1367227950
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 224717232620357220, guid: 6ce7c812f8c3de94380830f87a12e727,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1367227949}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000051, y: 1.0000051, z: 1.0000051}
+  m_Children: []
+  m_Father: {fileID: 1260407349}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 587, y: -308}
+  m_SizeDelta: {x: 550, y: 350}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1367227951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114494082265931308, guid: 6ce7c812f8c3de94380830f87a12e727,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1367227949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: c40792f2e481e3d458e46da1bee1c946, type: 3}
+    m_FontSize: 38
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 100
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1367227952
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 222402926527331212, guid: 6ce7c812f8c3de94380830f87a12e727,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1367227949}
 --- !u!1 &1394846786
 GameObject:
   m_ObjectHideFlags: 0
@@ -4076,6 +4166,20 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 1467990148}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: ItemIngredients
+      value: 'cereal (whole grain oats, sugar, oat flour, corn syrup, corn starch,
+        salt, trisodium phosphate, color added, natural and artificial flavor, mixed
+        tocopherois), corn syrup, confectionery coating (sugar, palm kernel oil, maltodextrin,
+        yogurt powder (cultured non-fat milk, whey protein concentrate, yogurt cultures),
+        non-fat milk, soy lecithin, natural flavor), marshmallows (sugar, modified
+        corn starch, corn syrup, dextrose, gelatin, calcium carbonate, colored with
+        yellow 5&6, blue 1, red 40, artificial flavor), crisp rice (rice flour, barley
+        malt extract, salt), canola oil, fructose, high fructose corn syrup, sugar.
+        Contains 2% or less of: Glycerin, Maltodextrin, Sorbitol, Water, Gelatin,
+        Salt, Artificial Flavor.'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
   m_IsPrefabParent: 0
@@ -4301,6 +4405,15 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 1525971777}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: ItemIngredients
+      value: White Bread (Enriched Wheat Flour (Flour, Malted Barley Flour, Niacin,
+        Iron(Ferrous Sulfate, Reduced Iron), Thiamine Mononitrate, Riboflavin, Folic
+        Acid), Water, Yeast, Salt, Soybean Oil, Sugar, Malt, Dough Conditioners(Ascorbic
+        Acid, Calcium Sulfate, Sodium Stearoyl Lactylate),Calcium Propionate(To Retard
+        Mold Growth))
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
   m_IsPrefabParent: 0
@@ -4561,7 +4674,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 586, y: 54}
+  m_AnchoredPosition: {x: 586, y: 149}
   m_SizeDelta: {x: 695.1, y: 1080.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1684803094
@@ -4768,6 +4881,17 @@ Prefab:
       propertyPath: ItemText
       value: Chickpeas
       objectReference: {fileID: 0}
+    - target: {fileID: 114544472909609018, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300010, guid: a8955525075323a489229550c68846cf,
+        type: 3}
+    - target: {fileID: 114544472909609018, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
   m_IsPrefabParent: 0
@@ -4837,6 +4961,7 @@ MonoBehaviour:
   factsTable: {fileID: 1677708973}
   FoodNameText: {fileID: 92151164}
   FoodDescriptionText: {fileID: 1575806391}
+  FoodIngredientsText: {fileID: 1367227951}
 --- !u!114 &1791569457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5094,6 +5219,16 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 1856273381}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: ItemIngredients
+      value: Bleached enriched wheat flour, water, sugar, chocolate chips (sugar,
+        unsweetened chocolate, cocoa butter, dextrose, soy lecithin, natural vanilla
+        extract), soybean and/or canola oils, liquid whole eggs, modified cornstarch,
+        leavening (sodium bicarbonate, sodium aluminum phosphate, monocalcium phosphate),
+        salt, monoglycerides, guar gum, xanthan gum, natural flavour, whey powder
+        (milk), corn syrup solids, enzyme (amylase)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
   m_IsPrefabParent: 0
@@ -5245,6 +5380,19 @@ Prefab:
       value: 
       objectReference: {fileID: 21300010, guid: a8955525075323a489229550c68846cf,
         type: 3}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: ItemIngredients
+      value: Whole grains (Whole grain wheat flour, Whole grain brown and golden flax
+        seed, Whole spelt flour, Whole grain oat, Whole grain millet, Whole grain
+        sunflower seed, Whole grain kamut flour, Whole grain rye meal, Whole grain
+        cracked wheat, Whole grain durum semolina, Whole grain barley grits, Whole
+        grain cracked triticale, Whole grain brown rice meal, Whole grain buckwheat
+        grits), Organic sourdough (Organic whole grain rye flour, Water, Bacterial
+        culture), Water, Wheat gluten, Wheat flour, Apple cider vinegar, Yeast, Raisin
+        juice concentrate, Sea salt, Malted barley flour, Cultured wheat starch, Natural
+        citric acid, Organic whole wheat flour, Enzymes.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
   m_IsPrefabParent: 0

@@ -9,12 +9,13 @@ public class LogItem : MonoBehaviour {
 	public Image GlowOverlay;
 	public Image ShadowOverlay;
 
-	bool hasBeenFound = false;
-	bool hasBeenClicked = false;
-	bool isClicked = false;
+	public bool hasBeenFound = false;
+	public bool hasBeenClicked = false;
+	public bool isClicked = false;
 
 	public string ItemText;
 	public string ItemDescription;
+	public string ItemIngredients;
 
 	public NutrientFactsTable.NutrientFactsData factsData;
 
@@ -77,6 +78,7 @@ public class LogItem : MonoBehaviour {
 			logDatabase.factsTable.SetData(ref factsData);
 			logDatabase.FoodNameText.text = ItemText;
 			logDatabase.FoodDescriptionText.text = ItemDescription.Replace(". ", ".\n").Replace("! ", "!\n");
+			logDatabase.FoodIngredientsText.text = "Ingredients: " + ItemIngredients;
 		}
 	}
 }
