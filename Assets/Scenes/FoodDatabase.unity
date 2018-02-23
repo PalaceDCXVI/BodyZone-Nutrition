@@ -163,7 +163,7 @@ Prefab:
     - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 50
+      value: -90.000374
       objectReference: {fileID: 0}
     - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -217,7 +217,7 @@ Prefab:
       objectReference: {fileID: 1791569456}
     - target: {fileID: 1868228992200698, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
       propertyPath: m_Name
-      value: WholeGrainBread
+      value: Soda
       objectReference: {fileID: 0}
     - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -248,11 +248,334 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300010, guid: a8955525075323a489229550c68846cf,
-        type: 3}
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: ItemDescription
+      value: Why not try quenching your thirst with water instead of soda? It has
+        no sugar and is great for hydrating your body (aka your body needs water to
+        make sure its working properly)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Calories
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.fats
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.SaturatedFats
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Carbohydrates
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Fibre
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Sugar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Protein
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Sodium
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Potassium
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Calcium
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Iron
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: ItemText
+      value: Soda
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &90388998
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2028799153}
+    m_Modifications:
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.50212
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 170
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -170.00008
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: logDatabase
+      value: 
+      objectReference: {fileID: 1791569456}
+    - target: {fileID: 1664286705231974, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
+      propertyPath: m_Name
+      value: Image
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1868228992200698, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
+      propertyPath: m_Name
+      value: VeggiePatty
+      objectReference: {fileID: 0}
+    - target: {fileID: 114544472909609018, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 114544472909609018, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114705560133577144, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300012, guid: a8955525075323a489229550c68846cf,
+        type: 3}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: ItemText
+      value: Veggie Patty
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: ItemDescription
+      value: Veggie burgers are a good alternative to hamburgers since they low in
+        saturated fat, high in fat and protein. There are so many ways to enjoy a
+        veggie burger like a beef burger.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Calories
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.SaturatedFats
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.TransFats
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Carbohydrates
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Fibre
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Sugar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Protein
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.fats
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Cholesterol
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Sodium
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Potassium
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Calcium
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Iron
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1791569457}
+    - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetActiveItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: LogItem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 90389000}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
+  m_IsPrefabParent: 0
+--- !u!224 &90388999 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 90388998}
+--- !u!114 &90389000 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 90388998}
+  m_Script: {fileID: 11500000, guid: ffa4a309127a9834ca0dac7049c78b1f, type: 3}
 --- !u!1 &92151162
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,6 +896,478 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 317753451}
+--- !u!1001 &384233214
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2028799153}
+    m_Modifications:
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.50212
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -29.999872
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -370
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: logDatabase
+      value: 
+      objectReference: {fileID: 1791569456}
+    - target: {fileID: 1664286705231974, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
+      propertyPath: m_Name
+      value: Image
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1868228992200698, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
+      propertyPath: m_Name
+      value: Salmon
+      objectReference: {fileID: 0}
+    - target: {fileID: 114705560133577144, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300014, guid: a8955525075323a489229550c68846cf,
+        type: 3}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: ItemDescription
+      value: Fish, like salmon, contain lots of healthy fats, like omega-3s that are
+        important for heart health. Try to eat fish twice a week if you are not vegetarian!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: ItemText
+      value: Salmon
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Calories
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.fats
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.SaturatedFats
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Carbohydrates
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Fibre
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Sugar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Protein
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Sodium
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Potassium
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Calcium
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Iron
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1791569457}
+    - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetActiveItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: LogItem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 384233216}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
+  m_IsPrefabParent: 0
+--- !u!224 &384233215 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 384233214}
+--- !u!114 &384233216 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 384233214}
+  m_Script: {fileID: 11500000, guid: ffa4a309127a9834ca0dac7049c78b1f, type: 3}
+--- !u!1001 &415271840
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2028799153}
+    m_Modifications:
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.50212
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -229.99992
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -370
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: logDatabase
+      value: 
+      objectReference: {fileID: 1791569456}
+    - target: {fileID: 1664286705231974, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
+      propertyPath: m_Name
+      value: Image
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1868228992200698, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
+      propertyPath: m_Name
+      value: Egg
+      objectReference: {fileID: 0}
+    - target: {fileID: 114705560133577144, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300006, guid: a8955525075323a489229550c68846cf,
+        type: 3}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: ItemText
+      value: Egg
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: ItemDescription
+      value: Eggs are a good source of protein. They could be eaten in many ways and
+        provide a variety of nutrients.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Calories
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.fats
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.SaturatedFats
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Carbohydrates
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Fibre
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Sugar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Protein
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Sodium
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Potassium
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Calcium
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Iron
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1791569457}
+    - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetActiveItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: LogItem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 415271842}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
+  m_IsPrefabParent: 0
+--- !u!224 &415271841 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 415271840}
+--- !u!114 &415271842 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 415271840}
+  m_Script: {fileID: 11500000, guid: ffa4a309127a9834ca0dac7049c78b1f, type: 3}
 --- !u!1001 &439695592
 Prefab:
   m_ObjectHideFlags: 0
@@ -623,7 +1418,7 @@ Prefab:
     - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 449.99994
+      value: 309.9995
       objectReference: {fileID: 0}
     - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -696,7 +1491,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1868228992200698, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
       propertyPath: m_Name
-      value: Muffin
+      value: Milk
       objectReference: {fileID: 0}
     - target: {fileID: 114544472909609018, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -717,79 +1512,78 @@ Prefab:
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: ItemText
-      value: Muffin
+      value: Milk
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: ItemDescription
-      value: 'Muffins are generally high in fiber, but sometimes could have a lot
-        of sugar and saturated fat. Look for muffins that are lower in sugar and saturated
-        fat or eat a smaller portion size. '
+      value: Lower fat milk like skim, 1% or 2%, is a great choice to get a big daily
+        dose of calcium, vitamin D, vitamin A, B12, protein and much more!
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Calories
-      value: 493
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.SaturatedFats
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.TransFats
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Carbohydrates
-      value: 71
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Fibre
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Sugar
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Protein
-      value: 11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.fats
-      value: 19
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Cholesterol
-      value: 51
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Sodium
-      value: 475
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Potassium
-      value: 254
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Calcium
-      value: 160
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Iron
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -1194,7 +1988,7 @@ Prefab:
     - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 250.00006
+      value: 109.99969
       objectReference: {fileID: 0}
     - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -1267,7 +2061,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1868228992200698, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
       propertyPath: m_Name
-      value: SugaryCereal
+      value: Water
       objectReference: {fileID: 0}
     - target: {fileID: 114705560133577144, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -1278,70 +2072,69 @@ Prefab:
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: ItemDescription
-      value: 'Half the grains you eat in a day should be whole-grains. Lots of cereals
-        are made with whole-grains, but sometimes they sneak in a lot of sugar. Try
-        a cereal lower in sugar and add some berries or banana for some sweetness
-        that is packed with vitamins and fibre. '
+      value: Did you know that your body is approxmiately 60% water? Drinking lots
+        of water throughout the day is very important and helps your body absorb the
+        nutrients from all the foods you eat!
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: ItemText
-      value: Sugary Cereal
+      value: Water
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Calories
-      value: 148
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.fats
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.SaturatedFats
-      value: 0.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Carbohydrates
-      value: 32
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Fibre
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Sugar
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Protein
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Sodium
-      value: 228
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Potassium
-      value: 74
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Calcium
-      value: 144
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Iron
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -2106,12 +2899,12 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1073953632}
---- !u!1001 &1164512528
+--- !u!1001 &1163692381
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 2002676338}
+    m_TransformParent: {fileID: 2028799153}
     m_Modifications:
     - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -2156,7 +2949,7 @@ Prefab:
     - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 250.00006
+      value: -29.999872
       objectReference: {fileID: 0}
     - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -2210,7 +3003,220 @@ Prefab:
       objectReference: {fileID: 1791569456}
     - target: {fileID: 1868228992200698, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
       propertyPath: m_Name
-      value: WhiteBread
+      value: HamburgerPatty
+      objectReference: {fileID: 0}
+    - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1791569457}
+    - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetActiveItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: LogItem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1163692383}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: ItemDescription
+      value: Beef hamburgers are high in protein and saturated fat. Since red meat
+        is high in saturated fat aim to eat it only once a week. You can always try
+        leaner meats, like chicken and turkey, or go veggie when it comes to burger
+        choices!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Calories
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.fats
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.SaturatedFats
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Carbohydrates
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Fibre
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Sugar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Protein
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Sodium
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Potassium
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Calcium
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Iron
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: ItemText
+      value: Beef Patty
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
+  m_IsPrefabParent: 0
+--- !u!224 &1163692382 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1163692381}
+--- !u!114 &1163692383 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1163692381}
+  m_Script: {fileID: 11500000, guid: ffa4a309127a9834ca0dac7049c78b1f, type: 3}
+--- !u!1001 &1164512528
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2002676338}
+    m_Modifications:
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.50212
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 109.99969
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -170.00005
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: logDatabase
+      value: 
+      objectReference: {fileID: 1791569456}
+    - target: {fileID: 1868228992200698, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
+      propertyPath: m_Name
+      value: OrangeJuice
       objectReference: {fileID: 0}
     - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -2237,6 +3243,73 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 758806951}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: ItemDescription
+      value: 'Let''s try eating our fruit and drinking water, since juice is high
+        in sugar with little or no fibre. It also is high in vitamin C and potassium.Try
+        eating oranges in slices! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Calories
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.fats
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.SaturatedFats
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Carbohydrates
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Fibre
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Sugar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Protein
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Sodium
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Potassium
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Calcium
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Iron
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: ItemText
+      value: Orange Juice
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
   m_IsPrefabParent: 0
@@ -2437,7 +3510,7 @@ Prefab:
     - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 50
+      value: -90.000374
       objectReference: {fileID: 0}
     - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -2510,7 +3583,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1868228992200698, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
       propertyPath: m_Name
-      value: WholeGrainCereal
+      value: SportsDrink
       objectReference: {fileID: 0}
     - target: {fileID: 114705560133577144, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -2521,68 +3594,68 @@ Prefab:
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: ItemText
-      value: Whole Grain Cereal
+      value: Sports Drink
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: ItemDescription
-      value: 'Whole-grain cereal is high in fibre! This will help you stay full longer.
-        Don''t forget to check out the amount of sugar on the nutrition label. '
+      value: Sports drinks are high in sugar. We encourage you to choose water to
+        quench your thirst, even when playing sports and being active!
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Calories
-      value: 206
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.fats
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.SaturatedFats
-      value: 0.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Carbohydrates
-      value: 48
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Fibre
-      value: 27
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Sugar
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Protein
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Sodium
-      value: 264
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Potassium
-      value: 208
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Calcium
-      value: 239
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
       propertyPath: factsData.Iron
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -3491,6 +4564,224 @@ RectTransform:
   m_AnchoredPosition: {x: 586, y: 54}
   m_SizeDelta: {x: 695.1, y: 1080.2}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1684803094
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2028799153}
+    m_Modifications:
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.50212
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -229.99992
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -169.99995
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: logDatabase
+      value: 
+      objectReference: {fileID: 1791569456}
+    - target: {fileID: 1868228992200698, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
+      propertyPath: m_Name
+      value: Chickpeas
+      objectReference: {fileID: 0}
+    - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1791569457}
+    - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetActiveItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: LogItem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 114551354521087930, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1684803096}
+    - target: {fileID: 114705560133577144, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300010, guid: a8955525075323a489229550c68846cf,
+        type: 3}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: ItemDescription
+      value: 'Talk about protein packed! Beans like chickpeas are high in protein,
+        fibre, iron and potassium. This is a great versatile and vegetarian ingredient
+        to incorporate into meals. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Calories
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.fats
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.SaturatedFats
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Carbohydrates
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Fibre
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Sugar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Protein
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Sodium
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Potassium
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Calcium
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Iron
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: ItemText
+      value: Chickpeas
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
+  m_IsPrefabParent: 0
+--- !u!224 &1684803095 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1684803094}
+--- !u!114 &1684803096 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1684803094}
+  m_Script: {fileID: 11500000, guid: ffa4a309127a9834ca0dac7049c78b1f, type: 3}
 --- !u!1 &1791569454
 GameObject:
   m_ObjectHideFlags: 0
@@ -3522,6 +4813,7 @@ RectTransform:
   m_Children:
   - {fileID: 1952249707}
   - {fileID: 2002676338}
+  - {fileID: 2028799153}
   m_Father: {fileID: 1260407349}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3975,7 +5267,7 @@ GameObject:
   - component: {fileID: 1952249709}
   - component: {fileID: 1952249708}
   m_Layer: 5
-  m_Name: ProteinTab
+  m_Name: GrainsTab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4124,7 +5416,7 @@ GameObject:
   - component: {fileID: 2002676340}
   - component: {fileID: 2002676339}
   m_Layer: 5
-  m_Name: ProteinTab (1)
+  m_Name: DrinksTab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4228,6 +5520,144 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2002676337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!1 &2028799152
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2028799153}
+  - component: {fileID: 2028799157}
+  - component: {fileID: 2028799156}
+  - component: {fileID: 2028799155}
+  - component: {fileID: 2028799154}
+  m_Layer: 5
+  m_Name: MeatAlternativesTab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2028799153
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2028799152}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000051, y: 1.0000051, z: 1.0000051}
+  m_Children:
+  - {fileID: 1684803095}
+  - {fileID: 1163692382}
+  - {fileID: 90388999}
+  - {fileID: 415271841}
+  - {fileID: 384233215}
+  m_Father: {fileID: 1791569455}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 480, y: -80.00012}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2028799154
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2028799152}
+--- !u!114 &2028799155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2028799152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe08da21722ab2b45884fd3fc8b0686a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2028799156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2028799152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2028799157}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1791569457}
+        m_MethodName: SetActiveTab
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2028799155}
+          m_ObjectArgumentAssemblyTypeName: LogTab, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &2028799157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2028799152}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
