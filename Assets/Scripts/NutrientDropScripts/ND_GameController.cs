@@ -12,6 +12,8 @@ public class ND_GameController:MonoBehaviour {
 	public ND_LevelInput			m_levelInput;		//Variables needed for the level. What types of food spawn, what dialogue is spoken, etc.
 	public GameObject				m_pre_SceneInfo;	//Prefab for scene info.
 
+	public Animator					m_animDialogue;		//Animator for dialogue canvas.
+
 	private bool	mp_firstFrameStart=true;			//Helps the FirstFrameStart to run.
 
 	private void Awake() {
@@ -85,8 +87,9 @@ public class ND_GameController:MonoBehaviour {
 
 		//Start the intro dialogue if it exists and isn't set to be skipped, else start the drop game.
 		if((FindSceneInfo()==null)||(!FindSceneInfo()[0].GetComponent<SceneInfo>().m_skipIntro)) {
-			if(FindDialogue(DIALOGUETYPE.LEVELINTRO, false)!=null) {
-				DialogueManager.inst.StartConversation(FindDialogue(DIALOGUETYPE.LEVELINTRO));
+			if(FindDialogue(DIALOGUETYPE.FD_INTRO, false)!=null) {
+				DialogueManager.inst.StartConversation(FindDialogue(DIALOGUETYPE.FD_INTRO));
+				m_animDialogue.SetTrigger("Go_BottomIn");
 			}
 			else StartDropGame();
 		}			
@@ -107,8 +110,10 @@ public class ND_GameController:MonoBehaviour {
 		NutrientBucket.inst.Pause();
 
 		//Start the success dialogue, else return to level select.
-		if(FindDialogue(DIALOGUETYPE.LEVELWIN, false)!=null)
-			DialogueManager.inst.StartConversation(FindDialogue(DIALOGUETYPE.LEVELWIN));
+		if(FindDialogue(DIALOGUETYPE.FD_WIN, false)!=null) {
+			DialogueManager.inst.StartConversation(FindDialogue(DIALOGUETYPE.FD_WIN));
+			m_animDialogue.SetTrigger("Go_BottomIn");
+		}
 		else ReturnLevelSelect();
 	}
 	public void EndLevelRobotDead(){
@@ -119,8 +124,10 @@ public class ND_GameController:MonoBehaviour {
 		NutrientBucket.inst.Pause();
 
 		//Start the dead robot dialogue, else reload the level.
-		if(FindDialogue(DIALOGUETYPE.LEVELFAILROBOTDEATH, false)!=null)
-			DialogueManager.inst.StartConversation(FindDialogue(DIALOGUETYPE.LEVELFAILROBOTDEATH));
+		if(FindDialogue(DIALOGUETYPE.FD_FAILROBOTDEATH, false)!=null) {
+			DialogueManager.inst.StartConversation(FindDialogue(DIALOGUETYPE.FD_FAILROBOTDEATH));
+			m_animDialogue.SetTrigger("Go_BottomIn");
+		}
 		else ReloadScene(true);
 	}
 	public void EndLevelTimeLimit() {
@@ -131,8 +138,10 @@ public class ND_GameController:MonoBehaviour {
 		NutrientBucket.inst.Pause();
 
 		//Start the time out dialogue, else reload the level.
-		if(FindDialogue(DIALOGUETYPE.LEVELFIALTIMELIMIT, false)!=null)
-			DialogueManager.inst.StartConversation(FindDialogue(DIALOGUETYPE.LEVELFIALTIMELIMIT));
+		if(FindDialogue(DIALOGUETYPE.FD_FAILTIMELIMIT, false)!=null) {
+			DialogueManager.inst.StartConversation(FindDialogue(DIALOGUETYPE.FD_FAILTIMELIMIT));
+			m_animDialogue.SetTrigger("Go_BottomIn");
+		}
 		else ReloadScene(true);
 	}
 	public void ReturnLevelSelect() {

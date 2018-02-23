@@ -8,10 +8,11 @@ public class NutrientBucket : MonoBehaviour {
 	public bool m_active;		//Movement active.
 	public bool Touch;
 	private RectTransform rectTransform;
-	private Rigidbody2D newRigidbody2D;
+	public Rigidbody2D newRigidbody2D;
 
 	public float moveSpeed = 1.0f;
 	private float moveSpeedScale = 1.0f; public void SetMoveSpeedScale(float scale) { moveSpeedScale = scale; }
+	public float m_maximumVelocity=1000;
 
 	private void Awake() {
 		if(inst==null) inst=this;
@@ -26,8 +27,7 @@ public class NutrientBucket : MonoBehaviour {
 		newRigidbody2D = GetComponent<Rigidbody2D>();
 	}
 	
-	void Update () 
-	{
+	void Update (){
 		if(m_active) {
 			// Robot's Movement, based on Rigid body velocity and which side of the screen is clicked
 			if (Input.GetMouseButton(0))
@@ -51,6 +51,10 @@ public class NutrientBucket : MonoBehaviour {
 					newRigidbody2D.rotation = -20f;
 					newRigidbody2D.drag = 0.0f;
      			}
+
+				if(newRigidbody2D.velocity.magnitude>m_maximumVelocity) {
+					newRigidbody2D.velocity=newRigidbody2D.velocity.normalized*m_maximumVelocity;
+				}
  			}
 			else
 			{
@@ -86,5 +90,14 @@ public class NutrientBucket : MonoBehaviour {
 		
 		if(_pause) StopInput();
 		else StartInput();
+	}
+	
+	public float GetMoveSpeed() {
+		//Returns the robot's current move speed from -1 to 1, compared to its maximum speed in either direction.
+		float _result=newRigidbody2D.velocity.magnitude/m_maximumVelocity;
+
+		if(Vector2.Dot(Vector2.right, newRigidbody2D.velocity)<0) _result*=-1.0f;
+
+		return _result;
 	}
 }

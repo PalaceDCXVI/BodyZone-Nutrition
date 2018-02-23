@@ -13,6 +13,7 @@ public class ND_RobotHandler:MonoBehaviour{
 	public int			m_wantedFoodIndex;
 	public Image		m_robotWantedFoodImage;
 	public Image		m_progressBarFill;
+	public Animator		m_animRobot;			//Robot animator.
 
 	private int			m_badFoodsEaten;		//Number of bad foods eaten.
 
@@ -65,7 +66,10 @@ public class ND_RobotHandler:MonoBehaviour{
 		NextFood();
 	}
 
-	public void Update(){}
+	public void Update(){
+		Debug.Log(NutrientBucket.inst.GetMoveSpeed());
+		m_animRobot.SetFloat("MoveSpeed", NutrientBucket.inst.GetMoveSpeed());
+	}
 
 	public void NextFood(){
 		//Count a wanted food as obtained and show the next one. End the game if over.

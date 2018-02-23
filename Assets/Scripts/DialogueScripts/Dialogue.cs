@@ -9,10 +9,11 @@ using UnityEngine;
 //The different use cases of dialogue.
 public enum DIALOGUETYPE {
 	NONE,
-	LEVELINTRO,
-	LEVELWIN,
-	LEVELFAILROBOTDEATH,
-	LEVELFIALTIMELIMIT
+	LS_INTRO,			//Level Select intro
+	FD_INTRO,			//Food Drop intro
+	FD_WIN,
+	FD_FAILROBOTDEATH,
+	FD_FAILTIMELIMIT
 }
 
 //Different events to happen as a new DialogueLine is shown.
