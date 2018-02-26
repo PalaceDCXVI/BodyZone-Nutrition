@@ -47,9 +47,10 @@ public class LS_LevelButtonHandler:MonoBehaviour{
 		}
 	}
 	public void UI_LevelButton(int _levelIndex) {
-		//Player clicked a level button. Start the Food Drop level.
+		//Player clicked a level button. Start the appropriate level.
 		//Debug.Log("LS_LevelButtonHandler.UI_LevelButton("+_levelIndex+").");
-		LS_LevelSelectHandler.inst.StartFoodDrop(LS_Levels.inst.m_levels[_levelIndex]);
+
+		LS_LevelSelectHandler.inst.StartLevel(LS_Levels.inst.m_levels[_levelIndex]);
 	}
 
 	public void PopulateButtonList(){

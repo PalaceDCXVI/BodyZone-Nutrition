@@ -9,6 +9,7 @@ TagManager:
   - NotFood
   - LevelInfo
   - SceneInfo
+  - Robot
   layers:
   - Default
   - TransparentFX

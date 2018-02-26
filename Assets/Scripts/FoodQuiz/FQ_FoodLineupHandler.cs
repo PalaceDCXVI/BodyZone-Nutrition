@@ -25,15 +25,14 @@ public class FQ_FoodLineupHandler:MonoBehaviour{
 		if(m_foods==null) m_foods=new List<GameObject>();
 	}
 	
-	void Update(){
-
-	}
+	void Update(){}
 
 	public void PopulateFoodList(){
 		//Remove old food slots.
 		if(m_foodSlots==null) m_foodSlots=new List<GameObject>();
 		if(m_foods==null) m_foods=new List<GameObject>();
 
+		//Remove any old ones in the lineup.
 		while(m_foodLineup.transform.childCount>0) DestroyImmediate(m_foodLineup.transform.GetChild(0).gameObject);
 
 		//Add in food slots.
@@ -42,15 +41,7 @@ public class FQ_FoodLineupHandler:MonoBehaviour{
 			m_foodSlots.Add(_newSlot);
 			m_foods.Add(_newSlot.transform.GetChild(0).gameObject);
 			_newSlot.transform.GetChild(0).gameObject.GetComponent<NutrientLife>().SetFoodType(FOODTYPE.LOGFOOD, i, FQ_GameController.inst.m_levelInput.m_foodQuizLevelInput.m_foods[i]);
-			//SetButton(_newButton, LS_Levels.inst.m_levels[i]);
 		}
-		
-		//GameObject _newButton=Instantiate(m_pre_B_Level, m_levelGrid.transform);
-		//SetButton(_newButton, LS_Levels.inst.m_levels[i]);
-
-		////Add the click callback.
-		//int _levelIndex=i;
-		//_newButton.GetComponent<Button>().onClick.AddListener(()=>UI_LevelButton(_levelIndex));
 	}
 
 	public Sprite GetFood(int _index) {

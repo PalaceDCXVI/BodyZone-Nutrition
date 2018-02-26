@@ -96,6 +96,7 @@ public class FoodQuiz_LevelInput {
 }
 
 public class LevelInput:MonoBehaviour{
+	//Structure that defines an entire level.
 	[Tooltip("What type of level this is.")]
 	public LEVELTYPE			m_levelType;
 	[Tooltip("Information for a Food Drop level.")]
@@ -115,6 +116,7 @@ public class LevelInput:MonoBehaviour{
 
 	public void Copy(LevelInput _base) {
 		//Copy over level input settings.
+		m_levelType=_base.m_levelType;
 		m_foodDropLevelInput=_base.m_foodDropLevelInput;
 		m_foodQuizLevelInput=_base.m_foodQuizLevelInput;
 		m_levelStatus=_base.m_levelStatus;

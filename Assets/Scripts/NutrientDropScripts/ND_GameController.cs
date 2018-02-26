@@ -15,6 +15,7 @@ public class ND_GameController:MonoBehaviour {
 	public Animator					m_animDialogue;		//Animator for dialogue canvas.
 
 	private bool	mp_firstFrameStart=true;			//Helps the FirstFrameStart to run.
+	private GameObject mp_passedLevelInfo;				//The passed level info, if it exists.
 
 	private void Awake() {
 		if(inst==null) inst=this;
@@ -46,6 +47,7 @@ public class ND_GameController:MonoBehaviour {
 			for(int i=0; i<_levelInfos.Length; i++) {
 				if(_levelInfos[i].name=="PassedLevelInfo") {
 					//Debug.Log("ND_GameController.FIndLevelInfo has found PassedLevelInfo.");
+					mp_passedLevelInfo=_levelInfos[i];
 					StartLevel(_levelInfos[i].GetComponent<LevelInput>());
 					_passedInfo=true;
 				}
@@ -114,7 +116,7 @@ public class ND_GameController:MonoBehaviour {
 			DialogueManager.inst.StartConversation(FindDialogue(DIALOGUETYPE.FD_WIN), SpeechBubble.SPEECHBUBBLETYPE.ASSISTANT);
 			m_animDialogue.SetTrigger("Go_BottomIn");
 		}
-		else ReturnLevelSelect();
+		else EndScene();
 	}
 	public void EndLevelRobotDead(){
 		//Robot has eaten too many non-foods.
@@ -144,13 +146,23 @@ public class ND_GameController:MonoBehaviour {
 		}
 		else ReloadScene(true);
 	}
-	public void ReturnLevelSelect() {
-		//Return to the LevelSelect scene.
+	public void EndScene() {
+		//Food drop game over. Either move onto Food Quiz or Level Select.
+		if(m_levelInput.m_levelType==LEVELTYPE.BOTH) {
+			DestroySceneInfo();
+			SceneManager.LoadScene("FoodQuiz");
+		}
+		else {	//Level select.
+			DestroySceneInfo();
 
-		DestroyLevelInfo();
-		DestroySceneInfo();
+			//Set the passed level info's rating and completion.
+			if(mp_passedLevelInfo!=null) {
+				mp_passedLevelInfo.GetComponent<LevelInput>().m_levelRating=LEVELRATING.STAR3;
+				mp_passedLevelInfo.GetComponent<LevelInput>().m_levelStatus=LEVELSTATUS.COMPLETE;
+			}
 
-		SceneManager.LoadScene("LevelSelect");
+			SceneManager.LoadScene("LevelSelect");
+		}
 	}
 	public void SetTimeScale(float timeScale){
 		//In case this is going to be used in gameplay for pausing. Note that this applies to Time.deltaTime but not Time.fixedDeltaTime.

@@ -21,6 +21,7 @@ public class NutrientLife:MonoBehaviour{
 	void Update(){}
 
 	public void SetFoodType(FOODTYPE _type, int _typeIndex, Sprite _selectedSprite){
+		//Set's the food's information.
 		m_foodType=_type;
 		m_foodTypeIndex=_typeIndex;
 

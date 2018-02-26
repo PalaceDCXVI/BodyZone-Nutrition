@@ -12,20 +12,20 @@ public enum DIALOGUETYPE {
 	LS_INTRO,			//Level Select intro
 	FD_INTRO,			//Food Drop intro
 	FD_WIN,
-	FD_FAILROBOTDEATH,
+	FD_FAILROBOTDEATH,	//Failing Food Drop by robot death.
 	FD_FAILTIMELIMIT,
-	FQ_INTRO,
-	FQ_FOODITEMSUCCESS,
+	FQ_INTRO,			//Food Quiz intro
+	FQ_FOODITEMSUCCESS,	//Assistant's dialogue on feeding the correct food.
 	FQ_FOODITEMFAIL,
-	FQ_ROBOTFOODITEM,
+	FQ_ROBOTFOODITEM,	//Robot's dialogue of wanting a food.
 	FQ_OUTRO
 }
 
 //Different events to happen as a new DialogueLine is shown.
 public enum LINEFLAG {
 	NONE,
-	LS_ANIM_HIDERIGHT,
-	FQ_GLOWFOOD
+	LS_ANIM_HIDERIGHT,		//Level Select: Assistant moves off screen right to grab the whiteboard.
+	FQ_GLOWFOOD				//Food Quiz: Glow one of the foods by index, using FlagValue.
 }
 
 [System.Serializable]

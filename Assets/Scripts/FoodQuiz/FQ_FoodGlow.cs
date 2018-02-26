@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Handles glowing a Food Lineup food.
+/// </summary>
+
 public class FQ_FoodGlow:MonoBehaviour{
 	public Color		m_glowColor=Color.red;		//The color of the glow.
 	public float		m_glowSpeed=1;				//Speed of the glow cycling on/off.

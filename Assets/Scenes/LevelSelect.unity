@@ -113,6 +113,257 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &16158972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 16158973}
+  - component: {fileID: 16158974}
+  m_Layer: 0
+  m_Name: L3 - TestLevelBoth
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &16158973
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 16158972}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1831391179}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &16158974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 16158972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e10665e29daa6a46a5b98d6a1ce964b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_levelType: 3
+  m_foodDropLevelInput:
+    m_dialogues:
+    - m_name: Intro
+      m_dialogueType: 2
+      m_dialogueValue: 0
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Test dialogue level intro.
+    - m_name: Win
+      m_dialogueType: 3
+      m_dialogueValue: 0
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Test dialogue level win.
+    - m_name: FailRobotDeath
+      m_dialogueType: 4
+      m_dialogueValue: 0
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Test dialogue robot death.
+    - m_name: FailTimeLimit
+      m_dialogueType: 5
+      m_dialogueValue: 0
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Test dialogue time limit fail.
+    m_spawnerInfo:
+      m_spawnGroupSize: 10
+      m_spawnRate: 1
+      m_spawnRandomness: 0.1
+      m_additionalSpawnChance: 0.2
+      m_logFoodPercent: 0.3
+      m_neededFoodChance: 0.5
+      m_notFoodPercent: 0.4
+      m_timeLimit: 0
+      m_neededItems: 2
+      m_needAllLogFoods: 1
+      m_logFoods:
+      - {fileID: 21300006, guid: a8955525075323a489229550c68846cf, type: 3}
+      - {fileID: 21300008, guid: a8955525075323a489229550c68846cf, type: 3}
+      - {fileID: 21300010, guid: a8955525075323a489229550c68846cf, type: 3}
+      - {fileID: 21300012, guid: a8955525075323a489229550c68846cf, type: 3}
+      - {fileID: 21300014, guid: a8955525075323a489229550c68846cf, type: 3}
+      m_otherFoods:
+      - {fileID: 21300000, guid: a8955525075323a489229550c68846cf, type: 3}
+      - {fileID: 21300002, guid: a8955525075323a489229550c68846cf, type: 3}
+      - {fileID: 21300004, guid: a8955525075323a489229550c68846cf, type: 3}
+      m_notFoods:
+      - {fileID: 21300000, guid: 77e252d85c594a5488d06db6b8fcf6dc, type: 3}
+      - {fileID: 21300000, guid: 12c67e4b32452dc4aa62e96d4e0d720d, type: 3}
+      - {fileID: 21300000, guid: c79b4dfdf2e0c6a4d8175c136e2886a8, type: 3}
+    m_robotInfo:
+      m_robotHealth: 0
+  m_foodQuizLevelInput:
+    m_useFoodDropLogFoods: 0
+    m_foods:
+    - {fileID: 21300006, guid: a8955525075323a489229550c68846cf, type: 3}
+    - {fileID: 21300008, guid: a8955525075323a489229550c68846cf, type: 3}
+    - {fileID: 21300012, guid: a8955525075323a489229550c68846cf, type: 3}
+    m_foodOrder: 000000000100000002000000
+    m_dialogues:
+    - m_name: Intro
+      m_dialogueType: 6
+      m_dialogueValue: -1
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: -1
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: The robot will tell you what kind of food it wants.
+      - m_inFlag: 0
+        m_inFlagValue: -1
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: Then you must drag the correct food to feed the robot!
+      - m_inFlag: 2
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: Like this one.
+      - m_inFlag: 2
+        m_inFlagValue: 1
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: Or this one.
+      - m_inFlag: 2
+        m_inFlagValue: -1
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: Or all of them!
+    - m_name: Food 0 Success
+      m_dialogueType: 7
+      m_dialogueValue: 0
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: -1
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: That's right! Whole grain cereal is high in fiber!
+    - m_name: Food 0 Fail
+      m_dialogueType: 8
+      m_dialogueValue: 0
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: -1
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: Oh no! The correct answer was the whole grain cereal.
+    - m_name: Food 1 Success
+      m_dialogueType: 7
+      m_dialogueValue: 1
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: -1
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: That's right! White bread was correct!
+    - m_name: Food 1 Fail
+      m_dialogueType: 8
+      m_dialogueValue: 1
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: -1
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: Oh no! The correct answer was the white bread.
+    - m_name: Food 2 Success
+      m_dialogueType: 7
+      m_dialogueValue: 2
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: -1
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: That's right! The muffin was correct!
+    - m_name: Food 2 Fail
+      m_dialogueType: 8
+      m_dialogueValue: 2
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: -1
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: Oh no! The correct answer was the muffin.
+    - m_name: Outro
+      m_dialogueType: 10
+      m_dialogueValue: -1
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: -1
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: Great work, Doc! Let's see how you did.
+    - m_name: Robot Food 0
+      m_dialogueType: 9
+      m_dialogueValue: 0
+      m_speaker: 
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: -1
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: I'm looking for a food high in fiber.
+    - m_name: Robot Food 1
+      m_dialogueType: 9
+      m_dialogueValue: 1
+      m_speaker: 
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: -1
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: I'm looking for white bread.
+    - m_name: Robot Food 2
+      m_dialogueType: 9
+      m_dialogueValue: 2
+      m_speaker: 
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: -1
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: I'm looking for a muffin.
+  m_levelStatus: 2
+  m_levelRating: 0
+  m_levelName: TestLevelBoth
 --- !u!1001 &34438628
 Prefab:
   m_ObjectHideFlags: 0
@@ -693,6 +944,55 @@ RectTransform:
   m_AnchoredPosition: {x: -0.000030517578, y: -0.000030517578}
   m_SizeDelta: {x: 765.1, y: 481.5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &279882934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 279882935}
+  - component: {fileID: 279882936}
+  m_Layer: 5
+  m_Name: CG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &279882935
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 279882934}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1513666062}
+  - {fileID: 1454777275}
+  - {fileID: 1235407309}
+  - {fileID: 494657808}
+  m_Father: {fileID: 306849846}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &279882936
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 279882934}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &306849845
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,10 +1020,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1667636027}
-  - {fileID: 1513666062}
-  - {fileID: 1454777275}
-  - {fileID: 1235407309}
-  - {fileID: 494657808}
+  - {fileID: 279882935}
   m_Father: {fileID: 1659256387}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1159,8 +1456,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 306849846}
-  m_RootOrder: 4
+  m_Father: {fileID: 279882935}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1517,6 +1814,206 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!1 &770141435
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 770141436}
+  - component: {fileID: 770141437}
+  m_Layer: 0
+  m_Name: L2 - TestLevelFoodQuiz
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &770141436
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 770141435}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1831391179}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &770141437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 770141435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e10665e29daa6a46a5b98d6a1ce964b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_levelType: 2
+  m_foodDropLevelInput:
+    m_dialogues: []
+    m_spawnerInfo:
+      m_spawnGroupSize: 10
+      m_spawnRate: 1
+      m_spawnRandomness: 0.1
+      m_additionalSpawnChance: 0.2
+      m_logFoodPercent: 0.3
+      m_neededFoodChance: 0.5
+      m_notFoodPercent: 0.4
+      m_timeLimit: 0
+      m_neededItems: 5
+      m_needAllLogFoods: 1
+      m_logFoods: []
+      m_otherFoods: []
+      m_notFoods: []
+    m_robotInfo:
+      m_robotHealth: 0
+  m_foodQuizLevelInput:
+    m_useFoodDropLogFoods: 0
+    m_foods:
+    - {fileID: 21300006, guid: a8955525075323a489229550c68846cf, type: 3}
+    - {fileID: 21300008, guid: a8955525075323a489229550c68846cf, type: 3}
+    - {fileID: 21300012, guid: a8955525075323a489229550c68846cf, type: 3}
+    m_foodOrder: 000000000100000002000000
+    m_dialogues:
+    - m_name: Intro
+      m_dialogueType: 6
+      m_dialogueValue: -1
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: -1
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: The robot will tell you what kind of food it wants.
+      - m_inFlag: 0
+        m_inFlagValue: -1
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: Then you must drag the correct food to feed the robot!
+      - m_inFlag: 2
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: Like this one.
+      - m_inFlag: 2
+        m_inFlagValue: 1
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: Or this one.
+      - m_inFlag: 2
+        m_inFlagValue: -1
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: Or all of them!
+    - m_name: Food 0 Success
+      m_dialogueType: 7
+      m_dialogueValue: 0
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: -1
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: That's right! Whole grain cereal is high in fiber!
+    - m_name: Food 0 Fail
+      m_dialogueType: 8
+      m_dialogueValue: 0
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: -1
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: Oh no! The correct answer was the whole grain cereal.
+    - m_name: Food 1 Success
+      m_dialogueType: 7
+      m_dialogueValue: 1
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: -1
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: That's right! White bread was correct!
+    - m_name: Food 1 Fail
+      m_dialogueType: 8
+      m_dialogueValue: 1
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: -1
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: Oh no! The correct answer was the white bread.
+    - m_name: Food 2 Success
+      m_dialogueType: 7
+      m_dialogueValue: 2
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: -1
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: That's right! The muffin was correct!
+    - m_name: Food 2 Fail
+      m_dialogueType: 8
+      m_dialogueValue: 2
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: -1
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: Oh no! The correct answer was the muffin.
+    - m_name: Outro
+      m_dialogueType: 10
+      m_dialogueValue: -1
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: -1
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: Great work, Doc! Let's see how you did.
+    - m_name: Robot Food 0
+      m_dialogueType: 9
+      m_dialogueValue: 0
+      m_speaker: 
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: -1
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: I'm looking for a food high in fiber.
+    - m_name: Robot Food 1
+      m_dialogueType: 9
+      m_dialogueValue: 1
+      m_speaker: 
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: -1
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: I'm looking for white bread.
+    - m_name: Robot Food 2
+      m_dialogueType: 9
+      m_dialogueValue: 2
+      m_speaker: 
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: -1
+        m_outFlag: 0
+        m_outFlagValue: -1
+        m_sentence: I'm looking for a muffin.
+  m_levelStatus: 2
+  m_levelRating: 0
+  m_levelName: TestLevelFoodQuiz
 --- !u!1 &803532352
 GameObject:
   m_ObjectHideFlags: 0
@@ -2249,8 +2746,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 306849846}
-  m_RootOrder: 3
+  m_Father: {fileID: 279882935}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2733,8 +3230,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1756856411}
-  m_Father: {fileID: 306849846}
-  m_RootOrder: 2
+  m_Father: {fileID: 279882935}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2791,8 +3288,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 306849846}
-  m_RootOrder: 1
+  m_Father: {fileID: 279882935}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3265,7 +3762,7 @@ GameObject:
   - component: {fileID: 1829543665}
   - component: {fileID: 1829543664}
   m_Layer: 0
-  m_Name: L1 - Grains 1
+  m_Name: L1 - TestLevelFoodDrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3426,13 +3923,13 @@ MonoBehaviour:
     m_robotInfo:
       m_robotHealth: 0
   m_foodQuizLevelInput:
-    m_useFoodDropLogFoods: 1
+    m_useFoodDropLogFoods: 0
     m_foods: []
     m_foodOrder: 
     m_dialogues: []
   m_levelStatus: 2
   m_levelRating: 0
-  m_levelName: Grains 1
+  m_levelName: TestLevelFoodDrop
 --- !u!4 &1829543665
 Transform:
   m_ObjectHideFlags: 0
@@ -3486,6 +3983,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1829543665}
+  - {fileID: 770141436}
+  - {fileID: 16158973}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

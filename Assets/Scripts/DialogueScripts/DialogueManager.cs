@@ -27,9 +27,9 @@ public class DialogueManager:MonoBehaviour{
 	[Tooltip("The different speech bubbles in the scene.")]
 	public List<SpeechBubble> m_speechBubbles;			//All speech bubbles in the scene.
 
-	private DIALOGUETYPE	mp_dlgType;		//The type of dialogue currently being played.
-	private Conversation	mp_convo;       //Local copy of the conversation currently being played.
-	private int				mp_dlgIndex;	//Index into the list of DialogueLines of which one is currently shown.
+	private DIALOGUETYPE	mp_dlgType;					//The type of dialogue currently being played.
+	private Conversation	mp_convo;					//Local copy of the conversation currently being played.
+	private int				mp_dlgIndex;				//Index into the list of DialogueLines of which one is currently shown.
 	private SpeechBubble.SPEECHBUBBLETYPE mp_bubble;	//Which speech bubble is being used.
 		
 	private void Awake(){
@@ -46,16 +46,20 @@ public class DialogueManager:MonoBehaviour{
 	public void Update(){}
 
 	public void StartConversation(Conversation _convo, SpeechBubble.SPEECHBUBBLETYPE _type){
+		//Begins a conversation using a speech bubble.
 		//Debug.Log("DialogueManager.StartConversation("+_convo.m_dialogueType.ToString()+").");
 		mp_convo=_convo;
 		mp_dlgType=mp_convo.m_dialogueType;
 		mp_bubble=_type;
+		ToggleSpeechBubble(mp_bubble, true);
 		GetSpeechBubble(mp_bubble).m_T_name.text=_convo.m_speaker;
 		mp_dlgIndex=-1;
 
 		DisplayNextSentence();
 	}
 	public void DisplayNextSentence(){
+		//Show the next sentence of the conversation. End if necessary.
+
 		//Check if any out flags need to be done.
 		if((mp_dlgIndex>=0)&&(mp_convo.m_dialogue[mp_dlgIndex].m_outFlag!=LINEFLAG.NONE)){
 			ResolveOutFlags();
@@ -116,7 +120,8 @@ public class DialogueManager:MonoBehaviour{
 		}
 	}
 
-	public void EndConversation(){		
+	public void EndConversation(){	
+		//End a conversation and do whatever is next.	
 		//Debug.Log("End of conversation: "+m_dlgType.ToString());
 
 		//Level Select	////
@@ -128,30 +133,49 @@ public class DialogueManager:MonoBehaviour{
 
 		//Food Drop		////
 		//End of intro. Start the nutrient drop game.
-		if(mp_dlgType==DIALOGUETYPE.FD_INTRO){
+		else if(mp_dlgType==DIALOGUETYPE.FD_INTRO){
 			ND_GameController.inst.StartDropGame();
 			ND_GameController.inst.m_animDialogue.SetTrigger("Go_BottomOut");
 		}
 
 		//Level success.
-		if(mp_dlgType==DIALOGUETYPE.FD_WIN) ND_GameController.inst.ReturnLevelSelect();
+		else if(mp_dlgType==DIALOGUETYPE.FD_WIN) ND_GameController.inst.EndScene();
 
 		//Robot dead. Reload level.
-		if(mp_dlgType==DIALOGUETYPE.FD_FAILROBOTDEATH) ND_GameController.inst.ReloadScene(true);
+		else if(mp_dlgType==DIALOGUETYPE.FD_FAILROBOTDEATH) ND_GameController.inst.ReloadScene(true);
 
 		//Time ran out. Reload level.
-		if(mp_dlgType==DIALOGUETYPE.FD_FAILTIMELIMIT) ND_GameController.inst.ReloadScene(true);
+		else if(mp_dlgType==DIALOGUETYPE.FD_FAILTIMELIMIT) ND_GameController.inst.ReloadScene(true);
 
 
 		//Food Quiz		////
-		if(mp_dlgType==DIALOGUETYPE.FQ_INTRO){
+		//End of intro.
+		else if(mp_dlgType==DIALOGUETYPE.FQ_INTRO){
+			ToggleSpeechBubble(SpeechBubble.SPEECHBUBBLETYPE.ASSISTANT, false);
 			FQ_GameController.inst.StartGame();
-			ToggleSpeechBubble();
 			FQ_FoodLineupHandler.inst.SetFoodGlow(false);
+		}
+
+		//Food fed to robot and explanatory dialogue over.
+		if(mp_dlgType==DIALOGUETYPE.FQ_FOODITEMSUCCESS){
+			ToggleSpeechBubble();
+			FQ_RobotHandler.inst.AnimateRobotLeaving();
+		}
+		else if(mp_dlgType==DIALOGUETYPE.FQ_FOODITEMFAIL){
+			ToggleSpeechBubble();
+			FQ_RobotHandler.inst.AnimateNewRobotIn();
+		}
+
+		//End of outro.
+		else if(mp_dlgType==DIALOGUETYPE.FQ_OUTRO){
+			ToggleSpeechBubble(SpeechBubble.SPEECHBUBBLETYPE.ASSISTANT, false);
+			FQ_GameController.inst.ShowScoreScreen();
+			//Debug.Log("DialogueManager.EndConversation: End of FQ_OUTRO.");
 		}
 	}
 
 	public SpeechBubble GetSpeechBubble(SpeechBubble.SPEECHBUBBLETYPE _type) {
+		//Get one of the Speech Bubbles by type.
 		for(int i=0; i<m_speechBubbles.Count; i++) {
 			if(m_speechBubbles[i].m_type==_type) return m_speechBubbles[i];
 		}
@@ -160,7 +184,19 @@ public class DialogueManager:MonoBehaviour{
 		return null;
 	}
 	public void ToggleSpeechBubble() {
-		//Toggles on/off the speech bubble.
+		//Toggles on/off the active speech bubble.
 		GetSpeechBubble(mp_bubble).m_speechBubble.SetActive(!GetSpeechBubble(mp_bubble).m_speechBubble.activeSelf);
+	}
+	public void ToggleSpeechBubble(SpeechBubble.SPEECHBUBBLETYPE _type, bool _state) {
+		//Toggles the visibility of a speech bubble.
+		bool _found=false;
+		for(int i=0; i<m_speechBubbles.Count; i++) {
+			if(m_speechBubbles[i].m_type==_type) {
+				m_speechBubbles[i].m_speechBubble.SetActive(_state);
+				_found=true;
+			}
+		}
+
+		if(!_found) Debug.Log("ERROR: DialogueManager.ToggleSpeechBubble("+_type.ToString()+", "+_state+") can't find speech bubble of that type in m_speechBubbles.");
 	}
 }

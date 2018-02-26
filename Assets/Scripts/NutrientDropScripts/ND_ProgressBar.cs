@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Handles the Progress Bar.
+/// </summary>
+
 public class ND_ProgressBar:MonoBehaviour{
 	public static ND_ProgressBar inst;
 	public Image	m_fill;			//Fill image.
