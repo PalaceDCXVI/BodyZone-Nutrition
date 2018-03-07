@@ -4,7 +4,11 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
+//The game object will need to be set to active at the start of the scene to work properly.
+//It will set itself to inactive immediately.
 public class PauseMenu : MonoBehaviour {
+
+	public static PauseMenu inst;
 
 	public UnityEvent OnPauseEvents; //Events that occur when the game pauses.
 
@@ -12,6 +16,20 @@ public class PauseMenu : MonoBehaviour {
 
 	[Tooltip("At 0, the game is running, above 0, the game is paused.")]
 	public int pauseCounter; //At 0, the game is running, above 0, the game is paused.
+
+
+
+	void Awake()
+	{
+		if(inst==null) inst=this;
+		else {
+			Debug.Log("PauseMenu destroyed on '"+gameObject.name+"'. Are there duplicates in the scene?");
+			DestroyImmediate(this);
+		}
+
+		
+		gameObject.SetActive(false);
+	}
 
 	public void RequestPause()
 	{
@@ -24,12 +42,12 @@ public class PauseMenu : MonoBehaviour {
 
 	public void RequestResume()
 	{
+		pauseCounter = 0; //Scene is active.
 		if (pauseCounter <= 1) //Game should resume and there is no other pause requests active.
 		{
 			pauseCounter = 1;
 			OnResumeEvents.Invoke();
 		}
-		pauseCounter--;
 	}
 
 	public void quitGame()
