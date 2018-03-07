@@ -33,6 +33,8 @@ public class FoodDropInterface : MonoBehaviour {
 
 	public void RequestResumeFromPauseMenu()
 	{
+		Debug.Log("requesting resume");
 		pauseMenu.RequestResume();
+		Debug.Log("Resume Requested");
 	}
 }
