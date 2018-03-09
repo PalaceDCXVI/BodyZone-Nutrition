@@ -258,7 +258,33 @@ public class NutrientSpawner:MonoBehaviour {
 
 	public void Pause(bool _pause=true) {
 		m_active=!_pause;
+
+		//Freeze children while paused.
+		PauseAllChildren(_pause);
 	}
+
+	private void PauseAllChildren(bool _pause=true)
+	{
+		if (_pause)
+		{
+			Rigidbody2D[] liveFoods = m_spawnZone.GetComponentsInChildren<Rigidbody2D>();
+
+			foreach (Rigidbody2D item in liveFoods)
+			{
+				item.simulated = false;
+			}
+		}
+		else
+		{
+			Rigidbody2D[] liveFoods = m_spawnZone.GetComponentsInChildren<Rigidbody2D>();
+
+			foreach (Rigidbody2D item in liveFoods)
+			{
+				item.simulated = true;
+			}
+		}
+	}
+
 	public float GetLevelTimer() {
 		//Returns the time left in the game.
 		return mp_levelTimer;

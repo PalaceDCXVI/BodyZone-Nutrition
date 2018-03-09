@@ -122,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7494210}
   - component: {fileID: 7494211}
+  - component: {fileID: 7494212}
   m_Layer: 5
   m_Name: LogScreenAnimator
   m_TagString: Untagged
@@ -171,6 +172,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &7494212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 7494209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e96cce3d283854aa2472146bb9b797, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &70333108
 Prefab:
   m_ObjectHideFlags: 0
@@ -1972,7 +1984,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FoodDropSceneName: FoodDrop_RS
-  HasFoundInterface: 0
 --- !u!224 &556353044 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
@@ -2891,15 +2902,15 @@ MonoBehaviour:
           m_StringArgument: FoodDatabase
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1073953634}
-        m_MethodName: Remove
+      - m_Target: {fileID: 7494211}
+        m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: FoodDatabase
+          m_StringArgument: DestroyScene
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,

@@ -128,12 +128,12 @@ Prefab:
     - target: {fileID: 114524974504873704, guid: c3d87a666fff54444ac99f520582ec71,
         type: 2}
       propertyPath: OnPauseEvents.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114524974504873704, guid: c3d87a666fff54444ac99f520582ec71,
         type: 2}
       propertyPath: OnResumeEvents.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 224226124687495088, guid: c3d87a666fff54444ac99f520582ec71,
         type: 2}
@@ -257,7 +257,7 @@ Prefab:
     - target: {fileID: 114524974504873704, guid: c3d87a666fff54444ac99f520582ec71,
         type: 2}
       propertyPath: OnPauseEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114524974504873704, guid: c3d87a666fff54444ac99f520582ec71,
         type: 2}
@@ -268,11 +268,11 @@ Prefab:
         type: 2}
       propertyPath: OnPauseEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1311920964}
+      objectReference: {fileID: 1311920963}
     - target: {fileID: 114524974504873704, guid: c3d87a666fff54444ac99f520582ec71,
         type: 2}
       propertyPath: OnPauseEvents.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetTimeScale
+      value: Pause
       objectReference: {fileID: 0}
     - target: {fileID: 114524974504873704, guid: c3d87a666fff54444ac99f520582ec71,
         type: 2}
@@ -282,7 +282,7 @@ Prefab:
     - target: {fileID: 114524974504873704, guid: c3d87a666fff54444ac99f520582ec71,
         type: 2}
       propertyPath: OnResumeEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114524974504873704, guid: c3d87a666fff54444ac99f520582ec71,
         type: 2}
@@ -293,11 +293,11 @@ Prefab:
         type: 2}
       propertyPath: OnResumeEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1311920964}
+      objectReference: {fileID: 1311920963}
     - target: {fileID: 114524974504873704, guid: c3d87a666fff54444ac99f520582ec71,
         type: 2}
       propertyPath: OnResumeEvents.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetTimeScale
+      value: Pause
       objectReference: {fileID: 0}
     - target: {fileID: 114524974504873704, guid: c3d87a666fff54444ac99f520582ec71,
         type: 2}
@@ -307,7 +307,7 @@ Prefab:
     - target: {fileID: 114524974504873704, guid: c3d87a666fff54444ac99f520582ec71,
         type: 2}
       propertyPath: OnResumeEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114524974504873704, guid: c3d87a666fff54444ac99f520582ec71,
         type: 2}
@@ -318,11 +318,11 @@ Prefab:
         type: 2}
       propertyPath: OnResumeEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1311920963}
+      objectReference: {fileID: 1696562004}
     - target: {fileID: 114524974504873704, guid: c3d87a666fff54444ac99f520582ec71,
         type: 2}
       propertyPath: OnResumeEvents.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Pause
+      value: StartInput
       objectReference: {fileID: 0}
     - target: {fileID: 114524974504873704, guid: c3d87a666fff54444ac99f520582ec71,
         type: 2}
@@ -401,12 +401,12 @@ Prefab:
     - target: {fileID: 114524974504873704, guid: c3d87a666fff54444ac99f520582ec71,
         type: 2}
       propertyPath: OnResumeEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114524974504873704, guid: c3d87a666fff54444ac99f520582ec71,
         type: 2}
       propertyPath: OnPauseEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114524974504873704, guid: c3d87a666fff54444ac99f520582ec71,
         type: 2}
@@ -417,11 +417,11 @@ Prefab:
         type: 2}
       propertyPath: OnPauseEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1311920963}
+      objectReference: {fileID: 1696562004}
     - target: {fileID: 114524974504873704, guid: c3d87a666fff54444ac99f520582ec71,
         type: 2}
       propertyPath: OnPauseEvents.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Pause
+      value: StopInput
       objectReference: {fileID: 0}
     - target: {fileID: 114524974504873704, guid: c3d87a666fff54444ac99f520582ec71,
         type: 2}
@@ -431,7 +431,17 @@ Prefab:
     - target: {fileID: 114524974504873704, guid: c3d87a666fff54444ac99f520582ec71,
         type: 2}
       propertyPath: OnPauseEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114524974504873704, guid: c3d87a666fff54444ac99f520582ec71,
+        type: 2}
+      propertyPath: OnPauseEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114524974504873704, guid: c3d87a666fff54444ac99f520582ec71,
+        type: 2}
+      propertyPath: OnPauseEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c3d87a666fff54444ac99f520582ec71, type: 2}

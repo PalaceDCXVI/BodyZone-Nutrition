@@ -42,12 +42,12 @@ public class PauseMenu : MonoBehaviour {
 
 	public void RequestResume()
 	{
+		pauseCounter--;
 		if (pauseCounter <= 1) //Game should resume and there is no other pause requests active.
 		{
 			pauseCounter = 1;
 			OnResumeEvents.Invoke();
 		}
-		pauseCounter--;
 	}
 
 	public void quitGame()
