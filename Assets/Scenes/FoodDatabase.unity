@@ -5439,6 +5439,73 @@ Prefab:
         juice concentrate, Sea salt, Malted barley flour, Cultured wheat starch, Natural
         citric acid, Organic whole wheat flour, Enzymes.
       objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: ItemText
+      value: Whole Grain Bread
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: ItemDescription
+      value: 'Whole-grain bread is awesome! The whole-grains contain many important
+        vitamins and minerals like B-vitamins, iron, zinc, magnesium and fibre, which
+        helps you stay full or not hungry. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Calories
+      value: 86
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.SaturatedFats
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Carbohydrates
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Fibre
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Sugar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Protein
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Cholesterol
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Sodium
+      value: 178
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Potassium
+      value: 71
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Calcium
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: factsData.Iron
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
   m_IsPrefabParent: 0
