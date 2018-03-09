@@ -2,22 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-//This will be a script where scripts that need to be communicated with in the main scene can be collected and found.
+//This exists in the LogScreen as a way to communicate with the Nutrient Drop scene. I know the names are confusing a little.
 public class FoodDropInterface : MonoBehaviour {
+
+	LogScreenInterface logScreenInterface;
 
 	public string FoodDropSceneName;
 
 	//Pause Menu
-	PauseMenu pauseMenu = null;
 
 	// Use this for initialization
 	void Start () {
-		pauseMenu = PauseMenu.inst;
-		if (pauseMenu == null)
+		logScreenInterface = LogScreenInterface.inst;
+		if (logScreenInterface == null)
 		{
-			Debug.Log("PauseMenu not found in " + gameObject.name);
-			return;
+			Debug.Log("logScreenInterface Has Not Been Found in " + gameObject.name);
 		}
 	}
 
@@ -28,13 +30,16 @@ public class FoodDropInterface : MonoBehaviour {
 
 	public void RequestPauseFromPauseMenu()
 	{
-		pauseMenu.RequestPause();
+		logScreenInterface.RequestPauseFromPauseMenu();
 	}
 
 	public void RequestResumeFromPauseMenu()
 	{
-		Debug.Log("requesting resume");
-		pauseMenu.RequestResume();
-		Debug.Log("Resume Requested");
+		logScreenInterface.RequestResumeFromPauseMenu();
+	}
+
+	public void TurnFoodDropButtonsBackOn()
+	{
+		logScreenInterface.SetButtonsInteractable(true);
 	}
 }

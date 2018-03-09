@@ -28,17 +28,11 @@ public class LogTab : MonoBehaviour {
 
 		if (active)
 		{
-			GetComponent<Button>().colors = ColorBlock.defaultColorBlock;
+			GetComponentInChildren<Canvas>().sortingOrder = 4;
 		}
 		else
 		{
-			ColorBlock newBlock = new ColorBlock();
-			newBlock.normalColor = Color.grey;
-			newBlock.highlightedColor = ColorBlock.defaultColorBlock.highlightedColor;
-			newBlock.pressedColor = ColorBlock.defaultColorBlock.pressedColor;
-			newBlock.colorMultiplier = 1;
-			newBlock.fadeDuration = 0.1f;
-			GetComponent<Button>().colors = newBlock;
+			GetComponentInChildren<Canvas>().sortingOrder = 3;
 			
 		}
 	}
