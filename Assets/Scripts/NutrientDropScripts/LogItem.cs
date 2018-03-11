@@ -60,6 +60,7 @@ public class LogItem : MonoBehaviour {
 		hasBeenFound = true;
 		logImage.color = Color.white;
 		GetComponent<Button>().interactable = true;
+		GlowOverlay.gameObject.SetActive(true);
 	}
 
 	public void HideItem()
