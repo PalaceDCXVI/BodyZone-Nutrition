@@ -20,7 +20,7 @@ public class LogDatabase : MonoBehaviour
 	}
 
 	LogSerializer logSerializer = new LogSerializer();
-	private const string filePath = "FoodItems.xml";
+	private const string filePath = "/FoodItems.xml";
 	public NutrientFactsTable factsTable;
 	public Text FoodNameText;
 	public Text FoodDescriptionText;
