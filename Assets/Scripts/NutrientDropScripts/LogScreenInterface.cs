@@ -7,7 +7,7 @@ public class LogScreenInterface : MonoBehaviour {
 
 	public static LogScreenInterface inst;
 
-	PauseMenu pauseMenu = null;
+	public PauseMenu pauseMenu = null;
 
 	public Button logButton = null;
 	public Button pauseButton = null;
@@ -23,7 +23,7 @@ public class LogScreenInterface : MonoBehaviour {
 
 	void Start()
 	{
-		pauseMenu = PauseMenu.inst;
+		//pauseMenu = PauseMenu.inst;
 		if (pauseMenu == null)
 		{
 			Debug.Log("pauseMenu not found in " + gameObject.name);

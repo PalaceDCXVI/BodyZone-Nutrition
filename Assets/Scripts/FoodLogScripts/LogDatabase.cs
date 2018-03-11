@@ -66,6 +66,15 @@ public class LogDatabase : MonoBehaviour
 			}
 
 			//ItemNodeItself
+			if (nodeInXMLDoc.ChildNodes[HasBeenClickedIndex].InnerText == "true")
+			{
+				item.SetBeenClicked(true);
+			}
+			else
+			{
+				item.SetBeenClicked(false);				
+			}
+			
 			if (nodeInXMLDoc.ChildNodes[HasBeenFoundIndex].InnerText == "true")
 			{
 				item.RevealItem();
@@ -75,14 +84,7 @@ public class LogDatabase : MonoBehaviour
 				item.HideItem();
 			}
 
-			if (nodeInXMLDoc.ChildNodes[HasBeenClickedIndex].InnerText == "true")
-			{
-				item.SetBeenClicked(true);
-			}
-			else
-			{
-				item.SetBeenClicked(false);				
-			}
+			
 		}
 
 		RevealCollectedItems();

@@ -230,6 +230,10 @@ Prefab:
       propertyPath: OnResumeEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1696562004}
+    - target: {fileID: 1333925095124126, guid: c3d87a666fff54444ac99f520582ec71, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c3d87a666fff54444ac99f520582ec71, type: 2}
   m_IsPrefabParent: 0
@@ -3240,6 +3244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d398c54d5220e84cb926081458eeec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 34438630}
   logButton: {fileID: 935285865}
   pauseButton: {fileID: 2018698463}
 --- !u!4 &1457915271

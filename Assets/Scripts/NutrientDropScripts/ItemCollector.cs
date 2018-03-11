@@ -25,6 +25,9 @@ public class ItemCollector:MonoBehaviour {
 		switch(_foodType){
 			case FOODTYPE.LOGFOOD:
 				if(_foodIndex==ND_RobotHandler.inst.m_wantedFoods[ND_RobotHandler.inst.m_wantedFoodIndex]) {
+					//Add wanted food to items collected
+					LogDatabase.AddItemToCollection(other.GetComponent<Image>());
+
 					//The wanted food was eaten.
 					ND_RobotHandler.inst.NextFood();
 

@@ -10,8 +10,6 @@ public class FoodDropInterface : MonoBehaviour {
 
 	LogScreenInterface logScreenInterface;
 
-	public string FoodDropSceneName;
-
 	//Pause Menu
 
 	// Use this for initialization
