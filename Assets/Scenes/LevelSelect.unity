@@ -113,257 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &16158972
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 16158973}
-  - component: {fileID: 16158974}
-  m_Layer: 0
-  m_Name: L3 - TestLevelBoth
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &16158973
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 16158972}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1831391179}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &16158974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 16158972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e10665e29daa6a46a5b98d6a1ce964b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_levelType: 3
-  m_foodDropLevelInput:
-    m_dialogues:
-    - m_name: Intro
-      m_dialogueType: 2
-      m_dialogueValue: 0
-      m_speaker: Assistant
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: 0
-        m_outFlag: 0
-        m_outFlagValue: 0
-        m_sentence: Test dialogue level intro.
-    - m_name: Win
-      m_dialogueType: 3
-      m_dialogueValue: 0
-      m_speaker: Assistant
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: 0
-        m_outFlag: 0
-        m_outFlagValue: 0
-        m_sentence: Test dialogue level win.
-    - m_name: FailRobotDeath
-      m_dialogueType: 4
-      m_dialogueValue: 0
-      m_speaker: Assistant
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: 0
-        m_outFlag: 0
-        m_outFlagValue: 0
-        m_sentence: Test dialogue robot death.
-    - m_name: FailTimeLimit
-      m_dialogueType: 5
-      m_dialogueValue: 0
-      m_speaker: Assistant
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: 0
-        m_outFlag: 0
-        m_outFlagValue: 0
-        m_sentence: Test dialogue time limit fail.
-    m_spawnerInfo:
-      m_spawnGroupSize: 10
-      m_spawnRate: 1
-      m_spawnRandomness: 0.1
-      m_additionalSpawnChance: 0.2
-      m_logFoodPercent: 0.3
-      m_neededFoodChance: 0.5
-      m_notFoodPercent: 0.4
-      m_timeLimit: 0
-      m_neededItems: 2
-      m_needAllLogFoods: 1
-      m_logFoods:
-      - {fileID: 21300006, guid: a8955525075323a489229550c68846cf, type: 3}
-      - {fileID: 21300008, guid: a8955525075323a489229550c68846cf, type: 3}
-      - {fileID: 21300010, guid: a8955525075323a489229550c68846cf, type: 3}
-      - {fileID: 21300012, guid: a8955525075323a489229550c68846cf, type: 3}
-      - {fileID: 21300014, guid: a8955525075323a489229550c68846cf, type: 3}
-      m_otherFoods:
-      - {fileID: 21300000, guid: a8955525075323a489229550c68846cf, type: 3}
-      - {fileID: 21300002, guid: a8955525075323a489229550c68846cf, type: 3}
-      - {fileID: 21300004, guid: a8955525075323a489229550c68846cf, type: 3}
-      m_notFoods:
-      - {fileID: 21300000, guid: 77e252d85c594a5488d06db6b8fcf6dc, type: 3}
-      - {fileID: 21300000, guid: 12c67e4b32452dc4aa62e96d4e0d720d, type: 3}
-      - {fileID: 21300000, guid: c79b4dfdf2e0c6a4d8175c136e2886a8, type: 3}
-    m_robotInfo:
-      m_robotHealth: 0
-  m_foodQuizLevelInput:
-    m_useFoodDropLogFoods: 0
-    m_foods:
-    - {fileID: 21300006, guid: a8955525075323a489229550c68846cf, type: 3}
-    - {fileID: 21300008, guid: a8955525075323a489229550c68846cf, type: 3}
-    - {fileID: 21300012, guid: a8955525075323a489229550c68846cf, type: 3}
-    m_foodOrder: 000000000100000002000000
-    m_dialogues:
-    - m_name: Intro
-      m_dialogueType: 6
-      m_dialogueValue: -1
-      m_speaker: Assistant
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: -1
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: The robot will tell you what kind of food it wants.
-      - m_inFlag: 0
-        m_inFlagValue: -1
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: Then you must drag the correct food to feed the robot!
-      - m_inFlag: 2
-        m_inFlagValue: 0
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: Like this one.
-      - m_inFlag: 2
-        m_inFlagValue: 1
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: Or this one.
-      - m_inFlag: 2
-        m_inFlagValue: -1
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: Or all of them!
-    - m_name: Food 0 Success
-      m_dialogueType: 7
-      m_dialogueValue: 0
-      m_speaker: Assistant
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: -1
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: That's right! Whole grain cereal is high in fiber!
-    - m_name: Food 0 Fail
-      m_dialogueType: 8
-      m_dialogueValue: 0
-      m_speaker: Assistant
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: -1
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: Oh no! The correct answer was the whole grain cereal.
-    - m_name: Food 1 Success
-      m_dialogueType: 7
-      m_dialogueValue: 1
-      m_speaker: Assistant
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: -1
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: That's right! White bread was correct!
-    - m_name: Food 1 Fail
-      m_dialogueType: 8
-      m_dialogueValue: 1
-      m_speaker: Assistant
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: -1
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: Oh no! The correct answer was the white bread.
-    - m_name: Food 2 Success
-      m_dialogueType: 7
-      m_dialogueValue: 2
-      m_speaker: Assistant
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: -1
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: That's right! The muffin was correct!
-    - m_name: Food 2 Fail
-      m_dialogueType: 8
-      m_dialogueValue: 2
-      m_speaker: Assistant
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: -1
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: Oh no! The correct answer was the muffin.
-    - m_name: Outro
-      m_dialogueType: 10
-      m_dialogueValue: -1
-      m_speaker: Assistant
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: -1
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: Great work, Doc! Let's see how you did.
-    - m_name: Robot Food 0
-      m_dialogueType: 9
-      m_dialogueValue: 0
-      m_speaker: 
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: -1
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: I'm looking for a food high in fiber.
-    - m_name: Robot Food 1
-      m_dialogueType: 9
-      m_dialogueValue: 1
-      m_speaker: 
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: -1
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: I'm looking for white bread.
-    - m_name: Robot Food 2
-      m_dialogueType: 9
-      m_dialogueValue: 2
-      m_speaker: 
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: -1
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: I'm looking for a muffin.
-  m_levelStatus: 2
-  m_levelRating: 0
-  m_levelName: TestLevelBoth
 --- !u!1001 &34438628
 Prefab:
   m_ObjectHideFlags: 0
@@ -796,7 +545,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 192711c5e079a074e872b36db01d7733, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d090b69f60aa2ea44ad9cee5b76aa257, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1814,206 +1563,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!1 &770141435
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 770141436}
-  - component: {fileID: 770141437}
-  m_Layer: 0
-  m_Name: L2 - TestLevelFoodQuiz
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &770141436
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 770141435}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1831391179}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &770141437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 770141435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e10665e29daa6a46a5b98d6a1ce964b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_levelType: 2
-  m_foodDropLevelInput:
-    m_dialogues: []
-    m_spawnerInfo:
-      m_spawnGroupSize: 10
-      m_spawnRate: 1
-      m_spawnRandomness: 0.1
-      m_additionalSpawnChance: 0.2
-      m_logFoodPercent: 0.3
-      m_neededFoodChance: 0.5
-      m_notFoodPercent: 0.4
-      m_timeLimit: 0
-      m_neededItems: 5
-      m_needAllLogFoods: 1
-      m_logFoods: []
-      m_otherFoods: []
-      m_notFoods: []
-    m_robotInfo:
-      m_robotHealth: 0
-  m_foodQuizLevelInput:
-    m_useFoodDropLogFoods: 0
-    m_foods:
-    - {fileID: 21300006, guid: a8955525075323a489229550c68846cf, type: 3}
-    - {fileID: 21300008, guid: a8955525075323a489229550c68846cf, type: 3}
-    - {fileID: 21300012, guid: a8955525075323a489229550c68846cf, type: 3}
-    m_foodOrder: 000000000100000002000000
-    m_dialogues:
-    - m_name: Intro
-      m_dialogueType: 6
-      m_dialogueValue: -1
-      m_speaker: Assistant
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: -1
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: The robot will tell you what kind of food it wants.
-      - m_inFlag: 0
-        m_inFlagValue: -1
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: Then you must drag the correct food to feed the robot!
-      - m_inFlag: 2
-        m_inFlagValue: 0
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: Like this one.
-      - m_inFlag: 2
-        m_inFlagValue: 1
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: Or this one.
-      - m_inFlag: 2
-        m_inFlagValue: -1
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: Or all of them!
-    - m_name: Food 0 Success
-      m_dialogueType: 7
-      m_dialogueValue: 0
-      m_speaker: Assistant
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: -1
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: That's right! Whole grain cereal is high in fiber!
-    - m_name: Food 0 Fail
-      m_dialogueType: 8
-      m_dialogueValue: 0
-      m_speaker: Assistant
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: -1
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: Oh no! The correct answer was the whole grain cereal.
-    - m_name: Food 1 Success
-      m_dialogueType: 7
-      m_dialogueValue: 1
-      m_speaker: Assistant
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: -1
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: That's right! White bread was correct!
-    - m_name: Food 1 Fail
-      m_dialogueType: 8
-      m_dialogueValue: 1
-      m_speaker: Assistant
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: -1
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: Oh no! The correct answer was the white bread.
-    - m_name: Food 2 Success
-      m_dialogueType: 7
-      m_dialogueValue: 2
-      m_speaker: Assistant
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: -1
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: That's right! The muffin was correct!
-    - m_name: Food 2 Fail
-      m_dialogueType: 8
-      m_dialogueValue: 2
-      m_speaker: Assistant
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: -1
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: Oh no! The correct answer was the muffin.
-    - m_name: Outro
-      m_dialogueType: 10
-      m_dialogueValue: -1
-      m_speaker: Assistant
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: -1
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: Great work, Doc! Let's see how you did.
-    - m_name: Robot Food 0
-      m_dialogueType: 9
-      m_dialogueValue: 0
-      m_speaker: 
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: -1
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: I'm looking for a food high in fiber.
-    - m_name: Robot Food 1
-      m_dialogueType: 9
-      m_dialogueValue: 1
-      m_speaker: 
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: -1
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: I'm looking for white bread.
-    - m_name: Robot Food 2
-      m_dialogueType: 9
-      m_dialogueValue: 2
-      m_speaker: 
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: -1
-        m_outFlag: 0
-        m_outFlagValue: -1
-        m_sentence: I'm looking for a muffin.
-  m_levelStatus: 2
-  m_levelRating: 0
-  m_levelName: TestLevelFoodQuiz
 --- !u!1 &803532352
 GameObject:
   m_ObjectHideFlags: 0
@@ -3335,6 +2884,501 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1513666061}
+--- !u!1 &1555650870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1555650871}
+  - component: {fileID: 1555650872}
+  m_Layer: 0
+  m_Name: L2 - Drinks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1555650871
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1555650870}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1831391179}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1555650872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1555650870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e10665e29daa6a46a5b98d6a1ce964b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_levelType: 3
+  m_foodDropLevelInput:
+    m_dialogues:
+    - m_name: Intro
+      m_dialogueType: 2
+      m_dialogueValue: 0
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Hi Doc! Are you ready to get started?
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Okay so there's a problem...
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: I have no idea what makes a drink healthy or unhealthy.
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Juice comes from fruits right? So, I'd assumes it's healthy, but
+          how can I be sure?
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: I do know that sugar might play a role...
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: But let's collect some foods to find out!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Remember to only collect the food on the FoodBot's display and
+          watch out for falling junk!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Good luck Doc!
+    - m_name: Win
+      m_dialogueType: 3
+      m_dialogueValue: 0
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Wow awesome Doc!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: According to the data from the FoodBot, we should try to choose
+          drinks that only contain natural sugars!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: So, drinks like milk, or drinks made with 100% fruit juice.
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Natural-sugars contain important vitamins and nutrients for our
+          bodies!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: But... it also looks like there's something called ADDED sugar.
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Sometimes, sugar is added to our drinks that wouldn't have been
+          there in the first place...
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Sounds more like sneaky sugar to me...
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: This sneaky added-sugar does not ctontain any nutritional value,
+          so it's really not good for you at all!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: It can cause cavities and unhealthy weight gain if you eat too
+          much of it!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: So, natural-sugar is good for you!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: And there's added-sugar that is sneaky...
+    - m_name: Fail Robot Death
+      m_dialogueType: 4
+      m_dialogueValue: 0
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Uh oh Doc, looks like the FoodBot ate a bit too much junk...
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Let's try again!
+    - m_name: Fail Time Limit
+      m_dialogueType: 5
+      m_dialogueValue: 0
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Oh no, we ran out of time!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Let's try again.
+    m_spawnerInfo:
+      m_spawnGroupSize: 10
+      m_spawnRate: 1
+      m_spawnRandomness: 0.1
+      m_additionalSpawnChance: 0.2
+      m_logFoodPercent: 0.3
+      m_neededFoodChance: 0.5
+      m_notFoodPercent: 0.4
+      m_timeLimit: 0
+      m_neededItems: 5
+      m_needAllLogFoods: 1
+      m_logFoods:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      m_otherFoods:
+      - {fileID: 21300008, guid: a8955525075323a489229550c68846cf, type: 3}
+      - {fileID: 21300010, guid: a8955525075323a489229550c68846cf, type: 3}
+      - {fileID: 21300014, guid: a8955525075323a489229550c68846cf, type: 3}
+      - {fileID: 21300012, guid: a8955525075323a489229550c68846cf, type: 3}
+      m_notFoods:
+      - {fileID: 21300000, guid: 77e252d85c594a5488d06db6b8fcf6dc, type: 3}
+      - {fileID: 21300000, guid: 12c67e4b32452dc4aa62e96d4e0d720d, type: 3}
+    m_robotInfo:
+      m_robotHealth: 1
+  m_foodQuizLevelInput:
+    m_useFoodDropLogFoods: 0
+    m_foods:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    m_foodOrder: 0300000001000000020000000400000000000000
+    m_dialogues:
+    - m_name: Intro
+      m_dialogueType: 6
+      m_dialogueValue: -1
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Uh oh Doc!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Looks like the FoodBots have been tanning in the sun all day,
+          and now they're super thirsty...
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Give them the drink they're hinting at!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: And don't forget to check the log if you aren't sure!
+    - m_name: 0 Question
+      m_dialogueType: 9
+      m_dialogueValue: 0
+      m_speaker: Steph
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: I'm so thirsty! I want the BEST thirst quencher!
+    - m_name: 0 Correct
+      m_dialogueType: 7
+      m_dialogueValue: 0
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Water is correct!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: When you start feeling thirsty, that means your body is already
+          dehydrated!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: So try to drink water throughout the day!
+    - m_name: 0 Wrong
+      m_dialogueType: 8
+      m_dialogueValue: 0
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: The correct answer was water! Your body is mostly made of water,
+          so it's the best to drink when you're thirsty.
+    - m_name: 1 Question
+      m_dialogueType: 9
+      m_dialogueValue: 1
+      m_speaker: Diane
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: I want a drink that will help my bones get stronger!
+    - m_name: 1 Correct
+      m_dialogueType: 7
+      m_dialogueValue: 1
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: That's correct!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Milk has protein, calcium, and Vitamin D.
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Which are all great for growing strong bones!
+    - m_name: 1 Wrong
+      m_dialogueType: 8
+      m_dialogueValue: 1
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 2
+        m_inFlagValue: 2
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: The correct answer was milk!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Milk is high in protein, calcium, and vitamin D!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Which all help grow strong bones!
+    - m_name: 2 Question
+      m_dialogueType: 9
+      m_dialogueValue: 2
+      m_speaker: Meredith
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: I want a tasty drink with Vitamin C!
+    - m_name: 2 Correct
+      m_dialogueType: 7
+      m_dialogueValue: 2
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Spot on!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: A glass of oreange juice contains all the Vitamin C you need for
+          the day!
+    - m_name: 2 Wrong
+      m_dialogueType: 8
+      m_dialogueValue: 2
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: The correct answer was Orange Juice.
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Citrus fruits are very high in Vitamin C!
+    - m_name: 3 Question
+      m_dialogueType: 9
+      m_dialogueValue: 3
+      m_speaker: Robo-Jeff
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: While the other bots were tanning, I was playing BotBall. I need
+          something tasty to quench my thirst.
+    - m_name: 3 Correct
+      m_dialogueType: 7
+      m_dialogueValue: 3
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Correct!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Sports drinks are great when you have been physically active for
+          over an hour!
+    - m_name: 3 Wrong
+      m_dialogueType: 8
+      m_dialogueValue: 3
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Oh no! The correct answer was the sports drink!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: This robot was craving something sweet...
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Since he was active for over an hour the sports drink was a good
+          choice!
+    - m_name: 4 Question
+      m_dialogueType: 9
+      m_dialogueValue: 4
+      m_speaker: Sydney the Cyborg
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: I'm in the mood for a treat, can I have something extra sweet
+          to drink?
+    - m_name: 4 Correct
+      m_dialogueType: 7
+      m_dialogueValue: 4
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: That's right, the answer is Soda!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Since soda is high in added sugar you should only drink it once
+          in a while!
+    - m_name: 4 Wrong
+      m_dialogueType: 8
+      m_dialogueValue: 4
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Oops..
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: The correct answer was Soda.
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Since, it is high in addded sugar you should only drink it on
+          occasion!
+    - m_name: Outro
+      m_dialogueType: 10
+      m_dialogueValue: -1
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Well good work doc!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: I took some notes! Let's see how we did!
+  m_levelStatus: 2
+  m_levelRating: 0
+  m_levelName: Drinks
 --- !u!1 &1599824066
 GameObject:
   m_ObjectHideFlags: 0
@@ -3762,7 +3806,7 @@ GameObject:
   - component: {fileID: 1829543665}
   - component: {fileID: 1829543664}
   m_Layer: 0
-  m_Name: L1 - TestLevelFoodDrop
+  m_Name: L1 - Grains
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3779,7 +3823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e10665e29daa6a46a5b98d6a1ce964b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_levelType: 1
+  m_levelType: 3
   m_foodDropLevelInput:
     m_dialogues:
     - m_name: Intro
@@ -3796,45 +3840,61 @@ MonoBehaviour:
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Are you ready to research more foods?
+        m_sentence: I need some help completing my research on foods made from grains.
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Today, I have some grain products set up for you.
+        m_sentence: I know that grains are a type of seed and they can be broken down
+          to make flours for breads!
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Unfortunately, I forgot to record which ones I added to the food
-          dropper...
+        m_sentence: and they can also be eaten in their whole form!
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: So, if you wouldn't mind collecting some food for me, I'll take
-          notes about each one!
+        m_sentence: Unfortunately, that's all I know about grain products...
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Touch to the left or right to move the robot.
+        m_sentence: But don't worry this is where you come in Doc!
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Oh, by the way...
+        m_sentence: I need you to control a FoodBot for me to catch some falling foods!
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Our food dropper is still malfunctioning, so try to avoid any
-          junk that falls!
+        m_sentence: Thing is.. FoodBots are really picky eaters, so only collect the
+          food on it's display.
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Good luck!
+        m_sentence: You must fill the FoodBot's hunger meter on so it will tell us
+          more about the foods!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Oh and one last thing... haha...
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: If the FoodBots eats any falling junk it'll explode and you'll
+          have to restart.
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Good luck doc!
     - m_name: Win
       m_dialogueType: 3
       m_dialogueValue: 0
@@ -3844,17 +3904,66 @@ MonoBehaviour:
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Wow, I'm sure glad I have you, Doc!
+        m_sentence: Wow great work Doc!
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: That would have taken me at least twice as long...
+        m_sentence: I destoryed 7 FoodBots attempting this before you showed up...
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Let's take a look at the notes I made about each food!
+        m_sentence: Anyway, according to the readings from the FoodBot...
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: When grains are harvested they can be refined into different types
+          of refined flours.
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: and you're not gunna believe this but...
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: during the milling process, healthy parts of the grain are removed...
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: most importantly fiber!!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: So, when we talk about refined-grains, we mean products that aren't
+          as healthy!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: since  they don't contain the entire grain!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: That means that whole-grain products are healthier since they
+          have more fiber!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: I've taken some notes about the food you collected Doc and added
+          them to the food log!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Let's check it out!
     - m_name: Fail Robot Death
       m_dialogueType: 4
       m_dialogueValue: 0
@@ -3864,22 +3973,12 @@ MonoBehaviour:
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Hmm... something's not right...
-      - m_inFlag: 0
-        m_inFlagValue: 0
-        m_outFlag: 0
-        m_outFlagValue: 0
-        m_sentence: Looks like we caught too many foods with refined grains.
+        m_sentence: Uh oh Doc, looks like the FoodBot ate a bit too much junk...
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
         m_sentence: Let's try again!
-      - m_inFlag: 0
-        m_inFlagValue: 0
-        m_outFlag: 0
-        m_outFlagValue: 0
-        m_sentence: Remember to pick food that are made with whole grains.
     - m_name: Fail Time Limit
       m_dialogueType: 5
       m_dialogueValue: 0
@@ -3915,21 +4014,297 @@ MonoBehaviour:
       m_otherFoods:
       - {fileID: 21300000, guid: a8955525075323a489229550c68846cf, type: 3}
       - {fileID: 21300002, guid: a8955525075323a489229550c68846cf, type: 3}
-      - {fileID: 21300004, guid: a8955525075323a489229550c68846cf, type: 3}
       m_notFoods:
       - {fileID: 21300000, guid: 77e252d85c594a5488d06db6b8fcf6dc, type: 3}
-      - {fileID: 21300000, guid: 12c67e4b32452dc4aa62e96d4e0d720d, type: 3}
-      - {fileID: 21300000, guid: c79b4dfdf2e0c6a4d8175c136e2886a8, type: 3}
     m_robotInfo:
       m_robotHealth: 0
   m_foodQuizLevelInput:
     m_useFoodDropLogFoods: 0
-    m_foods: []
-    m_foodOrder: 
-    m_dialogues: []
+    m_foods:
+    - {fileID: 21300006, guid: a8955525075323a489229550c68846cf, type: 3}
+    - {fileID: 21300008, guid: a8955525075323a489229550c68846cf, type: 3}
+    - {fileID: 21300010, guid: a8955525075323a489229550c68846cf, type: 3}
+    - {fileID: 21300012, guid: a8955525075323a489229550c68846cf, type: 3}
+    - {fileID: 21300014, guid: a8955525075323a489229550c68846cf, type: 3}
+    m_foodOrder: 0200000004000000020000000000000003000000
+    m_dialogues:
+    - m_name: Intro
+      m_dialogueType: 6
+      m_dialogueValue: -1
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Uh Oh Doc...
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: It looks like some of the other FoodBots got jealous that we were
+          only feeding one of them...
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: And of course they're all still ebing incredibly picky eaters...
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: But don't worry Doc!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Now that we've done some reasearch I know we can figure this out!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Try to feed each FoodBot with the food it's hinting at!
+      - m_inFlag: 2
+        m_inFlagValue: 5
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Drag any of the foods at the bottom to feed the FoodBot!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: You can also check the food log at any time if you're unsure!
+    - m_name: 0 Question
+      m_dialogueType: 9
+      m_dialogueValue: 0
+      m_speaker: Robert
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: I want a food that is high in fiber!
+    - m_name: 0 Correct
+      m_dialogueType: 7
+      m_dialogueValue: 0
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: That's right whole grain bread has extra fiber!
+    - m_name: 0 Wrong
+      m_dialogueType: 8
+      m_dialogueValue: 0
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Dang, the correct answer was whole grain bread!
+    - m_name: 1 Question
+      m_dialogueType: 9
+      m_dialogueValue: 1
+      m_speaker: Cybrody
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: I want a food I should only enjoy occasionally!
+    - m_name: 1 Correct
+      m_dialogueType: 7
+      m_dialogueValue: 1
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Good one Doc!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: This cereal has added sugar and is made with refined grains, so
+          it's low in important nutrients.
+    - m_name: 1 Wrong
+      m_dialogueType: 8
+      m_dialogueValue: 1
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 2
+        m_inFlagValue: 2
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: The correct answer was sugary cereal!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: This should only we enjoyed on occasion since it is made with
+          refined grains!
+    - m_name: 2 Question
+      m_dialogueType: 9
+      m_dialogueValue: 2
+      m_speaker: Meredith
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: I want a food that does no added sugars!
+    - m_name: 2 Correct
+      m_dialogueType: 7
+      m_dialogueValue: 2
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Wow! Whole grain bread is the only product that does not contain
+          added sugars!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Be sure to read the labels to check for added sugar, even in whole
+          grain products!
+    - m_name: 2 Wrong
+      m_dialogueType: 8
+      m_dialogueValue: 2
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Oops, looks like the correct answer was whole grain bread!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Even foods made with whole grains can be full of sugar!
+    - m_name: 3 Question
+      m_dialogueType: 9
+      m_dialogueValue: 3
+      m_speaker: Sarah the FoodBot
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: I want a food that will keep me feeling full for longer!
+    - m_name: 3 Correct
+      m_dialogueType: 7
+      m_dialogueValue: 3
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Good call doc!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Since fiber is indegestible, eating a meal full of it will keep
+          you feeling full much longer!
+    - m_name: 3 Wrong
+      m_dialogueType: 8
+      m_dialogueValue: 3
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Oh no! The correct food was whole grain cereal!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Since fiber is indegestible, eating a meal full of it will keep
+          you feeling full much longer!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: 
+    - m_name: 4 Question
+      m_dialogueType: 9
+      m_dialogueValue: 4
+      m_speaker: Metal Matt
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: I want a food that is high in sodium!
+    - m_name: 4 Correct
+      m_dialogueType: 7
+      m_dialogueValue: 4
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Wow!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Did you know baked goods are one of the highest sources of sodium
+          in the Canadian diet?
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Well I didn't but now I do!
+    - m_name: 4 Wrong
+      m_dialogueType: 8
+      m_dialogueValue: 4
+      m_speaker: 
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Oops..
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: The correct answer was the muffin!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Apparently, baked goods are one of the highest sources of fiber
+          in the canadian diet!
+    - m_name: Outro
+      m_dialogueType: 10
+      m_dialogueValue: -1
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Well good work doc!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: I took some notes! Let's see how we did!
   m_levelStatus: 2
   m_levelRating: 0
-  m_levelName: TestLevelFoodDrop
+  m_levelName: Grains
 --- !u!4 &1829543665
 Transform:
   m_ObjectHideFlags: 0
@@ -3983,8 +4358,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1829543665}
-  - {fileID: 770141436}
-  - {fileID: 16158973}
+  - {fileID: 1555650871}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
