@@ -120,6 +120,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114125483589669176, guid: c3d87a666fff54444ac99f520582ec71,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 224226124687495088, guid: c3d87a666fff54444ac99f520582ec71,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -233,6 +238,26 @@ Prefab:
     - target: {fileID: 1333925095124126, guid: c3d87a666fff54444ac99f520582ec71, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125483589669176, guid: c3d87a666fff54444ac99f520582ec71,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125483589669176, guid: c3d87a666fff54444ac99f520582ec71,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125483589669176, guid: c3d87a666fff54444ac99f520582ec71,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1457915269}
+    - target: {fileID: 114524974504873704, guid: c3d87a666fff54444ac99f520582ec71,
+        type: 2}
+      propertyPath: pauseCounter
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c3d87a666fff54444ac99f520582ec71, type: 2}
@@ -2994,6 +3019,7 @@ MonoBehaviour:
   m_pre_SceneInfo: {fileID: 1792388360267244, guid: c1d879c19c797bc48a1b426cd2b4b9ae,
     type: 2}
   m_animDialogue: {fileID: 1604295505}
+  m_pauseMenu: {fileID: 34438630}
 --- !u!114 &1311920965
 MonoBehaviour:
   m_ObjectHideFlags: 0

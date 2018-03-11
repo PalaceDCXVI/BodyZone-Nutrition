@@ -14,6 +14,8 @@ public class ND_GameController:MonoBehaviour {
 
 	public Animator					m_animDialogue;		//Animator for dialogue canvas.
 
+	public PauseMenu				m_pauseMenu;
+
 	private bool	mp_firstFrameStart=true;			//Helps the FirstFrameStart to run.
 	private GameObject mp_passedLevelInfo;				//The passed level info, if it exists.
 
@@ -86,6 +88,7 @@ public class ND_GameController:MonoBehaviour {
 		NutrientSpawner.inst.SetSpawnerInfo(m_levelInput.m_foodDropLevelInput.m_spawnerInfo);
 		ND_RobotHandler.inst.SetWantedFoods();
 		ND_LevelTimer.inst.SetupTimer();
+		m_pauseMenu.RequestPause();
 
 		//Start the intro dialogue if it exists and isn't set to be skipped, else start the drop game.
 		if((FindSceneInfo()==null)||(!FindSceneInfo()[0].GetComponent<SceneInfo>().m_skipIntro)) {
@@ -103,6 +106,7 @@ public class ND_GameController:MonoBehaviour {
 
 		NutrientSpawner.inst.Pause(false);
 		NutrientBucket.inst.Pause(false);
+		m_pauseMenu.RequestResume();
 	}
 	public void EndLevelSuccess(){
 		//The food catching part is completed.
