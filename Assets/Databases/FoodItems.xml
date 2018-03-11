@@ -2,23 +2,23 @@
 <FoodItems>
   <FoodItem>
     <Name>WholeGrainBread</Name>
-    <HasBeenFound>true</HasBeenFound>
-    <HasBeenClicked>true</HasBeenClicked>
+    <HasBeenFound>false</HasBeenFound>
+    <HasBeenClicked>false</HasBeenClicked>
   </FoodItem>
   <FoodItem>
     <Name>WhiteBread</Name>
-    <HasBeenFound>true</HasBeenFound>
-    <HasBeenClicked>true</HasBeenClicked>
+    <HasBeenFound>false</HasBeenFound>
+    <HasBeenClicked>false</HasBeenClicked>
   </FoodItem>
   <FoodItem>
     <Name>Muffin</Name>
-    <HasBeenFound>true</HasBeenFound>
-    <HasBeenClicked>true</HasBeenClicked>
+    <HasBeenFound>false</HasBeenFound>
+    <HasBeenClicked>false</HasBeenClicked>
   </FoodItem>
   <FoodItem>
     <Name>WholeGrainCereal</Name>
-    <HasBeenFound>true</HasBeenFound>
-    <HasBeenClicked>true</HasBeenClicked>
+    <HasBeenFound>false</HasBeenFound>
+    <HasBeenClicked>false</HasBeenClicked>
   </FoodItem>
   <FoodItem>
     <Name>SugaryCereal</Name>

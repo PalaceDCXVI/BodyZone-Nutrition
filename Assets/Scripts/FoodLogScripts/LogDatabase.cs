@@ -32,6 +32,19 @@ public class LogDatabase : MonoBehaviour
 	const int HasBeenFoundIndex = 1;
 	const int HasBeenClickedIndex = 2;
 
+	//Items collected during Nutrient Drop
+	public static List<Image> itemsCollected = new List<Image>();
+
+	public static void ClearItemsCollected()
+	{
+		itemsCollected.Clear();
+	}
+
+	public static void AddItemToCollection(Image item)
+	{
+		itemsCollected.Add(item);
+	}
+
 	void Start()
 	{
 		//Load the xml database
@@ -72,6 +85,7 @@ public class LogDatabase : MonoBehaviour
 			}
 		}
 
+		RevealCollectedItems();
 	}
 
 	public void SetItemFoundInDatabase(LogItem logItem)
@@ -94,6 +108,31 @@ public class LogDatabase : MonoBehaviour
 			return;
 		}
 		itemNode.ChildNodes[HasBeenClickedIndex].InnerText = "true"; //HasBeenClicked is third in the child nodes
+	}
+
+	//Compare the items collected with items in the list, unlock if they exit and are not already unlocked.
+	public void RevealCollectedItems()
+	{
+		foreach (Image collectedItem in itemsCollected)
+		{
+			foreach (LogItem logItem in foodItemsInChildren)
+			{
+				if (logItem.logImage.sprite == collectedItem.sprite)
+				{
+					if (logItem.hasBeenFound)
+					{
+						break;
+					}
+					else
+					{
+						SetItemFoundInDatabase(logItem);
+						logItem.RevealItem();
+					}
+				}
+			}
+		}
+
+		ClearItemsCollected();
 	}
 
 	void OnDestroy()

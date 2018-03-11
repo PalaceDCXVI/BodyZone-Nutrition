@@ -75,6 +75,9 @@ public class ND_RobotHandler:MonoBehaviour{
 		m_wantedFoodIndex++;
 		UpdateProgressBar();
 
+		//Add wanted food to items collected
+		LogDatabase.AddItemToCollection(m_robotWantedFoodImage);
+
 		if(m_wantedFoodIndex>=m_wantedFoods.Count) {
 			//End level.
 			m_robotWantedFoodImage.gameObject.SetActive(false);
