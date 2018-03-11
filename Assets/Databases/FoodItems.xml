@@ -17,7 +17,7 @@
   </FoodItem>
   <FoodItem>
     <Name>WholeGrainCereal</Name>
-    <HasBeenFound>false</HasBeenFound>
+    <HasBeenFound>true</HasBeenFound>
     <HasBeenClicked>false</HasBeenClicked>
   </FoodItem>
   <FoodItem>
