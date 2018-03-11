@@ -2127,7 +2127,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6433b166f3f4604d84765a69a50253a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FoodDropSceneName: FoodDrop_RS
 --- !u!224 &556353044 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224419495220148026, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
@@ -4668,7 +4667,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1461018867
 RectTransform:
   m_ObjectHideFlags: 0

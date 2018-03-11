@@ -5,7 +5,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
-
 public class LogDatabase : MonoBehaviour 
 {
 	enum FoodType
@@ -20,8 +19,8 @@ public class LogDatabase : MonoBehaviour
 		Good = 1
 	}
 
-	XmlDocument xmlDatabase;
-
+	LogSerializer logSerializer = new LogSerializer();
+	private const string filePath = "FoodItems.xml";
 	public NutrientFactsTable factsTable;
 	public Text FoodNameText;
 	public Text FoodDescriptionText;
@@ -48,68 +47,76 @@ public class LogDatabase : MonoBehaviour
 	void Start()
 	{
 		//Load the xml database
-		xmlDatabase = new XmlDocument();
-		xmlDatabase.Load(Application.dataPath + "/Databases/FoodItems.xml");
-		Debug.Log("Database loaded");
+		
+		logSerializer.Load(Application.persistentDataPath + filePath);
+	
 
+		//Find all the log items in the on screen database.
 		GetComponentsInChildren<LogItem>(true, foodItemsInChildren);
 
+		//Ensure that all log items are in the serialized list.
+		logSerializer.CompleteList(foodItemsInChildren);
+
 		//Go through the list and set the found items to... found.
-		XmlNode nodeInXMLDoc;
 		foreach (LogItem item in foodItemsInChildren)
 		{
-			nodeInXMLDoc = xmlDatabase.SelectSingleNode(string.Format("descendant::FoodItem[Name='{0}']", item.name));
-			if (nodeInXMLDoc == null)
+			foreach (LogSerializer.SerialLogItem seralizedLogItem in logSerializer.foodItems)
 			{
-				Debug.Log("item in database '" + item.name + "' was not found in xml document");
-				continue;
-			}
+				if (item.name == seralizedLogItem.name)
+				{
+					if (seralizedLogItem.IsClicked)
+					{
+						item.SetBeenClicked(true);
+					}
+					else
+					{
+						item.SetBeenClicked(false);
+					}
 
-			//ItemNodeItself
-			if (nodeInXMLDoc.ChildNodes[HasBeenClickedIndex].InnerText == "true")
-			{
-				item.SetBeenClicked(true);
-			}
-			else
-			{
-				item.SetBeenClicked(false);				
-			}
-			
-			if (nodeInXMLDoc.ChildNodes[HasBeenFoundIndex].InnerText == "true")
-			{
-				item.RevealItem();
-			}
-			else
-			{
-				item.HideItem();
-			}
+					if (seralizedLogItem.IsFound)
+					{
+						item.RevealItem();						
+					}
+					else
+					{
+						item.HideItem();
+					}
 
-			
+				}
+			}			
 		}
 
 		RevealCollectedItems();
 	}
 
+	
+
 	public void SetItemFoundInDatabase(LogItem logItem)
 	{
-		XmlNode itemNode = xmlDatabase.SelectSingleNode(string.Format("descendant::FoodItem[Name='{0}']", logItem.name));
-		if (itemNode == null)
+		LogSerializer.SerialLogItem serialLogItem;
+		for (int i = 0; i < logSerializer.foodItems.Count; i++)
 		{
-			Debug.Log("food item '" + logItem.name + "' not found in database");
-			return;
+			if (logSerializer.foodItems[i].name == logItem.name)
+			{
+				serialLogItem = logSerializer.foodItems[i];
+				serialLogItem.IsFound = true;
+				logSerializer.foodItems[i] = serialLogItem;
+			}
 		}
-		itemNode.ChildNodes[HasBeenFoundIndex].InnerText = "true"; //HasBeenFound is second in the child nodes
 	}
 
 	public void SetItemClickedInDatabase(LogItem logItem)
 	{
-		XmlNode itemNode = xmlDatabase.SelectSingleNode(string.Format("descendant::FoodItem[Name='{0}']", logItem.name));
-		if (itemNode == null)
+		LogSerializer.SerialLogItem serialLogItem;
+		for (int i = 0; i < logSerializer.foodItems.Count; i++)
 		{
-			Debug.Log("food item '" + logItem.name + "' not found in database");
-			return;
+			if (logSerializer.foodItems[i].name == logItem.name)
+			{
+				serialLogItem = logSerializer.foodItems[i];
+				serialLogItem.IsClicked = true;
+				logSerializer.foodItems[i] = serialLogItem;
+			}
 		}
-		itemNode.ChildNodes[HasBeenClickedIndex].InnerText = "true"; //HasBeenClicked is third in the child nodes
 	}
 
 	//Compare the items collected with items in the list, unlock if they exit and are not already unlocked.
@@ -139,6 +146,6 @@ public class LogDatabase : MonoBehaviour
 
 	void OnDestroy()
 	{
-		xmlDatabase.Save(Application.dataPath + "/Databases/FoodItems.xml");
+		logSerializer.Save(Application.persistentDataPath + filePath);
 	}
 }
