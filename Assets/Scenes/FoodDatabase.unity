@@ -1930,7 +1930,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300006, guid: a8955525075323a489229550c68846cf,
+      objectReference: {fileID: 21300008, guid: 704d007952261a24fbefe73c7372cf4f,
         type: 3}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -2797,7 +2797,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 110
+  m_Text: 
 --- !u!222 &766545285
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3125,7 +3125,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 110
+  m_Text: 
 --- !u!222 &808888067
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4965,8 +4965,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1547.2329, y: -874}
-  m_SizeDelta: {x: 550, y: 375}
+  m_AnchoredPosition: {x: 1560, y: -874}
+  m_SizeDelta: {x: 600, y: 375}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1367227951
 MonoBehaviour:
@@ -5701,7 +5701,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300014, guid: a8955525075323a489229550c68846cf,
+      objectReference: {fileID: 21300006, guid: 704d007952261a24fbefe73c7372cf4f,
         type: 3}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -6245,6 +6245,12 @@ Prefab:
       propertyPath: factsData.ServingSizeM
       value: 36
       objectReference: {fileID: 0}
+    - target: {fileID: 114705560133577144, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300002, guid: 704d007952261a24fbefe73c7372cf4f,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2, type: 2}
@@ -6477,7 +6483,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 110
+  m_Text: 
 --- !u!222 &1578205893
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6555,7 +6561,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 110
+  m_Text: 
 --- !u!222 &1638513982
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7410,7 +7416,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300012, guid: a8955525075323a489229550c68846cf,
+      objectReference: {fileID: 21300004, guid: 704d007952261a24fbefe73c7372cf4f,
         type: 3}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}
@@ -7787,7 +7793,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300010, guid: a8955525075323a489229550c68846cf,
+      objectReference: {fileID: 21300000, guid: 704d007952261a24fbefe73c7372cf4f,
         type: 3}
     - target: {fileID: 114660480587010814, guid: 6fb1f1ee693b3b84d9f6b412bb78dac2,
         type: 2}

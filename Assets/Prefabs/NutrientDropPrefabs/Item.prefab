@@ -73,9 +73,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffa4a309127a9834ca0dac7049c78b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  logImage: {fileID: 0}
+  GlowOverlay: {fileID: 0}
+  ShadowOverlay: {fileID: 0}
+  hasBeenFound: 0
+  hasBeenClicked: 0
+  isClicked: 0
   ItemText: Whole Wheat Bread
+  ItemDescription: 
+  ItemIngredients: 
   factsData:
+    ServingSizeE: 0
+    ServingTypeE: 
+    ServingSizeM: 0
+    servingType: 0
     Calories: 0
+    fats: 0
     SaturatedFats: 0
     TransFats: 0
     Carbohydrates: 0
@@ -142,7 +155,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300010, guid: a8955525075323a489229550c68846cf, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
