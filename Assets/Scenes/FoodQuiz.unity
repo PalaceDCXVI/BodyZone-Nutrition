@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1382,7 +1382,7 @@ Prefab:
     - target: {fileID: 224976751749200316, guid: 5a0b450dde8382e4bb987fd6abd69b2b,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -107.99243
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224976751749200316, guid: 5a0b450dde8382e4bb987fd6abd69b2b,
         type: 2}
@@ -1547,7 +1547,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2dd86646ade1e254f8c4a378ea080ec7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 25b6765e8bb3d2b43bef8c0df0539f43, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.57
   m_Pitch: 1
@@ -1747,7 +1747,7 @@ Prefab:
     - target: {fileID: 224976751749200316, guid: 5a0b450dde8382e4bb987fd6abd69b2b,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -107.99243
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224976751749200316, guid: 5a0b450dde8382e4bb987fd6abd69b2b,
         type: 2}
@@ -2764,7 +2764,7 @@ Prefab:
     - target: {fileID: 224976751749200316, guid: 5a0b450dde8382e4bb987fd6abd69b2b,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -107.99243
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224976751749200316, guid: 5a0b450dde8382e4bb987fd6abd69b2b,
         type: 2}
@@ -4668,7 +4668,7 @@ Prefab:
     - target: {fileID: 224976751749200316, guid: 5a0b450dde8382e4bb987fd6abd69b2b,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -107.99243
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224976751749200316, guid: 5a0b450dde8382e4bb987fd6abd69b2b,
         type: 2}
@@ -5407,7 +5407,7 @@ Prefab:
     - target: {fileID: 224976751749200316, guid: 5a0b450dde8382e4bb987fd6abd69b2b,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -107.99243
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224976751749200316, guid: 5a0b450dde8382e4bb987fd6abd69b2b,
         type: 2}
