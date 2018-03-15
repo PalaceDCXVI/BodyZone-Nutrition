@@ -3030,6 +3030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f70d72c8ac05443ab3cc9ed21671fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imagesToSpit: []
 --- !u!114 &798335314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3041,7 +3042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861f6753601a7ac4ea340a606207db23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  robotStunEffect: {fileID: 1461018868}
+  robotStunEffect: {fileID: 0}
 --- !u!222 &798335315
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5266,19 +5267,17 @@ GameObject:
   - component: {fileID: 1461018876}
   - component: {fileID: 1461018875}
   - component: {fileID: 1461018874}
-  - component: {fileID: 1461018869}
   - component: {fileID: 1461018873}
   - component: {fileID: 1461018872}
-  - component: {fileID: 1461018868}
   - component: {fileID: 1461018871}
-  - component: {fileID: 1461018870}
+  - component: {fileID: 1461018868}
   m_Layer: 0
   m_Name: Robot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1461018867
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5297,7 +5296,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 2500, y: 274}
+  m_AnchoredPosition: {x: 1199, y: 274}
   m_SizeDelta: {x: 1024, y: 1024}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1461018868
@@ -5308,94 +5307,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1461018866}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03e67a6eeae4b884aa73cd214c480d24, type: 3}
+  m_Script: {fileID: 11500000, guid: 84f70d72c8ac05443ab3cc9ed21671fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_stunColor: {r: 1, g: 0.77205884, b: 0.77205884, a: 1}
-  StunEffects:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 798335316}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1461018869}
-        m_MethodName: SetMoveSpeedScale
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0.1
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  UnStunEffects:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 798335316}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1461018869}
-        m_MethodName: SetMoveSpeedScale
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 1
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  stunLength: 1
-  isStunned: 0
---- !u!114 &1461018869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1461018866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c9961e0775be714db62d809543af2d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_active: 0
-  Touch: 1
-  newRigidbody2D: {fileID: 0}
-  moveSpeed: 500
-  m_maximumVelocity: 1000
---- !u!114 &1461018870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1461018866}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de80bca7bf63a1346850471572ded660, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isStunned: 0
+  imagesToSpit: []
 --- !u!95 &1461018871
 Animator:
   serializedVersion: 3
@@ -7203,6 +7118,8 @@ MonoBehaviour:
   FoodNameText: {fileID: 92151164}
   FoodDescriptionText: {fileID: 1575806391}
   FoodIngredientsText: {fileID: 1367227951}
+  foodItemsInChildren: []
+  robotAnimationController: {fileID: 1461018868}
 --- !u!114 &1791569457
 MonoBehaviour:
   m_ObjectHideFlags: 0

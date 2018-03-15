@@ -19,6 +19,8 @@ public class LogDatabase : MonoBehaviour
 		Good = 1
 	}
 
+	public static LogDatabase inst = null;
+
 	LogSerializer logSerializer = new LogSerializer();
 	private const string filePath = "/FoodItems.xml";
 	public NutrientFactsTable factsTable;
@@ -26,10 +28,13 @@ public class LogDatabase : MonoBehaviour
 	public Text FoodDescriptionText;
 	public Text FoodIngredientsText;
 
-	List<LogItem> foodItemsInChildren = new List<LogItem>();
+	public List<LogItem> foodItemsInChildren = new List<LogItem>();
 
 	const int HasBeenFoundIndex = 1;
 	const int HasBeenClickedIndex = 2;
+
+
+	public LogRobotAnimationController robotAnimationController;
 
 	//Items collected during Nutrient Drop
 	public static List<Image> itemsCollected = new List<Image>();
@@ -42,6 +47,15 @@ public class LogDatabase : MonoBehaviour
 	public static void AddItemToCollection(Image item)
 	{
 		itemsCollected.Add(item);
+	}
+	
+	void Awake()
+	{
+		if(inst==null) inst=this;
+		else {
+			Debug.Log("LogDatabase destroyed on '"+gameObject.name+"'. Are there duplicates in the scene?");
+			DestroyImmediate(this);
+		}
 	}
 
 	void Start()
@@ -87,6 +101,7 @@ public class LogDatabase : MonoBehaviour
 		}
 
 		RevealCollectedItems();
+		robotAnimationController.BeginSpitAnimation();
 	}
 
 	
@@ -141,11 +156,11 @@ public class LogDatabase : MonoBehaviour
 			}
 		}
 
-		ClearItemsCollected();
 	}
 
 	void OnDestroy()
 	{
+		ClearItemsCollected();				
 		logSerializer.Save(Application.persistentDataPath + filePath);
 	}
 }
