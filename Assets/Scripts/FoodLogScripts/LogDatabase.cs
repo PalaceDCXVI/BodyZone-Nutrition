@@ -101,7 +101,9 @@ public class LogDatabase : MonoBehaviour
 		}
 
 		RevealCollectedItems();
-		robotAnimationController.BeginSpitAnimation();
+
+		//Once the items have been revealed, they need to be prepared for the animation by moving them.
+		robotAnimationController.PrepSpitAnimation();
 	}
 
 	

@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 224982019274750884}
   - component: {fileID: 222999291988001230}
   - component: {fileID: 114705560133577144}
+  - component: {fileID: 111565471463715650}
   m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
@@ -81,6 +82,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!111 &111565471463715650
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1664286705231974}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &114018454633828032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,14 +135,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9862069, g: 1, b: 0, a: 0.503}
+  m_Color: {r: 0.9862069, g: 1, b: 0, a: 0.347}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -232,6 +247,10 @@ MonoBehaviour:
     in fibre, which will help you stay full longer. '
   ItemIngredients: 
   factsData:
+    ServingSizeE: 0
+    ServingTypeE: 
+    ServingSizeM: 0
+    servingType: 0
     Calories: 94
     fats: 1
     SaturatedFats: 0.2
@@ -265,8 +284,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
