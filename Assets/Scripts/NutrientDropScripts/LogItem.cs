@@ -60,7 +60,6 @@ public class LogItem : MonoBehaviour {
 		hasBeenFound = true;
 		logImage.color = Color.white;
 		GetComponent<Button>().interactable = true;
-		GlowOverlay.gameObject.SetActive(true);
 	}
 
 	public void HideItem()
@@ -68,7 +67,6 @@ public class LogItem : MonoBehaviour {
 		hasBeenFound = false;
 		logImage.color = Color.black;
 		GetComponent<Button>().interactable = false;
-		GlowOverlay.gameObject.SetActive(false);
 	}
 
 	//For use in the FoodDatabase scene, to pass the facts table ui prefab the data from this item.

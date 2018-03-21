@@ -24,9 +24,6 @@ public class LogScreenInterface : MonoBehaviour {
 
 	void Start()
 	{
-		//TODO: DELETE THIS BEFORE RELEASE
-		File.Delete(Application.persistentDataPath + "/FoodItems.xml");
-
 		//pauseMenu = PauseMenu.inst;
 		if (pauseMenu == null)
 		{

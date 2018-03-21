@@ -19,6 +19,8 @@ public class FoodDropInterface : MonoBehaviour {
 		{
 			Debug.Log("logScreenInterface Has Not Been Found in " + gameObject.name);
 		}
+
+		logScreenInterface.SetButtonsInteractable(false);
 	}
 
 	// Update is called once per frame
@@ -37,6 +39,11 @@ public class FoodDropInterface : MonoBehaviour {
 	}
 
 	public void TurnFoodDropButtonsBackOn()
+	{
+		logScreenInterface.SetButtonsInteractable(true);
+	}
+
+	void OnDestroy()
 	{
 		logScreenInterface.SetButtonsInteractable(true);
 	}
