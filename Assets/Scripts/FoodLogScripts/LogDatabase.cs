@@ -38,6 +38,7 @@ public class LogDatabase : MonoBehaviour
 
 	//Items collected during Nutrient Drop
 	public static List<Image> itemsCollected = new List<Image>();
+	public static bool shouldAddCollectedItems = false;
 
 	public static void ClearItemsCollected()
 	{
@@ -100,10 +101,13 @@ public class LogDatabase : MonoBehaviour
 			}			
 		}
 
-		RevealCollectedItems();
+		if (shouldAddCollectedItems)
+		{
+			RevealCollectedItems();
 
-		//Once the items have been revealed, they need to be prepared for the animation by moving them.
-		robotAnimationController.PrepSpitAnimation();
+			//Once the items have been revealed, they need to be prepared for the animation by moving them.
+			robotAnimationController.PrepSpitAnimation();
+		}
 	}
 
 	
@@ -162,7 +166,12 @@ public class LogDatabase : MonoBehaviour
 
 	void OnDestroy()
 	{
-		ClearItemsCollected();				
+		if (shouldAddCollectedItems)
+		{
+			ClearItemsCollected();				
+			shouldAddCollectedItems = false;
+		}
+		
 		logSerializer.Save(Application.persistentDataPath + filePath);
 	}
 }

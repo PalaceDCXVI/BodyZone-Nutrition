@@ -54,6 +54,11 @@ public class DialogueManager:MonoBehaviour{
 		ToggleSpeechBubble(mp_bubble, true);
 		GetSpeechBubble(mp_bubble).m_T_name.text=_convo.m_speaker;
 		mp_dlgIndex=-1;
+		Button speechBubbleButton = GetSpeechBubble(mp_bubble).m_speechBubble.GetComponentInChildren<Button>();
+		if (speechBubbleButton)
+		{
+			speechBubbleButton.interactable = true;
+		}
 
 		DisplayNextSentence();
 	}
@@ -123,7 +128,11 @@ public class DialogueManager:MonoBehaviour{
 	public void EndConversation(){	
 		//End a conversation and do whatever is next.	
 		//Debug.Log("End of conversation: "+m_dlgType.ToString());
-
+		Button speechBubbleButton = GetSpeechBubble(mp_bubble).m_speechBubble.GetComponentInChildren<Button>();
+		if (speechBubbleButton)
+		{
+			speechBubbleButton.interactable = false;
+		}
 		//Level Select	////
 		if(mp_dlgType==DIALOGUETYPE.LS_INTRO) {
 			ToggleSpeechBubble();
@@ -139,7 +148,7 @@ public class DialogueManager:MonoBehaviour{
 		}
 
 		//Level success.
-		else if(mp_dlgType==DIALOGUETYPE.FD_WIN) ND_GameController.inst.EndScene();
+		else if(mp_dlgType==DIALOGUETYPE.FD_WIN) ND_GameController.inst.EndLevelGoToDatabase();
 
 		//Robot dead. Reload level.
 		else if(mp_dlgType==DIALOGUETYPE.FD_FAILROBOTDEATH) ND_GameController.inst.ReloadScene(true);

@@ -37,7 +37,10 @@ public class LogRobotAnimationController : MonoBehaviour {
 
 	public void BeginSpitAnimation()
 	{
-		StartCoroutine(SpitImagesAtLogScreen());
+		if (LogDatabase.shouldAddCollectedItems)
+		{
+			StartCoroutine(SpitImagesAtLogScreen());
+		}
 	}
 	
 	IEnumerator SpitImagesAtLogScreen()
@@ -68,9 +71,6 @@ public class LogRobotAnimationController : MonoBehaviour {
 		Vector3 startPosition = spitPointTransform.position - originalPosition;
 		startPosition *= (1.0f / transform.root.localScale.x);
 
-		Debug.Log(startPosition);
-		Debug.Log(originalPosition);
-		Debug.Log(spitPointTransform.position);
 		AnimationClip movementClip = new AnimationClip();
 		movementClip.legacy = true;
 		movementClip.wrapMode = WrapMode.Once;

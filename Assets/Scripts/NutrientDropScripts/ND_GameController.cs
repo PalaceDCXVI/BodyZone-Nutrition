@@ -150,6 +150,23 @@ public class ND_GameController:MonoBehaviour {
 		}
 		else ReloadScene(true);
 	}
+	public void EndLevelGoToDatabase() {
+		//Food drop game over. 
+		//Move to the food database and then go to the next food quiz or level select when it as closed.
+		LogDatabase.shouldAddCollectedItems = true;
+		SceneManager.LoadSceneAsync("FoodDatabase", LoadSceneMode.Additive);
+
+
+		SceneManager.sceneUnloaded += OnFoodDatabaseClose;
+	}
+	void OnFoodDatabaseClose(Scene scene)
+	{
+		if (scene.name == "FoodDatabase")
+		{
+			SceneManager.sceneUnloaded -= OnFoodDatabaseClose;
+			EndScene();
+		}
+	}
 	public void EndScene() {
 		//Food drop game over. Either move onto Food Quiz or Level Select.
 		if(m_levelInput.m_levelType==LEVELTYPE.BOTH) {
