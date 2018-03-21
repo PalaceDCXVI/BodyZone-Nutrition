@@ -33,6 +33,8 @@ public class LogDatabase : MonoBehaviour
 	const int HasBeenFoundIndex = 1;
 	const int HasBeenClickedIndex = 2;
 
+	LogManager logManager;
+
 
 	public LogRobotAnimationController robotAnimationController;
 

@@ -940,7 +940,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: '
+
+'
 --- !u!222 &198509821
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2158,7 +2160,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: '
+
+'
 --- !u!222 &473840055
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2575,7 +2579,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: '
+
+'
 --- !u!222 &650491596
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2741,7 +2747,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: '
+
+'
 --- !u!222 &752536776
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2819,7 +2827,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 38
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2830,7 +2838,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: '
+
+'
 --- !u!222 &766545285
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2927,7 +2937,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: '
+
+'
 --- !u!222 &776619878
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2986,7 +2998,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: '
+
+'
 --- !u!222 &791647299
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3064,7 +3078,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: '
+
+'
 --- !u!222 &808888067
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3142,7 +3158,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: '
+
+'
 --- !u!222 &818085189
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3220,7 +3238,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: '
+
+'
 --- !u!222 &831203622
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3298,7 +3318,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: '
+
+'
 --- !u!222 &893732587
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3547,7 +3569,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: '
+
+'
 --- !u!222 &945183608
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3812,7 +3836,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: '
+
+'
 --- !u!222 &1154723319
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5029,7 +5055,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: '
+
+'
 --- !u!222 &1394095529
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5088,7 +5116,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: '
+
+'
 --- !u!222 &1394846788
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5177,7 +5207,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: '
+
+'
 --- !u!222 &1403382439
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5786,7 +5818,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: '
+
+'
 --- !u!222 &1482371687
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5957,7 +5991,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: '
+
+'
 --- !u!222 &1503612950
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6368,7 +6404,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: '
+
+'
 --- !u!222 &1578205893
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6435,7 +6473,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 38
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -6446,7 +6484,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: '
+
+'
 --- !u!222 &1638513982
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6941,7 +6981,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: '
+
+'
 --- !u!222 &1712430165
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7019,7 +7061,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: '
+
+'
 --- !u!222 &1743741624
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7104,6 +7148,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentlyActiveTab: {fileID: 1952249709}
   currentlyClickedItem: {fileID: 0}
+  tabs:
+  - {fileID: 1952249709}
+  - {fileID: 2002676340}
+  - {fileID: 2028799155}
 --- !u!1 &1803471475
 GameObject:
   m_ObjectHideFlags: 0
@@ -8279,7 +8327,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: '
+
+'
 --- !u!222 &2069529500
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8381,7 +8431,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: '
+
+'
 --- !u!222 &2135969764
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8440,7 +8492,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: '
+
+'
 --- !u!222 &2139407085
 CanvasRenderer:
   m_ObjectHideFlags: 0

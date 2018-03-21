@@ -90,6 +90,23 @@ public class ND_GameController:MonoBehaviour {
 		ND_LevelTimer.inst.SetupTimer();
 		m_pauseMenu.RequestPause();
 
+		//Tell the food database which tab it should open to.
+		switch (m_levelInput.m_levelName)
+		{
+		case "Grains":
+			LogManager.activeTab = LogManager.TabType.Grain;
+			break;
+		case "Drinks":
+			LogManager.activeTab = LogManager.TabType.Drink;
+			break;
+		case "MeatAlternatives":
+			LogManager.activeTab = LogManager.TabType.MeatAlts;
+			break;
+		default:
+			LogManager.activeTab = LogManager.TabType.Grain;
+			break;			
+		}
+
 		//Start the intro dialogue if it exists and isn't set to be skipped, else start the drop game.
 		if((FindSceneInfo()==null)||(!FindSceneInfo()[0].GetComponent<SceneInfo>().m_skipIntro)) {
 			if(FindDialogue(DIALOGUETYPE.FD_INTRO, false)!=null) {
@@ -154,6 +171,7 @@ public class ND_GameController:MonoBehaviour {
 		//Food drop game over. 
 		//Move to the food database and then go to the next food quiz or level select when it as closed.
 		LogDatabase.shouldAddCollectedItems = true;
+		
 		SceneManager.LoadSceneAsync("FoodDatabase", LoadSceneMode.Additive);
 
 

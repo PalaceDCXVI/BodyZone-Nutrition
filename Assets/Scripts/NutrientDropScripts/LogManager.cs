@@ -10,10 +10,41 @@ public class LogManager : MonoBehaviour {
 	public LogTab currentlyActiveTab = null;
 	public LogItem currentlyClickedItem = null;
 
+	public LogTab[] tabs;
+
+	public enum TabType
+	{
+		Grain = 0,
+		Drink,
+		MeatAlts
+	}
+	public static TabType activeTab = TabType.Grain;
+	
+
 	// Use this for initialization
 	void Start () 
 	{
+		switch (activeTab)
+		{
+			case TabType.Grain:
+			currentlyActiveTab = tabs[(int)TabType.Grain];
+			break;
+			case TabType.Drink:
+			currentlyActiveTab = tabs[(int)TabType.Drink];
+			break;
+			case TabType.MeatAlts:
+			currentlyActiveTab = tabs[(int)TabType.MeatAlts];
+			break;
+
+			default:
+			break;
+		}
 		currentlyActiveTab.SetTabActive(true);
+	}
+
+	void SetActiveTabByType()
+	{
+
 	}
 
 	public void SetActiveTab(LogTab selectedTab)

@@ -71,10 +71,10 @@ public class NutrientFactsTable : MonoBehaviour {
 	
 	public void SetData(ref NutrientFactsData data)
 	{
-		ServingSizeE.text 				= data.ServingSizeE.ToString("0");
-		ServingSizeE1.text 				= data.ServingSizeE.ToString("0");
-		ServingSizeM.text 				= data.ServingSizeM.ToString("0");
-		ServingSizeM1.text 				= data.ServingSizeM.ToString("0");
+		ServingSizeE.text 				= data.ServingSizeE.ToString("0") + " " + data.ServingTypeE;
+		ServingSizeE1.text 				= data.ServingSizeE.ToString("0") + " " + data.ServingTypeE;
+		ServingSizeM.text 				= data.ServingSizeM.ToString("0") + " " + data.servingType.ToString();
+		ServingSizeM1.text 				= data.ServingSizeM.ToString("0") + " " + data.servingType.ToString();
 		CaloriesText.text 				= data.Calories.ToString("0");
 		FatsText.text 					= data.fats.ToString("0");
 		FatsPDVText.text 				= ((data.fats / fatsDV) * 100).ToString("0");
