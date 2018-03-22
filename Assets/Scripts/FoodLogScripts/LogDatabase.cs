@@ -148,7 +148,7 @@ public class LogDatabase : MonoBehaviour
 		}
 	}
 
-	//Compare the items collected with items in the list, unlock if they exit and are not already unlocked.
+	//Compare the items collected with items in the list, unlock if they exist and are not already unlocked.
 	public void RevealCollectedItems()
 	{
 		foreach (Image collectedItem in itemsCollected)
@@ -165,6 +165,7 @@ public class LogDatabase : MonoBehaviour
 					{
 						SetItemFoundInDatabase(logItem);
 						logItem.RevealItem();
+						logItem.SetBeenClicked(false);
 					}
 				}
 			}

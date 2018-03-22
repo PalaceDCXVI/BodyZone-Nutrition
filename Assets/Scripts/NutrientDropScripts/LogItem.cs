@@ -29,12 +29,11 @@ public class LogItem : MonoBehaviour {
 	public void SetBeenClicked(bool clicked)
 	{
 		hasBeenClicked = clicked;
-
-		if (!hasBeenClicked && hasBeenFound)
+		if (!clicked && hasBeenFound)
 		{
 			GlowOverlay.gameObject.SetActive(true);
 		}
-		else
+		else if (clicked && hasBeenFound)
 		{
 			GlowOverlay.gameObject.SetActive(false);
 			logDatabase.SetItemClickedInDatabase(this);

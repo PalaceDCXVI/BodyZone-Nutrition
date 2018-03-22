@@ -171,7 +171,12 @@ public class ND_GameController:MonoBehaviour {
 	public void EndLevelGoToDatabase() {
 		//Food drop game over. 
 		//Move to the food database and then go to the next food quiz or level select when it as closed.
+		NutrientSpawner.inst.Pause();
+		NutrientBucket.inst.Pause();
+		LogScreenInterface.inst.SetButtonsInteractable(false);
+
 		LogDatabase.shouldAddCollectedItems = true;
+
 		
 		SceneManager.LoadSceneAsync("FoodDatabase", LoadSceneMode.Additive);
 		
@@ -183,6 +188,7 @@ public class ND_GameController:MonoBehaviour {
 	IEnumerator StartDatabaseConversation(float waitTime)
 	{
 		yield return new WaitForSeconds(waitTime);
+		NutrientSpawner.inst.m_spawnZone.SetActive(false);
 		DialogueManager.inst.StartConversation(FindDialogue(DIALOGUETYPE.LOG_INTRO), SpeechBubble.SPEECHBUBBLETYPE.ASSISTANT);
 		m_animDialogue.SetTrigger("Go_BottomIn");
 	}
@@ -191,6 +197,7 @@ public class ND_GameController:MonoBehaviour {
 		if (scene.name == "FoodDatabase")
 		{
 			SceneManager.sceneUnloaded -= OnFoodDatabaseClose;
+		
 			EndScene();
 		}
 	}

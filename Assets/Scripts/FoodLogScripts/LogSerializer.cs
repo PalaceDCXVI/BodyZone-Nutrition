@@ -14,10 +14,10 @@ public class LogSerializer{//} : MonoBehaviour {
 		public string name;
 
 		[XmlAttribute("HasBeenFound")]
-		public bool IsFound;
+		public bool IsFound = false;
 		
 		[XmlAttribute("HasBeenClicked")]
-		public bool IsClicked;
+		public bool IsClicked = false;
 	}
 
 	[XmlArray("FoodItems")]
