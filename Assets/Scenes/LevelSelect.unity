@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -449,7 +449,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 176.35278, y: 159.99463}
+  m_AnchoredPosition: {x: 176.35278, y: 111.7}
   m_SizeDelta: {x: 468.18, y: 56.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &78515974
@@ -2709,8 +2709,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 206.84302, y: 28.53833}
-  m_SizeDelta: {x: 529.14, y: 190.25}
+  m_AnchoredPosition: {x: 206.84302, y: -6.399994}
+  m_SizeDelta: {x: 529.1, y: 190.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1430261151
 MonoBehaviour:
@@ -2936,39 +2936,43 @@ MonoBehaviour:
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Hi Doc! Are you ready to get started?
+        m_sentence: Hi Doc! Today I need your help classifying the types of drinks
+          I consume.
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Okay so there's a problem...
+        m_sentence: I am trying to make better choices, but I need help determining
+          which drinks are the healthiest choice.
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: I have no idea what makes a drink healthy or unhealthy.
+        m_sentence: For example, since juice comes fruit, it must be a healthy choice,
+          right?
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Juice comes from fruits right? So, I'd assumes it's healthy, but
-          how can I be sure?
+        m_sentence: 'But how can I be sure? '
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: I do know that sugar might play a role...
+        m_sentence: "I think sugar plays an important role in determining if a drink
+          is healthy. \rBut I'm not sure.\r\n"
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: But let's collect some foods to find out!
+        m_sentence: "I need to collect a variety of drinks to test my hypothesis,
+          will you help? \r\n"
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Remember to only collect the food on the FoodBot's display and
-          watch out for falling junk!
+        m_sentence: "Remember to collect only the drink shown on the FoodBot's display
+          screen and watch out for falling junk! \r"
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
@@ -2983,62 +2987,75 @@ MonoBehaviour:
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Wow awesome Doc!
+        m_sentence: 'Wow awesome work Doc! '
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: According to the data from the FoodBot, we should try to choose
-          drinks that only contain natural sugars!
+        m_sentence: 'You collected a variety of drinks for us to analyze. '
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: So, drinks like milk, or drinks made with 100% fruit juice.
+        m_sentence: 'Let''s take a closer look at the nutritional data from the drink
+          you have collected. '
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Natural-sugars contain important vitamins and nutrients for our
-          bodies!
+        m_sentence: 'According to the data, we should try to choose drinks that contain
+          only natural sugars! '
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: But... it also looks like there's something called ADDED sugar.
+        m_sentence: 'Natural sugars are found in milk or drinks made with 100% fruit
+          juice. '
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Sometimes, sugar is added to our drinks that wouldn't have been
-          there in the first place...
+        m_sentence: 'These drinks also contain important vitamins and minerals to
+          help our bodies grow strong. '
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Sounds more like sneaky sugar to me...
+        m_sentence: 'But wait... if we look at the nutritional data a little closer,
+          there is something called ADDED sugar. '
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: This sneaky added-sugar does not ctontain any nutritional value,
-          so it's really not good for you at all!
+        m_sentence: 'Sometimes beverage companies add extra sugar to our drinks. '
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: It can cause cavities and unhealthy weight gain if you eat too
-          much of it!
+        m_sentence: 'Sounds more like Sneaky Sugar to me... '
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: So, natural-sugar is good for you!
+        m_sentence: 'Drinks and other foods containing Sneaky Sugar generally have
+          little nutritional value and often contain few healthy vitamins and minerals. '
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: And there's added-sugar that is sneaky...
+        m_sentence: So according to the nutritional data...
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: 'Eating foods and consuming drinks with too much Sneaky Sugar
+          can lead to cavities and weight gain. '
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: I think it is time to review the Food Log and investigate these
+          Sneaky Sugars ourselves!
     - m_name: Fail Robot Death
       m_dialogueType: 4
       m_dialogueValue: 0
@@ -3089,8 +3106,8 @@ MonoBehaviour:
       m_spawnRate: 1
       m_spawnRandomness: 0.1
       m_additionalSpawnChance: 0.2
-      m_logFoodPercent: 0.3
-      m_neededFoodChance: 0.5
+      m_logFoodPercent: 0.582
+      m_neededFoodChance: 0.509
       m_notFoodPercent: 0.4
       m_timeLimit: 0
       m_neededItems: 5
@@ -3102,15 +3119,15 @@ MonoBehaviour:
       - {fileID: 21300006, guid: 65d9d6259d0181b4cb2ffc6603a15ecf, type: 3}
       - {fileID: 21300008, guid: 65d9d6259d0181b4cb2ffc6603a15ecf, type: 3}
       m_otherFoods:
-      - {fileID: 21300008, guid: a8955525075323a489229550c68846cf, type: 3}
-      - {fileID: 21300010, guid: a8955525075323a489229550c68846cf, type: 3}
-      - {fileID: 21300014, guid: a8955525075323a489229550c68846cf, type: 3}
-      - {fileID: 21300012, guid: a8955525075323a489229550c68846cf, type: 3}
+      - {fileID: 21300002, guid: 8686f4f89ee38ee45aae0818cf4cba3a, type: 3}
+      - {fileID: 21300000, guid: 704d007952261a24fbefe73c7372cf4f, type: 3}
+      - {fileID: 21300000, guid: 8686f4f89ee38ee45aae0818cf4cba3a, type: 3}
+      - {fileID: 21300006, guid: 704d007952261a24fbefe73c7372cf4f, type: 3}
       m_notFoods:
-      - {fileID: 21300000, guid: 77e252d85c594a5488d06db6b8fcf6dc, type: 3}
-      - {fileID: 21300000, guid: 12c67e4b32452dc4aa62e96d4e0d720d, type: 3}
+      - {fileID: 21300000, guid: 177b7a15e3ee96a4f99bf0b21975e702, type: 3}
+      - {fileID: 21300000, guid: 9264fa67798d4b942968a6ef1325c6ad, type: 3}
     m_robotInfo:
-      m_robotHealth: 1
+      m_robotHealth: 4
   m_foodQuizLevelInput:
     m_useFoodDropLogFoods: 0
     m_foods:
@@ -3130,23 +3147,17 @@ MonoBehaviour:
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Uh oh Doc!
+        m_sentence: 'Looks like we have some very thirsty FoodBots here Doc! '
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Looks like the FoodBots have been tanning in the sun all day,
-          and now they're super thirsty...
+        m_sentence: Make sure you give them the drink that they want!
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Give them the drink they're hinting at!
-      - m_inFlag: 0
-        m_inFlagValue: 0
-        m_outFlag: 0
-        m_outFlagValue: 0
-        m_sentence: And don't forget to check the log if you aren't sure!
+        m_sentence: Don't forget to check the food log if you aren't sure.
     - m_name: 0 Question
       m_dialogueType: 9
       m_dialogueValue: 0
@@ -3166,18 +3177,14 @@ MonoBehaviour:
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Water is correct!
+        m_sentence: 'Water is correct! When you start to feel thirsty, that means
+          that your body needs water to stay hydrated! '
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: When you start feeling thirsty, that means your body is already
-          dehydrated!
-      - m_inFlag: 0
-        m_inFlagValue: 0
-        m_outFlag: 0
-        m_outFlagValue: 0
-        m_sentence: So try to drink water throughout the day!
+        m_sentence: Water is the best to drink throughout the day for quenching your
+          thirst.
     - m_name: 0 Wrong
       m_dialogueType: 8
       m_dialogueValue: 0
@@ -3187,8 +3194,10 @@ MonoBehaviour:
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: The correct answer was water! Your body is mostly made of water,
-          so it's the best to drink when you're thirsty.
+        m_sentence: 'The correct answer was water! Your body is mostly made of water,
+          so it is the best drink for quenching your thirst.
+
+'
     - m_name: 1 Question
       m_dialogueType: 9
       m_dialogueValue: 1
@@ -3850,66 +3859,83 @@ MonoBehaviour:
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Welcome back, Doc!
+        m_sentence: 'Hey Doc! I need some help completing my research on foods made
+          from grains. '
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: I need some help completing my research on foods made from grains.
+        m_sentence: 'Whole grains and foods made from them consist of the entire grain
+          seed called the kernel. '
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: I know that grains are a type of seed and they can be broken down
-          to make flours for breads!
+        m_sentence: 'Time to learn the Rule of 3! '
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: and they can also be eaten in their whole form!
+        m_sentence: 'The kernel is made of 3 parts: the bran (outside layer), the
+          endosperm (middle layer), and the germ (inside layer). '
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Unfortunately, that's all I know about grain products...
+        m_sentence: 'Fibre is important to eat for good nutrition and is found in
+          the bran and the germ. '
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: But don't worry this is where you come in Doc!
+        m_sentence: 'If a food contains the whole kernel - all 3 parts of the grain
+          seed - it is called a whole grain. '
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: I need you to control a FoodBot for me to catch some falling foods!
+        m_sentence: If the kernel is broken down, or milled, but all 3 parts of the
+          grain are still in that food, it is called a whole wheat food.
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Thing is.. FoodBots are really picky eaters, so only collect the
-          food on it's display.
+        m_sentence: 'Whole wheat foods still contain a lot of fibre! '
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: You must fill the FoodBot's hunger meter on so it will tell us
-          more about the foods!
+        m_sentence: 'Unfortunately, I don''t know that much about other, "refined
+          grains". '
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Oh and one last thing... haha...
+        m_sentence: "\rBut don't worry this is where you come in Doc! I need you to
+          control a FoodBot for me to catch some falling foods! \r\n"
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: If the FoodBots eats any falling junk it'll explode and you'll
-          have to restart.
+        m_sentence: 'Thing is... FoodBots are really selective, so only collect the
+          food on its display. '
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Good luck doc!
+        m_sentence: 'You must fill the FoodBot''s hunger meter so it will tell us
+          more about the foods! '
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: 'Oh and one last thing... haha... if the FoodBot eats any falling
+          junk it''ll explode and you''ll have to restart. '
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Good Luck Doc!
     - m_name: Win
       m_dialogueType: 3
       m_dialogueValue: 0
@@ -3919,66 +3945,64 @@ MonoBehaviour:
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Wow great work Doc!
+        m_sentence: 'Wow, great work Doc! I destroyed 7 FoodBots attempting this before
+          you showed up... '
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: I destoryed 7 FoodBots attempting this before you showed up...
+        m_sentence: According to my readings from the FoodBot...
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Anyway, according to the readings from the FoodBot...
+        m_sentence: 'When a grain is processed, the bran (outside layer), and the
+          germ (inside layer) are removed. '
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: When grains are harvested they can be refined into different types
-          of refined flours.
+        m_sentence: This only leaves the endosperm (middle layer), which contains
+          only a few nutrients and almost no fibre!
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: and you're not gunna believe this but...
+        m_sentence: 'That''s not good! These types of grains are called refined grains. '
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: during the milling process, healthy parts of the grain are removed...
+        m_sentence: 'Grains, whether whole grain, whole wheat, or refined grains -
+          are added to lots of foods. '
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: most importantly fiber!!
+        m_sentence: 'They make up flours for breads, pastas, rice, and other baked
+          goods. '
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: So, when we talk about refined-grains, we mean products that aren't
-          as healthy!
+        m_sentence: 'They are also added to breakfast cereals! '
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: since  they don't contain the entire grain!
+        m_sentence: 'I''ve taken notes about each food we have collected and added
+          them to our food log. '
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: That means that whole-grain products are healthier since they
-          have more fiber!
+        m_sentence: Let's check it out.
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
         m_sentence: I've taken some notes about the food you collected Doc and added
           them to the food log!
-      - m_inFlag: 0
-        m_inFlagValue: 0
-        m_outFlag: 0
-        m_outFlagValue: 0
-        m_sentence: Let's check it out!
     - m_name: Fail Robot Death
       m_dialogueType: 4
       m_dialogueValue: 0
@@ -4029,9 +4053,9 @@ MonoBehaviour:
       m_spawnRate: 1
       m_spawnRandomness: 0.1
       m_additionalSpawnChance: 0.2
-      m_logFoodPercent: 0.3
-      m_neededFoodChance: 0.5
-      m_notFoodPercent: 0.4
+      m_logFoodPercent: 0.763
+      m_neededFoodChance: 0.632
+      m_notFoodPercent: 0.218
       m_timeLimit: 0
       m_neededItems: 5
       m_needAllLogFoods: 1
@@ -4045,18 +4069,16 @@ MonoBehaviour:
       - {fileID: 21300000, guid: a8955525075323a489229550c68846cf, type: 3}
       - {fileID: 21300002, guid: a8955525075323a489229550c68846cf, type: 3}
       m_notFoods:
-      - {fileID: 21300000, guid: 77e252d85c594a5488d06db6b8fcf6dc, type: 3}
+      - {fileID: 21300000, guid: 9264fa67798d4b942968a6ef1325c6ad, type: 3}
     m_robotInfo:
       m_robotHealth: 0
   m_foodQuizLevelInput:
     m_useFoodDropLogFoods: 0
     m_foods:
-    - {fileID: 21300006, guid: a8955525075323a489229550c68846cf, type: 3}
-    - {fileID: 21300008, guid: a8955525075323a489229550c68846cf, type: 3}
-    - {fileID: 21300010, guid: a8955525075323a489229550c68846cf, type: 3}
-    - {fileID: 21300012, guid: a8955525075323a489229550c68846cf, type: 3}
-    - {fileID: 21300014, guid: a8955525075323a489229550c68846cf, type: 3}
-    m_foodOrder: 0200000004000000020000000000000003000000
+    - {fileID: 21300008, guid: 704d007952261a24fbefe73c7372cf4f, type: 3}
+    - {fileID: 21300000, guid: 704d007952261a24fbefe73c7372cf4f, type: 3}
+    - {fileID: 21300006, guid: 704d007952261a24fbefe73c7372cf4f, type: 3}
+    m_foodOrder: 010000000200000000000000
     m_dialogues:
     - m_name: Intro
       m_dialogueType: 6
@@ -4078,32 +4100,30 @@ MonoBehaviour:
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: And of course they're all still ebing incredibly picky eaters...
+        m_sentence: And of course they're all still being very selective...
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: But don't worry Doc!
+        m_sentence: This time the FoodBots will have you a clue to what they want
+          to eat!
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Now that we've done some reasearch I know we can figure this out!
+        m_sentence: But don't worry Doc now that we've done research I'm sure you
+          can figure this out!
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Try to feed each FoodBot with the food it's hinting at!
+        m_sentence: Try to feed each FoodBot the grain product it wants to eat.
       - m_inFlag: 2
         m_inFlagValue: 5
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Drag any of the foods at the bottom to feed the FoodBot!
-      - m_inFlag: 0
-        m_inFlagValue: 0
-        m_outFlag: 0
-        m_outFlagValue: 0
-        m_sentence: You can also check the food log at any time if you're unsure!
+        m_sentence: And don't worry, you can check the Food Log at any time if you're
+          unsure!
     - m_name: 0 Question
       m_dialogueType: 9
       m_dialogueValue: 0
@@ -4113,7 +4133,7 @@ MonoBehaviour:
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: I want a food that is high in fiber!
+        m_sentence: I want a food made with all parts of the grain kernel.
     - m_name: 0 Correct
       m_dialogueType: 7
       m_dialogueValue: 0
@@ -4123,7 +4143,14 @@ MonoBehaviour:
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: That's right whole grain bread has extra fiber!
+        m_sentence: "\rThat's right Whole Wheat Bread is made from flours that contain
+          all parts of the grain kernel!\n"
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Remember that only foods made with the entire grain kernel can
+          be labelled as whole wheat.
     - m_name: 0 Wrong
       m_dialogueType: 8
       m_dialogueValue: 0
@@ -4133,7 +4160,13 @@ MonoBehaviour:
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Dang, the correct answer was whole grain bread!
+        m_sentence: The correct answer was Whole Wheat Bread!
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: Whole Wheat Bread is made with flour that contains all parts of
+          the grain kernel, which is why it is called "whole" wheat.
     - m_name: 1 Question
       m_dialogueType: 9
       m_dialogueValue: 1
@@ -4143,7 +4176,7 @@ MonoBehaviour:
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: I want a food I should only enjoy occasionally!
+        m_sentence: I want a refined grain food.
     - m_name: 1 Correct
       m_dialogueType: 7
       m_dialogueValue: 1
@@ -4153,13 +4186,13 @@ MonoBehaviour:
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Good one Doc!
+        m_sentence: Yes Doc, the Sugary Cereal is made with refined grains!
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: This cereal has added sugar and is made with refined grains, so
-          it's low in important nutrients.
+        m_sentence: This means that it only contains one part, the endosperm, of the
+          grain kernel, which means less fibre...
     - m_name: 1 Wrong
       m_dialogueType: 8
       m_dialogueValue: 1
@@ -4169,13 +4202,18 @@ MonoBehaviour:
         m_inFlagValue: 2
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: The correct answer was sugary cereal!
+        m_sentence: The correct answer was the Sugary Cereal,
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: This should only we enjoyed on occasion since it is made with
-          refined grains!
+        m_sentence: Sugary cereal is made with refined grains, meaning that the most
+          nutritious parts of the grain kernel, the bran and germ, have been removed.
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: These are the parts that contain fibre!
     - m_name: 2 Question
       m_dialogueType: 9
       m_dialogueValue: 2
@@ -4185,7 +4223,7 @@ MonoBehaviour:
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: I want a food that does no added sugars!
+        m_sentence: I want a whole grain food.
     - m_name: 2 Correct
       m_dialogueType: 7
       m_dialogueValue: 2
@@ -4195,14 +4233,15 @@ MonoBehaviour:
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Wow! Whole grain bread is the only product that does not contain
-          added sugars!
+        m_sentence: 'Whole Grain Cereal contains the whole grain kernel!
+
+'
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Be sure to read the labels to check for added sugar, even in whole
-          grain products!
+        m_sentence: Try to make 50% of the grains you eat whole grain to get more
+          fibre into your diet.
     - m_name: 2 Wrong
       m_dialogueType: 8
       m_dialogueValue: 2
@@ -4212,126 +4251,30 @@ MonoBehaviour:
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Oops, looks like the correct answer was whole grain bread!
+        m_sentence: 'The correct answer was Whole Grain Cereal!
+
+'
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Even foods made with whole grains can be full of sugar!
-    - m_name: 3 Question
+        m_sentence: "Try to make 50% of the grains you eat whole grain to get more
+          fibre into your diet.\r"
+    - m_name: Outro
       m_dialogueType: 9
-      m_dialogueValue: 3
+      m_dialogueValue: -1
       m_speaker: Sarah the FoodBot
       m_dialogue:
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: I want a food that will keep me feeling full for longer!
-    - m_name: 3 Correct
-      m_dialogueType: 7
-      m_dialogueValue: 3
-      m_speaker: Assistant
-      m_dialogue:
+        m_sentence: Looks like that's all of them Doc!
       - m_inFlag: 0
         m_inFlagValue: 0
         m_outFlag: 0
         m_outFlagValue: 0
-        m_sentence: Good call doc!
-      - m_inFlag: 0
-        m_inFlagValue: 0
-        m_outFlag: 0
-        m_outFlagValue: 0
-        m_sentence: Since fiber is indegestible, eating a meal full of it will keep
-          you feeling full much longer!
-    - m_name: 3 Wrong
-      m_dialogueType: 8
-      m_dialogueValue: 3
-      m_speaker: Assistant
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: 0
-        m_outFlag: 0
-        m_outFlagValue: 0
-        m_sentence: Oh no! The correct food was whole grain cereal!
-      - m_inFlag: 0
-        m_inFlagValue: 0
-        m_outFlag: 0
-        m_outFlagValue: 0
-        m_sentence: Since fiber is indegestible, eating a meal full of it will keep
-          you feeling full much longer!
-      - m_inFlag: 0
-        m_inFlagValue: 0
-        m_outFlag: 0
-        m_outFlagValue: 0
-        m_sentence: 
-    - m_name: 4 Question
-      m_dialogueType: 9
-      m_dialogueValue: 4
-      m_speaker: Metal Matt
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: 0
-        m_outFlag: 0
-        m_outFlagValue: 0
-        m_sentence: I want a food that is high in sodium!
-    - m_name: 4 Correct
-      m_dialogueType: 7
-      m_dialogueValue: 4
-      m_speaker: Assistant
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: 0
-        m_outFlag: 0
-        m_outFlagValue: 0
-        m_sentence: Wow!
-      - m_inFlag: 0
-        m_inFlagValue: 0
-        m_outFlag: 0
-        m_outFlagValue: 0
-        m_sentence: Did you know baked goods are one of the highest sources of sodium
-          in the Canadian diet?
-      - m_inFlag: 0
-        m_inFlagValue: 0
-        m_outFlag: 0
-        m_outFlagValue: 0
-        m_sentence: Well I didn't but now I do!
-    - m_name: 4 Wrong
-      m_dialogueType: 8
-      m_dialogueValue: 4
-      m_speaker: 
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: 0
-        m_outFlag: 0
-        m_outFlagValue: 0
-        m_sentence: Oops..
-      - m_inFlag: 0
-        m_inFlagValue: 0
-        m_outFlag: 0
-        m_outFlagValue: 0
-        m_sentence: The correct answer was the muffin!
-      - m_inFlag: 0
-        m_inFlagValue: 0
-        m_outFlag: 0
-        m_outFlagValue: 0
-        m_sentence: Apparently, baked goods are one of the highest sources of fiber
-          in the canadian diet!
-    - m_name: Outro
-      m_dialogueType: 10
-      m_dialogueValue: -1
-      m_speaker: Assistant
-      m_dialogue:
-      - m_inFlag: 0
-        m_inFlagValue: 0
-        m_outFlag: 0
-        m_outFlagValue: 0
-        m_sentence: Well good work doc!
-      - m_inFlag: 0
-        m_inFlagValue: 0
-        m_outFlag: 0
-        m_outFlagValue: 0
-        m_sentence: I took some notes! Let's see how we did!
+        m_sentence: I took some notes on how you did, let's take a look.
   m_levelStatus: 2
   m_levelRating: 0
   m_levelName: Grains
