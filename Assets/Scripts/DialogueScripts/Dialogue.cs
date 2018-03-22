@@ -18,7 +18,8 @@ public enum DIALOGUETYPE {
 	FQ_FOODITEMSUCCESS,	//Assistant's dialogue on feeding the correct food.
 	FQ_FOODITEMFAIL,
 	FQ_ROBOTFOODITEM,	//Robot's dialogue of wanting a food.
-	FQ_OUTRO
+	FQ_OUTRO,
+	LOG_INTRO
 }
 
 //Different events to happen as a new DialogueLine is shown.

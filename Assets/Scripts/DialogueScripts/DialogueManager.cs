@@ -148,13 +148,20 @@ public class DialogueManager:MonoBehaviour{
 		}
 
 		//Level success.
-		else if(mp_dlgType==DIALOGUETYPE.FD_WIN) ND_GameController.inst.EndLevelGoToDatabase();
-
+		else if (mp_dlgType==DIALOGUETYPE.FD_WIN) 
+		{
+			ND_GameController.inst.m_animDialogue.SetTrigger("Go_BottomOut");
+			ND_GameController.inst.EndLevelGoToDatabase();
+		}
 		//Robot dead. Reload level.
 		else if(mp_dlgType==DIALOGUETYPE.FD_FAILROBOTDEATH) ND_GameController.inst.ReloadScene(true);
 
 		//Time ran out. Reload level.
 		else if(mp_dlgType==DIALOGUETYPE.FD_FAILTIMELIMIT) ND_GameController.inst.ReloadScene(true);
+
+		//Intro to database, close dialogue afterwords
+		else if (mp_dlgType==DIALOGUETYPE.LOG_INTRO) ND_GameController.inst.m_animDialogue.SetTrigger("Go_BottomOut");
+	
 
 
 		//Food Quiz		////

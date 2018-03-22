@@ -36,7 +36,10 @@ public class LogDatabase : MonoBehaviour
 	LogManager logManager;
 
 
+	public Animator logScreenAnimator;
 	public LogRobotAnimationController robotAnimationController;
+	public Animator dialogueAnimator;
+	
 
 	//Items collected during Nutrient Drop
 	public static List<Image> itemsCollected = new List<Image>();
@@ -81,15 +84,6 @@ public class LogDatabase : MonoBehaviour
 			{
 				if (item.name == seralizedLogItem.name)
 				{
-					if (seralizedLogItem.IsClicked)
-					{
-						item.SetBeenClicked(true);
-					}
-					else
-					{
-						item.SetBeenClicked(false);
-					}
-
 					if (seralizedLogItem.IsFound)
 					{
 						item.RevealItem();						
@@ -99,6 +93,14 @@ public class LogDatabase : MonoBehaviour
 						item.HideItem();
 					}
 
+					if (seralizedLogItem.IsClicked)
+					{
+						item.SetBeenClicked(true);
+					}
+					else
+					{
+						item.SetBeenClicked(false);
+					}
 				}
 			}			
 		}
@@ -109,7 +111,11 @@ public class LogDatabase : MonoBehaviour
 
 			//Once the items have been revealed, they need to be prepared for the animation by moving them.
 			robotAnimationController.PrepSpitAnimation();
+
+			//Do dialogue animation.
+			//dialogueAnimator.SetTrigger("Go_BottomIn");
 		}
+		logScreenAnimator.SetTrigger("StartAnimation");
 	}
 
 	

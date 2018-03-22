@@ -106,6 +106,7 @@ public class ND_GameController:MonoBehaviour {
 			LogManager.activeTab = LogManager.TabType.Grain;
 			break;			
 		}
+		LogDatabase.ClearItemsCollected();
 
 		//Start the intro dialogue if it exists and isn't set to be skipped, else start the drop game.
 		if((FindSceneInfo()==null)||(!FindSceneInfo()[0].GetComponent<SceneInfo>().m_skipIntro)) {
@@ -173,9 +174,17 @@ public class ND_GameController:MonoBehaviour {
 		LogDatabase.shouldAddCollectedItems = true;
 		
 		SceneManager.LoadSceneAsync("FoodDatabase", LoadSceneMode.Additive);
-
+		
+		StartCoroutine(StartDatabaseConversation(0.5f));
 
 		SceneManager.sceneUnloaded += OnFoodDatabaseClose;
+	}
+
+	IEnumerator StartDatabaseConversation(float waitTime)
+	{
+		yield return new WaitForSeconds(waitTime);
+		DialogueManager.inst.StartConversation(FindDialogue(DIALOGUETYPE.LOG_INTRO), SpeechBubble.SPEECHBUBBLETYPE.ASSISTANT);
+		m_animDialogue.SetTrigger("Go_BottomIn");
 	}
 	void OnFoodDatabaseClose(Scene scene)
 	{

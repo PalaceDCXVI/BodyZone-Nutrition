@@ -3069,6 +3069,21 @@ MonoBehaviour:
         m_outFlag: 0
         m_outFlagValue: 0
         m_sentence: Let's try again.
+    - m_name: Food Database Intro
+      m_dialogueType: 11
+      m_dialogueValue: 0
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: This is the food database.
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: I feel like we've been here before...
     m_spawnerInfo:
       m_spawnGroupSize: 10
       m_spawnRate: 1
@@ -3994,6 +4009,21 @@ MonoBehaviour:
         m_outFlag: 0
         m_outFlagValue: 0
         m_sentence: Let's try again.
+    - m_name: Food Database Intro
+      m_dialogueType: 11
+      m_dialogueValue: 0
+      m_speaker: Assistant
+      m_dialogue:
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: This is the food database.
+      - m_inFlag: 0
+        m_inFlagValue: 0
+        m_outFlag: 0
+        m_outFlagValue: 0
+        m_sentence: It sure is databas-y!
     m_spawnerInfo:
       m_spawnGroupSize: 10
       m_spawnRate: 1

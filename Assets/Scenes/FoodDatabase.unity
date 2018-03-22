@@ -7133,7 +7133,9 @@ MonoBehaviour:
   FoodDescriptionText: {fileID: 1575806391}
   FoodIngredientsText: {fileID: 1367227951}
   foodItemsInChildren: []
+  logScreenAnimator: {fileID: 7494211}
   robotAnimationController: {fileID: 1461018868}
+  dialogueAnimator: {fileID: 0}
 --- !u!114 &1791569457
 MonoBehaviour:
   m_ObjectHideFlags: 0
