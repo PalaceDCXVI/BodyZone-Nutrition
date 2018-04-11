@@ -168,7 +168,7 @@ public class FQ_GameController:MonoBehaviour {
 			mp_passedLevelInfo.GetComponent<LevelInput>().m_levelStatus=LEVELSTATUS.COMPLETE;
 		}
 
-		SceneManager.LoadScene("LevelSelect");
+		LevelLoading.Instance.LoadScene("LevelSelect");
 	}
 
 	public Conversation FindDialogue(DIALOGUETYPE _type, int _value=-1, bool _logError=true) {

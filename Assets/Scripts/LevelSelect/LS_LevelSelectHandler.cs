@@ -60,9 +60,9 @@ public class LS_LevelSelectHandler:MonoBehaviour{
 		
 		LEVELTYPE _levelType=m_levelInputObject.GetComponent<LevelInput>().m_levelType;
 		if((_levelType==LEVELTYPE.FOODDROP)||(_levelType==LEVELTYPE.BOTH))
-			SceneManager.LoadScene("FoodDrop_RS");
+			LevelLoading.Instance.LoadScene("FoodDrop_RS");
 		else if(_levelType==LEVELTYPE.FOODQUIZ)
-			SceneManager.LoadScene("FoodQuiz");
+			LevelLoading.Instance.LoadScene("FoodQuiz");
 	}
 
 	//Animator functions.

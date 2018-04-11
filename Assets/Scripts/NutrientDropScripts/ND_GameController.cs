@@ -205,7 +205,7 @@ public class ND_GameController:MonoBehaviour {
 		//Food drop game over. Either move onto Food Quiz or Level Select.
 		if(m_levelInput.m_levelType==LEVELTYPE.BOTH) {
 			DestroySceneInfo();
-			SceneManager.LoadScene("FoodQuiz");
+			LevelLoading.Instance.LoadScene("FoodQuiz");
 		}
 		else {	//Level select.
 			DestroySceneInfo();
@@ -216,7 +216,7 @@ public class ND_GameController:MonoBehaviour {
 				mp_passedLevelInfo.GetComponent<LevelInput>().m_levelStatus=LEVELSTATUS.COMPLETE;
 			}
 
-			SceneManager.LoadScene("LevelSelect");
+			LevelLoading.Instance.LoadScene("LevelSelect");
 		}
 	}
 	public void SetTimeScale(float timeScale){
@@ -227,12 +227,12 @@ public class ND_GameController:MonoBehaviour {
 		//Reloads the Food Drop scene, skipping the intro by default.
 		//Debug.Log("ND_GameController.ReloadScene("+_skipIntro+").");
 
-		if(!_skipIntro) SceneManager.LoadScene("FoodDrop_RS");
+		if(!_skipIntro) LevelLoading.Instance.LoadScene("FoodDrop_RS");
 		else {
 			Instantiate(m_pre_SceneInfo);
 			DontDestroyOnLoad(m_pre_SceneInfo);
 			m_pre_SceneInfo.GetComponent<SceneInfo>().m_skipIntro=true;
-			SceneManager.LoadScene("FoodDrop_RS");
+			LevelLoading.Instance.LoadScene("FoodDrop_RS");
 		}
 	}
 	private void DestroyLevelInfo() {
