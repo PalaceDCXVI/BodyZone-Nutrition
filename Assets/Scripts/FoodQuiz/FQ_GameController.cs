@@ -16,6 +16,7 @@ public class FQ_GameController:MonoBehaviour {
 	private bool					mp_firstFrameStart=true;
 	private int						mp_currentFood;		//Index into the LevelInput of the currently wanted food.
 	private int						mp_correctAnswers;	//Number of correct quiz answers by the player.
+	private int						mp_totalAnswers; 	//Total answers given by the player;
 	private GameObject				mp_passedLevelInfo;
 
 	private void Awake() {
@@ -32,6 +33,7 @@ public class FQ_GameController:MonoBehaviour {
 		mp_firstFrameStart=false;
 		mp_currentFood=-1;
 		mp_correctAnswers=0;
+		mp_totalAnswers=0;
 		FindLevelInfo();
 	}
 	
@@ -122,6 +124,8 @@ public class FQ_GameController:MonoBehaviour {
 		m_allowDragging=false;
 		DialogueManager.inst.ToggleSpeechBubble(SpeechBubble.SPEECHBUBBLETYPE.ROBOT, false);
 
+		mp_totalAnswers++;
+
 		if(_foodIndex==m_levelInput.m_foodQuizLevelInput.m_foodOrder[mp_currentFood]) {	//Correct food.
 			//Debug.Log("FQ_GameController.RobotFed("+_foodIndex+"): Fed correct food.");
 			mp_correctAnswers++;
@@ -129,6 +133,7 @@ public class FQ_GameController:MonoBehaviour {
 		}
 		else {	//Fed incorrect food.
 			//Debug.Log("FQ_GameController.RobotFed("+_foodIndex+"): Fed incorrect food.");
+			mp_currentFood--; //Sets the current food back by one so that it will re-do the current food.		
 			FQ_RobotHandler.inst.AnimateRobotExplode();
 			DialogueManager.inst.StartConversation(FindDialogue(DIALOGUETYPE.FQ_FOODITEMFAIL, mp_currentFood), SpeechBubble.SPEECHBUBBLETYPE.ASSISTANT);
 		}
@@ -147,7 +152,8 @@ public class FQ_GameController:MonoBehaviour {
 		m_animDialogue.SetTrigger("Go_OutRight");
 
 		//Calculate the score.
-		float _percentScore=(float)mp_correctAnswers/(float)m_levelInput.m_foodQuizLevelInput.m_foodOrder.Count;
+		//float _percentScore=(float)mp_correctAnswers/(float)m_levelInput.m_foodQuizLevelInput.m_foodOrder.Count;
+		float _percentScore=(float)mp_correctAnswers/(float)mp_totalAnswers;
 		int _score=0;
 		if(_percentScore<=.33f) _score=0;
 		else if(_percentScore<=.66f) _score=1;
@@ -168,7 +174,7 @@ public class FQ_GameController:MonoBehaviour {
 			mp_passedLevelInfo.GetComponent<LevelInput>().m_levelStatus=LEVELSTATUS.COMPLETE;
 		}
 
-		SceneManager.LoadScene("LevelSelect");
+		LevelLoading.Instance.LoadScene("LevelSelect");
 	}
 
 	public Conversation FindDialogue(DIALOGUETYPE _type, int _value=-1, bool _logError=true) {

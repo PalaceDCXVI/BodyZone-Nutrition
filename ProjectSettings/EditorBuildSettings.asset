@@ -17,3 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FoodDatabase.unity
     guid: 19d09a60b3b720b4c9448954609ccedb
+  - enabled: 1
+    path: Assets/Scenes/LevelLoading.unity
+    guid: efd4e9ed3e0a3f747a644673d7ea36f3

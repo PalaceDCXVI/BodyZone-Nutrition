@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4907889b1a681e94386de551da60e93f
+timeCreated: 1523405877
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - LoadCanvas: {fileID: 1981795602132932, guid: 87618669f9f705d4c9b5357b51954595,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
